@@ -127,6 +127,12 @@ blockquote { margin: 2rem 0 .65rem; padding: 1.1rem 0 0 1.25rem; border-left: 2p
 .balcescu-moment .translation { color: #a9a69e; }
 .balcescu-moment .fr-echo { color: #b9b2a4; }
 
+.transylvania-brief { position: relative; z-index: 2; width: min(1000px, 100%); margin: clamp(5rem, 9vw, 8rem) auto 0; padding: clamp(1.6rem, 3vw, 2.8rem); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.transylvania-brief h3 { max-width: 720px; margin: 0 0 1.4rem; color: var(--ink); font-size: clamp(2rem, 3.8vw, 3.6rem); font-weight: 400; line-height: 1; letter-spacing: -.045em; }
+.transylvania-brief > p:not(.section-kicker) { max-width: 840px; color: #393b42; font-size: clamp(1.02rem, 1.45vw, 1.18rem); line-height: 1.68; }
+.transylvania-brief .section-kicker { color: var(--red); }
+.transylvania-brief .fr-echo { color: #8a5540; }
+
 .language-section { color: #f4ede0; background: #172033; }
 .language-section::before { content: ""; position: absolute; z-index: 0; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 47%, rgba(214,180,94,.05) 47% 53%, transparent 53%); }
 .language-heading, .language-grid, .argument { position: relative; z-index: 1; width: min(1170px, 100%); margin-inline: auto; }

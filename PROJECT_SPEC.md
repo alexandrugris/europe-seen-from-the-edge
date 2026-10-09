@@ -136,16 +136,26 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Review:** “The title should be something like The French Revolution created the ideas on which a nation has been build. Keep ‘Romania made a country’. Iterate a bit on the heading. Also, make sure this whole page fits on one screen in desktop mode.”
 **Acceptance:** The historical story opens with a concise title that makes the French Revolution the source of the political possibility, retains “Romania made it a country,” and keeps the full hero visible in one desktop viewport.
 **Resolution:** Recast the title as “The French Revolution made a nation imaginable. Romania made it a country.” The French echo was updated to match. The desktop hero now has a fixed viewport height with compact type and responsive vertical spacing, while the mobile hero remains content-led. Removed the flag section after review; the landing now contrasts the European claim with “war, corruption, oppression” and explicitly right-anchors the desktop route strip.
-**Commit:** pending
+**Commit:** `4fd97ad`
 
 ### R-007 — The danger of the three empires
 
-**Status:** implemented locally; awaiting review
+**Status:** implemented
 **Priority:** high
 **Area:** main story
 **Review:** “the story is that a country that is squeezed between 3 empires without a far away friend and source of inspiration is in a very dangerous place — not just territorial, but also its soul. the french [eighteenth-century] ideas were those ideas. also, [find] a photo which includes the full Moldova, before the annexation of Bessarabia by the Russian Empire.”
 **Acceptance:** The opening map section presents the three empires as an existential pressure, explains France as a distant intellectual horizon, and shows Moldavia whole before the 1812 annexation.
 **Resolution:** Rewrote the section around law, political imagination, and selfhood; named the French Enlightenment and Revolution as the source of a vocabulary for independence; replaced the 1856 map with a sourced 1810 map showing Moldavia before Bessarabia’s annexation.
+**Commit:** `e9d884c`
+
+### R-008 — Editorial expansion and French echoes
+
+**Status:** implemented
+**Priority:** high
+**Area:** main story
+**Review:** “incorporate the changed texts in the page and do the translation to french as well.”
+**Acceptance:** The returned English editing copy is integrated into the historical story, with matching French echoes for the new and revised passages.
+**Resolution:** Integrated the revised narrative, including the Transylvanian thread from the <i>Supplex</i> through 1918; added French echoes throughout; corrected surface-language and chronology issues in the editing copy; and added sources for the new historical claims.
 **Commit:** pending
 
 ## Decision Log
