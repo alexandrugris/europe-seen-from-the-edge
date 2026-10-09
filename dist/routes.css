@@ -54,9 +54,11 @@ h2 {
 .route-list span { color: var(--gold-dim); font-style: italic; font-size: 1rem; }
 .route-list p { margin: .2rem 0 0; max-width: 40rem; color: var(--muted); font-size: .97rem; line-height: 1.5; }
 
-/* unwritten subjects: present, but visibly not yet a destination */
-.route-list--pending > li > span:first-child { color: var(--muted); }
-.route-list--pending a { pointer-events: none; }
+/* annex rooms: shorter entries, no descriptive paragraph */
+.room-lede { max-width: 40rem; margin: 1.2rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+.route-list--rooms > li { grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: baseline; }
+.route-list--rooms a { font-size: clamp(1.05rem, 1.8vw, 1.3rem); }
+.route-list--rooms span { font-size: .95rem; }
 
 .fr-echo--head { margin-top: .5rem; }
 main .fr-echo--head { max-width: 40rem; }
