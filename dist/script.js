@@ -1,10 +1,14 @@
 const progress = document.querySelector(".reading-progress span");
 const reveals = document.querySelectorAll(".reveal");
+const thread = document.querySelector(".red-thread span");
 
 const updateProgress = () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const value = scrollable > 0 ? window.scrollY / scrollable : 0;
   progress.style.width = `${Math.min(1, Math.max(0, value)) * 100}%`;
+  if (thread) {
+    thread.style.transform = `scale(${0.82 + value * 0.5})`;
+  }
 };
 
 const observer = new IntersectionObserver(
