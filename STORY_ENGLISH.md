@@ -54,8 +54,6 @@ Read each pair across. The line between them is the story.
 
 Moldavia and Wallachia live between Ottoman suzerainty and Russian pressure. Romanian is the language of a people, not yet the unquestioned language of government. In Habsburg Transylvania, the *Școala Ardeleană* — Samuil Micu, Gheorghe Șincai, Petru Maior, Ioan Budai-Deleanu — turns the Latin origin of the language into a political argument.
 
-> "The 'little Rome' of the East and Romanian regeneration."
-
 In 1791, the *Supplex Libellus Valachorum* asked Emperor Leopold II to recognise Romanians in Transylvania as a constituent nation alongside the Hungarians, Székelys, and Saxons. The petition was refused. In 1825, the *Lexicon of Buda* published a four-language dictionary using Latin script. Both acts sought the same thing: to place Romanians on Europe’s map as a people before nearby empires could erase them.
 
 ## The most intimate frontier

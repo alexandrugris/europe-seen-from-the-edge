@@ -168,6 +168,16 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Resolution:** Rebuilt the three-empires section as a full-viewport map screen with a concise three-empire key; added Declaration-of-the-Rights artwork behind the Paris question; reframed 1848 as the Springtime of Nations; revised the Russian-Empire, Moscow, French-patronage, and crossroads copy; used the archival Calea Victoriei photograph as the late-century background; and added mobile-specific treatments for the new visual layers.
 **Commit:** `2d7fcef`
 
+### R-010 — Make Paris visible; remove the unexplained quotation
+
+**Status:** implemented locally; awaiting review
+**Priority:** high
+**Area:** main story, imagery, sourcing
+**Review:** “this requires a bit more work. the background is not great. do something else? maybe some image of paris at the epoch - very muted, but recognizable?” and “what is exactly this? where is the quote from?”
+**Acceptance:** The Paris question is set over a recognisable, restrained period view of Paris; no quotation remains unless it has an attributable source.
+**Resolution:** Replaced the Rights-of-Man background with Louis Daguerre’s public-domain 1838 Boulevard du Temple photograph, kept it muted beneath the editorial copy, credited it in the source drawer, and removed the unsupported “little Rome” line from the page and English manuscript.
+**Commit:** pending
+
 ## Decision Log
 
 | Date | Decision | Reason |

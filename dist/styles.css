@@ -59,7 +59,7 @@ h1 em { color: #e4c98d; font-weight: 400; }
 
 .opening, .language-section, .pressure { position: relative; padding: clamp(7rem, 13vw, 13rem) max(1.5rem, 6vw); overflow: hidden; }
 .opening { padding-block: clamp(3.75rem, 6vh, 5rem); }
-.opening { min-height: 100svh; display: grid; align-content: center; background: linear-gradient(90deg, rgba(239,234,221,.97) 0%, rgba(239,234,221,.91) 50%, rgba(239,234,221,.53) 100%), url("./assets/rights-of-man-1789.jpg") right center / min(64vw, 900px) auto no-repeat, var(--paper); }
+.opening { min-height: 100svh; display: grid; align-content: center; background: linear-gradient(90deg, rgba(239,234,221,.97) 0%, rgba(239,234,221,.93) 42%, rgba(239,234,221,.78) 100%), url("./assets/paris-boulevard-1838.jpg") center / cover no-repeat, var(--paper); }
 .opening::before { content: ""; position: absolute; inset: 2.2rem max(1.5rem, 6vw); pointer-events: none; border-block: 1px solid rgba(23,26,33,.12); }
 .section-kicker { margin-bottom: 1.4rem; color: var(--red); font-size: .68rem; font-weight: 750; }
 .opening > .section-kicker, .opening > h2 { width: min(1000px, 100%); margin-inline: auto; text-align: center; }
@@ -275,7 +275,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
   .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
-  .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.96), rgba(239,234,221,.78)), url("./assets/rights-of-man-1789.jpg") 72% center / auto 82% no-repeat, var(--paper); }
+  .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.97), rgba(239,234,221,.82)), url("./assets/paris-boulevard-1838.jpg") 65% center / auto 100% no-repeat, var(--paper); }
   .opening::before { inset: 1.3rem; }
   .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-intro { gap: .8rem; }
