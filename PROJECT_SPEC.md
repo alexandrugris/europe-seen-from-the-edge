@@ -160,13 +160,13 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 
 ### R-009 — Recompose the story screens
 
-**Status:** implemented locally; awaiting review
+**Status:** implemented
 **Priority:** high
 **Area:** main story, imagery
 **Review:** Rework the three-empires screen; use map or background art to make the Paris question legible; make 1848 the “Springtime of Nations”; sharpen the Russian Empire and Moscow framing; make the late-nineteenth-century European-claim section visual and historically precise; revise the crossroads title; keep the Markdown copy current; make the desktop sections fit a screen and retain a working mobile layout.
 **Acceptance:** The opening map works as a full-bleed visual rather than a stranded figure; the Paris question has visual texture; revised titles and bilingual copy are present; the archival Calea Victoriei image supports the late-century thesis; and the editing manuscript matches the visible English copy.
 **Resolution:** Rebuilt the three-empires section as a full-viewport map screen with a concise three-empire key; added Declaration-of-the-Rights artwork behind the Paris question; reframed 1848 as the Springtime of Nations; revised the Russian-Empire, Moscow, French-patronage, and crossroads copy; used the archival Calea Victoriei photograph as the late-century background; and added mobile-specific treatments for the new visual layers.
-**Commit:** pending
+**Commit:** `2d7fcef`
 
 ## Decision Log
 
