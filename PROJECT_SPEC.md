@@ -178,6 +178,16 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Resolution:** Replaced the Rights-of-Man background with Louis Daguerre’s public-domain 1838 Boulevard du Temple photograph, kept it muted beneath the editorial copy, credited it in the source drawer, and removed the unsupported “little Rome” line from the page and English manuscript.
 **Commit:** `3234ca6`
 
+### R-011 — Make Manuc’s inn a visual biographical story
+
+**Status:** implemented locally; awaiting review
+**Priority:** high
+**Area:** annex, imagery, sourcing
+**Review:** “you have the story of manuc here, also as md in the project file. update the Manuc section of the site, make it really nice. Use words and titles from the story to make a visual story, with images, ... go for it.”
+**Acceptance:** The Manuc destination has a distinct, image-led narrative that gives his Armenian-Danubian biography, Bucharest’s multilingual commercial life, the 1812 treaty, and the building’s continuity clear visual and editorial weight. Existing Architecture and Art destinations retain their shared styles.
+**Resolution:** Rebuilt the destination around “A courtyard for a continent,” with a full-bleed inn façade, Manuc’s route as a compact life ledger, an Old Town street-name guest list, a credited Szathmári historic view, a treaty sequence, and a final contemporary courtyard. Added a focused source drawer and preserved the shared annex treatment used by the other destinations.
+**Commit:** pending
+
 ## Decision Log
 
 | Date | Decision | Reason |
