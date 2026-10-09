@@ -1,46 +1,53 @@
 # Repository Guidelines
 
+## Continuity & Source of Truth
+
+Before editing, read `PROJECT_SPEC.md`: the living spec, review inbox, decision log, active milestone, and restart guide. Update it after each meaningful pass and before committing.
+
 ## Project Structure & Module Organization
 
-This repository contains a buildless, single-page historical narrative:
+This is a buildless historical narrative. Treat `dist/` as authored source.
 
-- `dist/index.html` — semantic story structure, copy, citations, and image credits.
-- `dist/styles.css` — responsive editorial layout, palette, and motion.
-- `dist/script.js` — reading progress and reveal behaviour.
-- `dist/assets/` — locally hosted archival and documentary images.
-- `.openai/hosting.json` — private Sites deployment configuration.
+- `dist/index.html`: story, citations, and image credits.
+- `dist/styles.css`: responsive editorial layout and motion.
+- `dist/script.js`: reading progress and reveal behaviour.
+- `dist/assets/`: archival images.
+- `.openai/hosting.json`: private Sites configuration.
 
-Treat `dist/` as the authored static site, not generated output. Keep the experience linear: new material should strengthen the existing narrative rather than introduce dashboards, menus, or parallel entry paths.
+Keep one linear journey; do not introduce dashboards, menus, or competing entry points.
 
 ## Development and Validation Commands
 
-No dependency installation or build step is required. Preview locally with:
-
 ```sh
 python3 -m http.server 4173 --directory dist
+node --check dist/script.js
+git diff --check
 ```
 
-Then open `http://127.0.0.1:4173/`. Before committing, run:
-
-```sh
-node --check dist/script.js  # validate JavaScript syntax
-git diff --check             # catch whitespace errors
-```
-
-Verify the opening, one archival section, and the ending at desktop and mobile widths. Check that all local images load and that the browser console remains clean.
+Preview `http://127.0.0.1:4173/`. Check the opening, one archival section, and the ending at desktop and mobile widths. Confirm images load and the console stays clean.
 
 ## Coding Style & Naming Conventions
 
-Use 2-space indentation in HTML, CSS, JavaScript, JSON, and SVG. Prefer semantic HTML, descriptive CSS classes in lowercase kebab-case, and JavaScript variables in `camelCase`. Keep CSS tokens in `:root`; reuse the established paper, navy, red, and gold palette. Respect `prefers-reduced-motion` when adding animation.
+Use 2-space indentation. Prefer semantic HTML, lowercase kebab-case CSS classes, and `camelCase` JavaScript. Keep tokens in `:root`, reuse the paper/navy/red/gold palette, and respect `prefers-reduced-motion`.
 
-## Historical and Editorial Standards
+## Approved Baseline & Editorial Standards
 
-Write short, literary passages supported by specific facts. Distinguish documented events from interpretation, avoid collective blame, and name regimes or state policies precisely. Add authoritative sources for factual claims and preserve creator, title, date, and licence information for every image. Never use generated imagery as historical evidence.
+Tag `pdf-baseline-v1` (`1f0b9df`) is the approved baseline. Build on it; do not rewrite it without explicit direction. The core idea: French revolutionary language, education, and culture gave Romanian elites a vocabulary for freedom that Romania turned into a country. German and other threads remain additions, not competing theses.
+
+Write literary passages grounded in facts. Separate events from interpretation, name regimes precisely, and avoid collective blame. Preserve citations and image credits. Never use generated imagery as historical evidence.
+
+## Planned Additive Features
+
+- Add an image-led opening: Kyiv, Tbilisi, and Romania’s 2017 anti-corruption protests; use minimal labels.
+- Keep English first with a restrained italic French echo beneath it.
+- Place annexes behind one end doorway: Hanul lui Manuc, architecture, art, language, the Paris generation, and territorial maps.
+- In the language annex, distinguish inherited Latin vocabulary from later French or learned Latin, Slavic, Turkish, and other layers. Explain why estimates differ between core-vocabulary samples and full dictionaries.
+- Let images, objects, buildings, and individual lives carry the story; avoid dense explanatory panels.
 
 ## Commit & Pull Request Guidelines
 
-Use concise imperative subjects, such as `Refine 1848 narrative` or `Fix mobile Carol portrait`. Keep commits focused. Pull requests should summarize the narrative or visual change, list validation performed, link relevant sources, and include desktop and mobile screenshots for layout changes.
+Use concise imperative subjects, such as `Add language annex`. Keep commits focused. Pull requests should summarize changes, validation, and sources, with desktop/mobile screenshots for layout work.
 
 ## Security & Deployment
 
-Never commit credentials or tokens. Preserve the existing Sites project ID and private audience unless a change is explicitly requested.
+Never commit credentials or tokens. Preserve the Sites project ID and private audience unless a change is explicitly requested.

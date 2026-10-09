@@ -1,0 +1,74 @@
+:root {
+  --night: #10141d;
+  --ink: #171a21;
+  --paper: #f1eadc;
+  --cream: #f4eee2;
+  --gold: #dfc57e;
+  --red: #9e3439;
+  --muted: #6c665e;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Baskerville, Georgia, serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--serif); }
+a { color: inherit; }
+.annex-header { position: absolute; z-index: 3; top: 0; right: 0; left: 0; width: min(1180px, calc(100% - 48px)); margin: auto; padding: 1.3rem 0; display: flex; justify-content: space-between; align-items: center; color: var(--cream); font: 700 .62rem/1.2 var(--sans); letter-spacing: .09em; text-transform: uppercase; }
+.annex-home { color: var(--gold); text-decoration: none; }
+.annex-nav { display: flex; gap: 1.2rem; }
+.annex-nav a { color: rgba(244,238,226,.86); text-decoration: none; }
+.annex-nav a:hover, .annex-nav a:focus-visible, .annex-home:hover, .annex-home:focus-visible { color: var(--gold); }
+.annex-hero { position: relative; min-height: min(760px, 88svh); overflow: hidden; display: grid; align-items: end; color: var(--cream); background: var(--night); }
+.annex-hero figure, .annex-hero figure img { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
+.annex-hero figure img { object-fit: cover; filter: saturate(.72) contrast(1.08) brightness(.72); }
+.annex-hero::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(7,10,16,.91), rgba(7,10,16,.52) 59%, rgba(7,10,16,.16)), linear-gradient(0deg, rgba(7,10,16,.9), transparent 67%); content: ""; }
+.annex-hero--manuc figure img { object-position: center 56%; }
+.annex-hero--architecture figure img { object-position: center; }
+.annex-hero--art figure img { object-position: center 35%; }
+.annex-hero-copy { position: relative; z-index: 2; width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 8rem 0 clamp(3rem, 10vh, 7rem); }
+.annex-kicker { margin: 0 0 1rem; color: var(--gold); font: 750 .64rem/1.25 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+.annex-hero h1 { max-width: 780px; margin: 0; font-size: clamp(3.7rem, 8vw, 8.4rem); font-weight: 400; letter-spacing: -.065em; line-height: .82; }
+.annex-hero h1 em { color: var(--gold); font-weight: 400; }
+.annex-fr { margin: 1.2rem 0 0; color: rgba(244,238,226,.82); font-size: clamp(1rem, 1.5vw, 1.3rem); font-style: italic; }
+.annex-deck { max-width: 630px; margin: 1.8rem 0 0; font-size: clamp(1.02rem, 1.5vw, 1.24rem); line-height: 1.55; }
+.annex-story { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: clamp(4rem, 10vw, 9rem) 0; }
+.annex-intro { max-width: 780px; margin-bottom: clamp(4rem, 8vw, 7rem); }
+.annex-intro h2, .annex-panel h2 { margin: 0 0 1rem; font-size: clamp(2.5rem, 5.1vw, 5.7rem); font-weight: 400; letter-spacing: -.055em; line-height: .9; }
+.annex-intro p, .annex-panel p { font-size: clamp(1.03rem, 1.45vw, 1.22rem); line-height: 1.65; }
+.annex-intro .annex-fr, .annex-panel .annex-fr { color: var(--muted); font-size: clamp(.95rem, 1.25vw, 1.08rem); }
+.annex-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.5rem, 6vw, 6rem); align-items: start; }
+.annex-panel { padding-top: 1.5rem; border-top: 1px solid rgba(23,26,33,.28); }
+.annex-panel h2 { font-size: clamp(2rem, 3.6vw, 3.6rem); }
+.annex-panel h3 { margin: 2.2rem 0 .6rem; color: var(--red); font: 750 .68rem/1.3 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
+.annex-panel p { margin: 0 0 1.15rem; }
+.annex-figure { margin: clamp(4rem, 9vw, 8rem) 0; }
+.annex-figure img { display: block; width: 100%; max-height: 75svh; object-fit: cover; }
+.annex-figure figcaption { margin-top: .65rem; color: var(--muted); font: .63rem/1.45 var(--sans); letter-spacing: .09em; text-transform: uppercase; }
+.annex-statement { margin: clamp(3rem, 7vw, 7rem) 0 0; padding: clamp(2rem, 5vw, 4rem); color: var(--cream); background: var(--night); font-size: clamp(1.75rem, 3.8vw, 4.2rem); line-height: 1; letter-spacing: -.045em; }
+.annex-statement em { color: var(--gold); }
+.annex-statement span { display: block; margin-top: 1.2rem; color: rgba(244,238,226,.74); font-size: .45em; line-height: 1.25; font-style: italic; letter-spacing: 0; }
+.annex-sources { padding: 2rem 0 0; border-top: 1px solid rgba(23,26,33,.28); }
+.annex-sources h2 { margin: 0 0 .85rem; color: var(--red); font: 750 .66rem/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.annex-sources ul { margin: 0; padding-left: 1rem; }
+.annex-sources li { margin: .35rem 0; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+.annex-sources a { text-underline-offset: .18em; }
+
+@media (max-width: 720px) {
+  .annex-header { width: calc(100% - 32px); padding: 1rem 0; font-size: .51rem; }
+  .annex-nav { gap: .7rem; }
+  .annex-hero { min-height: 88svh; }
+  .annex-hero::after { background: linear-gradient(0deg, rgba(7,10,16,.92), rgba(7,10,16,.38) 72%, rgba(7,10,16,.62)); }
+  .annex-hero-copy { width: calc(100% - 32px); padding: 7rem 0 2.7rem; }
+  .annex-kicker { font-size: .56rem; }
+  .annex-hero h1 { font-size: clamp(3.15rem, 15vw, 4.8rem); }
+  .annex-fr { margin-top: .9rem; font-size: .96rem; }
+  .annex-deck { margin-top: 1.25rem; font-size: 1rem; line-height: 1.45; }
+  .annex-story { width: calc(100% - 32px); padding: 4rem 0; }
+  .annex-intro { margin-bottom: 3.5rem; }
+  .annex-intro h2 { font-size: clamp(2.65rem, 12vw, 4rem); }
+  .annex-intro p, .annex-panel p { font-size: 1rem; line-height: 1.55; }
+  .annex-grid { grid-template-columns: 1fr; gap: 2.8rem; }
+  .annex-figure { margin: 3.5rem 0; }
+  .annex-statement { margin-top: 3.5rem; padding: 1.65rem; font-size: clamp(2rem, 9vw, 3rem); }
+}

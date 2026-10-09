@@ -26,38 +26,22 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .reading-progress span { display: block; width: 0; height: 100%; background: var(--red-bright); }
 .eyebrow, .section-kicker, .track-label, .epoch-date, .timeline-intro, figcaption, .begin, .footer-note { font-family: var(--sans); letter-spacing: .16em; text-transform: uppercase; }
 
-.hero { position: relative; min-height: 100svh; overflow: hidden; display: grid; place-items: center; color: #faf4e7; background: var(--night); }
+.hero { position: relative; height: 100svh; min-height: 40rem; overflow: hidden; display: grid; place-items: center; color: #faf4e7; background: var(--night); }
 .hero-half { position: absolute; inset: 0 50% 0 0; background-position: center; background-size: cover; filter: saturate(.78) contrast(1.08); }
 .hero-half--france { background-image: url("./assets/lamartine-1848.jpg"); }
 .hero-half--romania { inset: 0 0 0 50%; background-image: url("./assets/calea-victoriei-1900.jpg"); }
 .hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,10,15,.7), rgba(7,10,15,.36) 48%, rgba(7,10,15,.62)), linear-gradient(0deg, rgba(7,10,15,.83), transparent 54%, rgba(7,10,15,.38)); }
-.hero-content { position: relative; z-index: 2; width: min(1210px, calc(100% - 48px)); margin: auto; padding: 14vh 0 17vh; }
-.eyebrow { margin: 0 0 1.9rem; color: #e6cb91; font-size: .68rem; font-weight: 700; }
-.hero-route { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.75rem; color: rgba(255,255,255,.82); font: 700 .62rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+.hero-content { position: relative; z-index: 2; width: min(1210px, calc(100% - 48px)); margin: auto; padding: clamp(2.5rem, 6vh, 4.5rem) 0 clamp(4.5rem, 9vh, 6.5rem); }
+.eyebrow { margin: 0 0 1.3rem; color: #e6cb91; font-size: .68rem; font-weight: 700; }
+.hero-route { display: flex; align-items: center; gap: .65rem; margin-bottom: 1.2rem; color: rgba(255,255,255,.82); font: 700 .62rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
 .hero-route i { width: clamp(2rem, 7vw, 5rem); height: 1px; background: var(--red-bright); }
-h1 { max-width: 1120px; margin-bottom: 2rem; font-size: clamp(3.6rem, 8vw, 8.3rem); font-weight: 400; line-height: .86; letter-spacing: -.06em; text-wrap: balance; }
+h1 { max-width: 1120px; margin-bottom: 1.25rem; font-size: clamp(3.4rem, 7vw, 7.15rem); font-weight: 400; line-height: .88; letter-spacing: -.06em; text-wrap: balance; }
 h1 em { color: #e4c98d; font-weight: 400; }
-.hero-title-fr { max-width: 830px; margin: -.75rem 0 2rem clamp(.2rem, 4vw, 3rem); color: #dfc385; font-size: clamp(1.05rem, 1.7vw, 1.38rem); font-style: italic; line-height: 1.45; }
-.hero-deck { max-width: 650px; margin: 0 0 0 clamp(.3rem, 9vw, 7rem); font-size: clamp(1.12rem, 1.8vw, 1.48rem); line-height: 1.5; }
-.hero-deck--fr { margin-top: .65rem; color: #d9d0ba; font-size: clamp(.92rem, 1.35vw, 1.08rem); font-style: italic; line-height: 1.5; }
+.hero-title-fr { max-width: 830px; margin: -.35rem 0 1.2rem clamp(.2rem, 4vw, 3rem); color: #dfc385; font-size: clamp(1rem, 1.45vw, 1.2rem); font-style: italic; line-height: 1.4; }
+.hero-deck { max-width: 650px; margin: 0 0 0 clamp(.3rem, 9vw, 7rem); font-size: clamp(1.05rem, 1.55vw, 1.32rem); line-height: 1.42; }
+.hero-deck--fr { margin-top: .45rem; color: #d9d0ba; font-size: clamp(.84rem, 1.15vw, .98rem); font-style: italic; line-height: 1.4; }
 .begin { position: absolute; z-index: 3; bottom: 2rem; left: 2rem; display: flex; gap: .8rem; align-items: center; color: white; font-size: .62rem; font-weight: 750; text-decoration: none; }
 .begin span { color: var(--red-bright); font-size: 1rem; }
-
-.now { position: relative; min-height: 100svh; overflow: hidden; padding: clamp(7rem, 11vw, 10rem) max(1.5rem, 6vw) clamp(4rem, 7vw, 7rem); color: white; background: var(--night); }
-.now-photo-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
-.now-photo { background-position: center; background-size: cover; filter: saturate(.7) contrast(1.1); }
-.now-photo--kyiv { background-image: url("./assets/euromaidan-flags.jpg"); }
-.now-photo--tbilisi { background-image: url("./assets/tbilisi-europe.jpg"); }
-.now-photo--bucharest { background-image: url("./assets/bucharest-wall-of-light-2017.jpg"); }
-.now-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,9,14,.56), rgba(6,9,14,.16) 50%, rgba(6,9,14,.34)), linear-gradient(0deg, rgba(6,9,14,.82), transparent 52%, rgba(6,9,14,.34)); }
-.now-copy, .now-city-rail { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
-.now-copy { max-width: 940px; margin: 9vh auto 0; text-align: center; text-shadow: 0 3px 28px rgba(0,0,0,.75); }
-.now-copy h2 { margin-bottom: .8rem; font-size: clamp(3.6rem, 7.4vw, 7.4rem); }
-.now-copy p { margin: 0 auto; color: #ead59c; font-size: clamp(1rem, 1.65vw, 1.4rem); font-style: italic; line-height: 1.35; }
-.now-city-rail { position: absolute; z-index: 2; left: max(1.5rem, 6vw); right: max(1.5rem, 6vw); bottom: 1.4rem; width: auto; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.35); }
-.now-city-rail p { margin: 0; padding: .85rem .9rem 0; border-right: 1px solid rgba(255,255,255,.24); text-align: center; }
-.now-city-rail p:last-child { border-right: 0; }
-.now-city-rail b { display: block; color: #f1dfae; font: 750 .62rem/1.25 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
 
 .frontier-map { position: relative; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: clamp(2.5rem, 7vw, 8rem); align-items: center; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); background: #e3d1b0; }
 .frontier-copy { max-width: 590px; }
@@ -216,20 +200,6 @@ blockquote { margin: 2rem 0 .65rem; padding: 1.1rem 0 0 1.25rem; border-left: 2p
 .crossroads-line { margin-top: clamp(5rem, 9vw, 8rem); padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.18); color: #ead49d; font-size: clamp(1.6rem, 3.4vw, 3.2rem); font-style: italic; line-height: 1.2; }
 .crossroads-line span { display: block; margin-top: .65rem; color: #bdbab2; font-size: .58em; line-height: 1.35; }
 
-.annex-door { position: relative; min-height: 86svh; display: grid; align-items: center; overflow: hidden; padding: clamp(7rem, 12vw, 11rem) max(1.5rem, 6vw); color: #f4ede0; background: #10151e; }
-.annex-door-photo { position: absolute; inset: 0; background: url("./assets/hanul-manuc-courtyard.jpg") center / cover no-repeat; filter: saturate(.58) contrast(1.08); }
-.annex-door-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,15,22,.95), rgba(11,15,22,.78) 54%, rgba(11,15,22,.38)), linear-gradient(0deg, rgba(11,15,22,.88), transparent 50%); }
-.annex-door-copy { position: relative; z-index: 1; width: min(800px, 100%); margin-left: max(0px, calc((100% - 1120px) / 2)); }
-.annex-door .section-kicker { color: #e3c681; }
-.annex-door h2 { margin-bottom: 1.4rem; }
-.annex-door-copy > p:not(.section-kicker):not(.fr-echo):not(.annex-door-list) { max-width: 660px; font-size: clamp(1.08rem, 1.65vw, 1.28rem); line-height: 1.72; }
-.annex-door .fr-echo { max-width: 660px; color: #beb8ad; }
-.annex-door-list { margin: 2.4rem 0 1.8rem; color: #e8d39b; font: 750 .64rem/1.7 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
-.annex-door-link { display: inline-flex; align-items: center; gap: 1rem; padding: .95rem 1.25rem; border: 1px solid rgba(255,255,255,.42); color: white; font: 750 .69rem/1 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; transition: color .25s ease, background .25s ease; }
-.annex-door-link:hover { color: #171a21; background: #e8d39b; }
-.annex-door-link span { color: #dfbd6d; font-size: 1.1rem; }
-.annex-door-link:hover span { color: #8e3b35; }
-
 footer { padding: 2.7rem max(1.5rem, 6vw); color: #bbb9b4; background: #090c12; font-family: var(--sans); }
 footer details { width: min(1120px, 100%); margin: auto; }
 footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
@@ -261,7 +231,6 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 @media (max-width: 760px) {
   .frontier-map, .crossroads-grid, .balcescu-moment { grid-template-columns: 1fr; }
   .frontier-map { gap: 2.5rem; }
-  .now-copy { width: 100%; margin-left: 0; }
   .balcescu-moment figure { width: min(235px, 62%); }
   .paired-timeline { grid-template-columns: 1fr; gap: 2.4rem; }
   .paired-timeline::before { inset: 0 auto 0 14px; height: 100%; }
@@ -272,6 +241,8 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 }
 
 @media (max-width: 650px) {
+  .hero { height: auto; min-height: 100svh; }
+  .hero-content { padding-block: 7rem 7.5rem; }
   .hero-half--france { inset: 0 45% 0 0; }
   .hero-half--romania { inset: 0 0 0 55%; }
   .hero-content { width: calc(100% - 32px); }
@@ -281,7 +252,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-deck { margin-left: 0; }
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
-  .opening, .language-section, .pressure, .crossroads, .epoch, .annex-door { padding-inline: 1.35rem; }
+  .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
   .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-intro { gap: .8rem; }
   .timeline-note { grid-column: auto; }
@@ -303,11 +274,6 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .german-thread { grid-template-columns: minmax(94px, .34fr) 1fr; gap: 1.25rem; }
   .german-thread figure img { height: 230px; }
   .language-lives li { grid-template-columns: 1fr; gap: .2rem; }
-  .now { min-height: auto; padding-bottom: 2.2rem; }
-  .now-photo-grid { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
-  .now-city-rail { position: relative; inset: auto; margin-top: 3rem; grid-template-columns: 1fr; }
-  .now-city-rail p { padding: .8rem 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
-  .now-city-rail p:last-child { border-bottom: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
