@@ -158,6 +158,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 | 2026-10-09 | Remove overt “Make Europe Great” rhetoric. | European confidence should emerge subtly from the story. |
 | 2026-10-09 | Make the contemporary opening a standalone landing page with destination links. | The root should establish the structure; “The Long Way from Paris” must remain the checkpointed baseline in its own untouched destination. |
 | 2026-10-09 | Revise the historical hero at the reviewer’s request. | The new wording foregrounds the French Revolution as the source of a political possibility while retaining Romanian agency. |
+| 2026-10-09 | Keep a separate English-only Markdown editing copy of the historical story. | It gives the author a simple, round-trip-friendly way to revise prose without touching the page structure or bilingual presentation. |
 
 ## Resume Protocol
 
