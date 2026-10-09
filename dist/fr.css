@@ -1,0 +1,98 @@
+/* Bilingual contract for the whole site.
+   French appears in exactly two roles: a body echo and a heading echo.
+   One size rule each, so a French line always weighs the same next to
+   English wherever it appears. Colours stay contextual (some sections sit on
+   navy, some on paper, some on red) — only the scale is standardised here.
+
+   Loaded last on every page so it wins the cascade. */
+
+.fr-echo {
+  margin-top: .6rem;
+  font-size: .92em;          /* one ratio, everywhere */
+  font-style: italic;
+  line-height: 1.56;
+}
+
+/* the echo of a heading — a real heading, never a caption */
+.fr-echo--head {
+  margin-top: .5rem;
+  font-size: clamp(1.02rem, 1.8vw, 1.42rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Echoes that live inside a display-scale line. They previously had no rule
+   at all and rendered at full display weight, running straight into the
+   English with no line break. */
+.epoch-turn span,
+.pressure-line span {
+  display: block;
+  margin-top: .8rem;
+  font-size: .44em;
+  line-height: 1.42;
+  letter-spacing: -.01em;
+}
+.epoch-turn span { color: #efe4cd; }
+.pressure-line span { color: #ded5c2; }
+
+/* Bring the annex room thesis onto the same .44em scale as the other
+   display-line echoes. */
+.room-thesis span { font-size: .44em; }
+
+/* ---------------------------------------------------------------------------
+   Contextual corrections.
+
+   The base rust colour belongs on paper. A few sections sit on navy, on red or
+   inside a card, and need their own value; and a couple of containers set a
+   font-size on bare `p`, which outranks a single-class heading echo.
+   --------------------------------------------------------------------------- */
+
+/* the hero sits on near-black navy — the rust has no contrast there */
+.hero .fr-echo,
+.hero .fr-echo--head { color: #dfc385; }
+
+/* card-scale headings get a compact echo, or it outweighs the title itself */
+.press-grid .fr-echo--head,
+.chapter-card .fr-echo--head { font-size: .96rem; margin-top: .35rem; }
+
+/* containers that style bare `p` outrank `.fr-echo--head`; restate the size */
+.track-card .fr-echo--head,
+.pressure-card .fr-echo--head,
+.balcescu-moment .fr-echo--head { font-size: clamp(1rem, 1.6vw, 1.28rem); }
+
+/* a centred heading keeps its echo centred */
+.opening > .fr-echo--head { max-width: 900px; margin-inline: auto; text-align: center; }
+
+/* closing statements centre their echo too */
+.chapter-closing > .fr-echo,
+.chapter-closing > .fr-echo--head,
+.annex-hero-copy > .fr-echo,
+.annex-hero-copy > .fr-echo--head { max-width: 780px; margin-inline: auto; }
+
+/* --- contextual colours -------------------------------------------------
+   Each of these used to be carried by a now-removed class (.annex-fr,
+   .chapter-fr, .fr). Sections sit on paper, navy or red, so the value has to
+   follow the surface, not the role. */
+
+/* --- on navy --- */
+.hero .fr-echo, .hero .fr-echo--head { color: #dfc385; }
+.chapter-hero .fr-echo, .chapter-hero .fr-echo--head { color: rgba(246,238,224,.82); }
+.annex-hero .fr-echo, .annex-hero .fr-echo--head { color: #d0c5af; }
+.manuc-hero .fr-echo, .manuc-hero .fr-echo--head { color: rgba(244,238,226,.82); }
+.chapter-split--ink .fr-echo, .chapter-split--ink .fr-echo--head { color: #aaa69d; }
+.chapter-essay--art .fr-echo, .chapter-essay--art .fr-echo--head { color: #aeb1b8; }
+.epoch--paris .fr-echo--head, .epoch--napoleon .fr-echo--head { color: #e4ca8d; }
+.room--art .fr-echo--head { color: #aaa8a3; }
+.room--language .fr-echo--head { color: #aaa8a2; }
+.room--maps .fr-echo--head { color: #a9a6a0; }
+
+/* --- on paper --- */
+.chapter-closing .fr-echo, .chapter-closing .fr-echo--head { color: #82614d; }
+.art-closing .fr-echo, .art-closing .fr-echo--head { color: #f0d688; }
+.annex-intro .fr-echo, .annex-panel .fr-echo { color: var(--muted); }
+
+/* --- apparatus: tiny uppercase labels, so the echo must be smaller --- */
+.manuc-sources .fr-echo--head,
+.sources .fr-echo--head,
+.chapter-sources .fr-echo--head { font-size: .8rem; letter-spacing: .02em; }

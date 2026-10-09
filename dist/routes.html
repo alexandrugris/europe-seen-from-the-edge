@@ -3,21 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10131b" />
+    <meta name="description" content="Every route through Europe, Seen from the Edge — the chapters that exist, and the rooms still to come." />
     <title>Europe, Seen from the Edge — Routes</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./routes.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./fr.css" />
   </head>
   <body>
+    <nav class="site-nav" aria-label="Main">
+      <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
+      <ul class="site-links">
+        <li><a href="./the-long-way-from-paris.html">The story</a></li>
+        <li><a href="./manuc.html">Manuc</a></li>
+        <li><a href="./architecture.html">Architecture</a></li>
+        <li><a href="./art.html">Art</a></li>
+        <li><a href="./annexes/">Annexes</a></li>
+        <li><a href="./routes.html" aria-current="page">Routes</a></li>
+      </ul>
+    </nav>
+
     <main>
-      <a href="./index.html">← Back to the entrance</a>
-      <p class="eyebrow">Future routes</p>
-      <h1>The rooms are here.<br /><em>Their stories come next.</em></h1>
-      <section id="architecture"><h2>Cities in translation</h2><p>Architecture</p></section>
-      <section id="hanul"><h2>At Manuc’s table</h2><p>Hanul lui Manuc</p></section>
-      <section id="language"><h2>Words that travel</h2><p>Language</p></section>
-      <section id="paris-generation"><h2>Portraits in transit</h2><p>The Paris generation</p></section>
-      <section id="territory"><h2>Borders under pressure</h2><p>Territory and pressure</p></section>
-      <section id="intersection"><h2>Many rooms, one home</h2><p>Romania at the intersection</p></section>
-      <section id="art"><h2>Art in public</h2><p>Art and cultural life</p></section>
+      <header class="routes-head">
+        <p class="eyebrow">Every route</p>
+        <h1>Four chapters, one cabinet.<br /><em>And rooms still to build.</em></h1>
+        <p class="fr-echo" lang="fr">Quatre chapitres, un cabinet. Et des pièces encore à construire.</p>
+      </header>
+
+      <section aria-labelledby="written-title">
+        <h2 id="written-title">Written</h2>
+        <p class="fr-echo fr-echo--head" lang="fr">Écrit</p>
+        <ul class="route-list">
+          <li>
+            <a href="./the-long-way-from-paris.html">The Long Way from Paris</a>
+            <span class="fr-echo" lang="fr">La longue route depuis Paris</span>
+            <p>The spine — how the revolution’s vocabulary became a constitution, a language, a state.</p>
+            <p class="fr-echo" lang="fr">L’ossature — comment le vocabulaire de la révolution est devenu constitution, langue, État.</p>
+          </li>
+          <li>
+            <a href="./manuc.html">Manuc’s Inn</a>
+            <span class="fr-echo" lang="fr">L’auberge de Manuc</span>
+            <p>One courtyard, and the treaty that redrew half of Moldavia inside it.</p>
+            <p class="fr-echo" lang="fr">Une cour, et le traité qui redessina la moitié de la Moldavie.</p>
+          </li>
+          <li>
+            <a href="./architecture.html">Architecture · Little Paris</a>
+            <span class="fr-echo" lang="fr">Architecture · Le Petit Paris</span>
+            <p>How a provincial capital learned the grammar of boulevards and concert halls.</p>
+            <p class="fr-echo" lang="fr">Comment une capitale de province apprit la grammaire des boulevards et des salles de concert.</p>
+          </li>
+          <li>
+            <a href="./art.html">Art · Poetry &amp; Painting</a>
+            <span class="fr-echo" lang="fr">Art · poésie et peinture</span>
+            <p>Rosenthal, Aman, Barbizon, Eminescu — and the German key they wrote in.</p>
+            <p class="fr-echo" lang="fr">Rosenthal, Aman, Barbizon, Eminescu — et la clé allemande dans laquelle ils écrivirent.</p>
+          </li>
+          <li>
+            <a href="./annexes/">The Annexes</a>
+            <span class="fr-echo" lang="fr">Les annexes</span>
+            <p>Six rooms for what the chapters could only brush against.</p>
+            <p class="fr-echo" lang="fr">Six pièces pour ce que les chapitres ne faisaient qu’effleurer.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="coming-title">
+        <h2 id="coming-title">Still to come</h2>
+        <p class="fr-echo fr-echo--head" lang="fr">À venir</p>
+        <ul class="route-list route-list--pending">
+          <li><span>The Paris generation</span><span class="fr-echo" lang="fr">La génération parisienne</span></li>
+          <li><span>Territory and pressure</span><span class="fr-echo" lang="fr">Territoire et pression</span></li>
+          <li><span>Romania at the intersection</span><span class="fr-echo" lang="fr">La Roumanie au carrefour</span></li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>

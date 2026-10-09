@@ -69,7 +69,7 @@ h1 em { color: #e4c98d; font-weight: 400; }
 h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; text-wrap: balance; }
 .opening-grid { width: min(940px, 100%); margin: 1.35rem auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 7rem); }
 .opening-grid p { margin: 0; font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.55; }
-.fr-echo { margin-top: .55rem !important; color: #8a5540; font-size: .88em !important; font-style: italic; line-height: 1.55 !important; }
+.fr-echo { margin-top: .55rem; color: #8a5540; font-size: .88em; font-style: italic; line-height: 1.55; }
 .epoch--paris .fr-echo, .epoch--napoleon .fr-echo, .language-section .fr-echo, .pressure .fr-echo { color: #b9b2a4; }
 .timeline-key { position: relative; z-index: 1; width: min(940px, 100%); margin: 1.35rem auto 0; padding: .8rem 0 .9rem; border-block: 1px solid var(--line); text-align: center; }
 .timeline-key-label { margin: 0 0 .55rem; color: var(--red); font: 750 .59rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; }

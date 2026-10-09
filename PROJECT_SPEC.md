@@ -9,7 +9,8 @@ This document is the continuity layer for the project. It records the product in
 - Continuation brief commit: `5247e7e`
 - Source: `dist/` (buildless HTML, CSS, and JavaScript)
 - Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site/?revision=f46bc968>
-- Working preview: root landing page and destination routes, including the expanded Architecture and Art & Poetry chapters, reviewed locally at desktop and 390px mobile widths; committed and ready to push.
+- Working preview: `cd` into the repo and run `./serve.sh`, then open <http://127.0.0.1:4173/>. Review **R-014** is implemented and validated at desktop 1440 and mobile 390: one shared nav on all seven pages, a three-screen landing, and a single bilingual contract with French on every narrative heading. The Site has **not** been published from this state.
+- Source of truth for French: the essay *De la Révolution française à la Grande Guerre, 1789–1914* (Claw, octobre 2026) is written in French and is the original of this English rendering. Prefer its French over any translation written from the English.
 - Repository: <https://github.com/alexandrugris/europe-seen-from-the-edge>
 
 The baseline is approved. New work is additive unless a review explicitly asks to revise existing material.
@@ -208,6 +209,16 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Resolution:** Rebuilt both short destination pages as long-form editorial chapters with an intentionally varied typographic rhythm, responsive visual systems, restrained French echoes and new credited images. The architecture page treats Haussmann as an influence on civic scale rather than a claim that Bucharest was remade as Paris; the art page distinguishes the French academic and Barbizon routes from German Romantic, philosophical and journalistic influences. Validated with `node --check`, `git diff --check`, browser-console checks, and visual review at desktop and 390px mobile widths.
 **Commit:** `7d9fe1a`
 
+### R-014 — Site-wide navigation, landing structure and bilingual consistency
+
+**Status:** implemented
+**Priority:** high
+**Area:** interaction, layout, opening
+**Review:** "the mobile version of the main page looks like shit, fix it"; "the site is not consistent in navigation — there is no consistent navigation menu between the main pages"; "the main landing page needs another explanation — not clear why the sections are as they are, so the menu appears on the second screen and explains why each section is selected as representative"; "the use of french translation is not at all consistent across the sections — make it consistent and equally prominent to english"; "de-robotize the voice and the text wherever possible".
+**Acceptance:** One shared navigation bar present and identical on every page, current page marked; the landing reads as claim → four chapters with the reason each earns its place → annexes; every narrative heading carries a French echo at one consistent scale; the mobile landing is legible and scrollable.
+**Resolution:** A full-site audit found five unrelated navigation patterns across seven pages — including no navigation at all on the 19,646px story page — and a finished nav component in `annex.css` that no page had adopted. Promoted it into `dist/site-nav.css` and linked it from all seven pages with `aria-current="page"` on the current one; this also gave the previously orphaned annexes and routes index their inbound links. The landing was rebuilt as three screens: the claim, "Four ways in" with a one-line rationale per chapter, and the annexes doorway. French was consolidated into a single contract, `dist/fr.css` (`.fr-echo` and `.fr-echo--head`), retiring seven competing classes whose scale ratios ranged from 0.16 to 1.00 — two of which had no CSS rule and rendered at display weight, running into their English with no line break. Every narrative heading now carries French. `routes.html` was an empty stub with seven blank sections; it was written out as a real index and restyled from a stray cream theme into the site's dark system. English text is byte-for-byte unchanged throughout.
+**Commit:** the commit titled *Unify navigation, rebuild the landing, and standardise French* (the one carrying this entry).
+
 ## Decision Log
 
 | Date | Decision | Reason |
@@ -220,13 +231,16 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 | 2026-10-09 | Revise the historical hero at the reviewer’s request. | The new wording foregrounds the French Revolution as the source of a political possibility while retaining Romanian agency. |
 | 2026-10-09 | Keep a separate English-only Markdown editing copy of the historical story. | It gives the author a simple, round-trip-friendly way to revise prose without touching the page structure or bilingual presentation. |
 | 2026-10-09 | Make the Art and Architecture routes into distinct long-form chapters. | The material needs enough room for its sources, historical texture and different French/German threads to become legible without overloading the main story. |
+| 2026-10-09 | Give every page the same fixed navigation bar rather than hiding destinations behind one doorway. | Five unrelated nav patterns existed and the story page had none. A bar also makes orphan pages reachable, which supersedes the earlier "behind one end-of-story doorway" decision; the doorway on the landing remains as a signpost, not the only route. |
+| 2026-10-09 | Standardise French on two classes with one scale each, instead of one class per page. | Seven competing classes spanned 0.16–1.00 of their English line, so French looked heavier on some pages and like a footnote on others. |
+| 2026-10-09 | Treat the French essay, not the English page, as the source of truth for French. | The site is an English rendering of a French original; translating back from English invents French the author never wrote. |
 
 ## Resume Protocol
 
 At the start of a new conversation, ask the agent to:
 
 1. Read `AGENTS.md` and this file completely.
-2. Confirm the branch is `codex/pdf-baseline` and the working tree is understood before editing.
+2. Confirm the branch is `master` and the working tree is understood before editing. (`codex/pdf-baseline` is the frozen approved-baseline branch and is far behind — do not switch to it to continue work.)
 3. Treat `pdf-baseline-v1` as read-only reference, then inspect the latest commits and open reviews.
 4. Work only on the active milestone or explicitly selected review IDs.
 5. Preview and validate the result before committing.

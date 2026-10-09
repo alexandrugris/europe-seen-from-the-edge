@@ -1,0 +1,63 @@
+/* Shared site navigation.
+   One bar, identical in every page, promoted from the annexes' original bar.
+   Every page links out to every other page, so nothing is orphaned and the
+   reader can always get back. */
+
+/* keep in-page jumps clear of the fixed bar */
+html { scroll-padding-top: 4.5rem; }
+
+.site-nav {
+  position: fixed; z-index: 50; inset: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 54px; padding: 0 max(1.1rem, 3.2vw);
+  color: rgba(248, 241, 229, .82);
+  background: rgba(9, 12, 18, .78);
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+  backdrop-filter: blur(13px); -webkit-backdrop-filter: blur(13px);
+  font: 720 .62rem/1.2 var(--sans);
+  letter-spacing: .1em; text-transform: uppercase;
+}
+
+.site-home {
+  display: inline-flex; align-items: baseline; gap: .5rem;
+  color: #ecd28d; text-decoration: none; white-space: nowrap;
+}
+.site-home em {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  letter-spacing: 0; text-transform: none; color: rgba(236, 210, 141, .62);
+}
+
+.site-links {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: clamp(.6rem, 1.5vw, 1.4rem);
+  margin: 0; padding: 0; list-style: none;
+}
+.site-links a {
+  display: inline-block; padding: .35rem 0;
+  color: rgba(248, 241, 229, .78); text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .18s ease, border-color .18s ease;
+}
+.site-links a:hover, .site-links a:focus-visible { color: #ecd28d; outline: 0; }
+.site-links a[aria-current="page"] {
+  color: var(--gold); border-bottom-color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .site-nav {
+    min-height: 48px;
+    font-size: .54rem; letter-spacing: .07em;
+  }
+  .site-home em { display: none; }
+  .site-links { gap: .55rem; }
+}
+
+@media (max-width: 420px) {
+  /* French brand line is dropped first; labels stay readable rather than shrinking. */
+  .site-links { gap: .45rem; }
+  .site-home { font-size: .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-links a { transition: none; }
+}

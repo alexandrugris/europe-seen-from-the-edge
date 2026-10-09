@@ -4,49 +4,139 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#10131b" />
-    <meta name="description" content="Europe, seen from Romania's edge." />
+    <meta name="description" content="Europe, seen from Romania's edge — a story in four chapters and six annex rooms." />
     <title>Europe, Seen from the Edge</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./landing.css" />
+    <link rel="stylesheet" href="./site-nav.css" />
+    <link rel="stylesheet" href="./fr.css" />
   </head>
   <body>
+  <nav class="site-nav" aria-label="Main">
+    <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
+    <ul class="site-links">
+      <li><a href="./the-long-way-from-paris.html">The story</a></li>
+      <li><a href="./manuc.html">Manuc</a></li>
+      <li><a href="./architecture.html">Architecture</a></li>
+      <li><a href="./art.html">Art</a></li>
+      <li><a href="./annexes/">Annexes</a></li>
+      <li><a href="./routes.html">Routes</a></li>
+    </ul>
+  </nav>
     <main class="landing" aria-labelledby="title">
-      <div class="landing-scenes" aria-hidden="true">
-        <figure class="landing-scene landing-scene--kyiv">
-          <img src="./assets/euromaidan-flags.jpg" alt="" />
-        </figure>
-        <figure class="landing-scene landing-scene--tbilisi">
-          <img src="./assets/tbilisi-europe.jpg" alt="" />
-        </figure>
-        <figure class="landing-scene landing-scene--bucharest">
-          <img src="./assets/bucharest-protest-2017.jpg" alt="" />
-        </figure>
-        <figure class="landing-scene landing-scene--bucha">
-          <img src="./assets/bucha-2022.jpg" alt="" />
-        </figure>
-      </div>
-      <div class="landing-shade" aria-hidden="true"></div>
 
-      <section class="landing-content">
-        <header class="landing-intro">
-          <p>Europe, from the edge</p>
-          <h1 id="title">At Europe’s edge,<br /><em>freedom has a flag.</em></h1>
-          <p class="landing-fr" lang="fr">Aux confins de l’Europe, la liberté a un drapeau.</p>
-          <div class="landing-connection">
-            <p>Kyiv · Tbilisi · Bucharest: one claim—justice, freedom, independence. Bucha shows the imperial alternative: war, corruption, oppression. Romania’s past is one regional story, told here from home.</p>
-            <p class="landing-fr" lang="fr">Kyiv · Tbilissi · Bucarest&nbsp;: une même exigence — justice, liberté, indépendance. Boutcha montre l’autre voie impériale&nbsp;: la guerre, la corruption, l’oppression. L’histoire roumaine est l’un des récits de cette région, raconté ici depuis chez soi.</p>
-          </div>
-        </header>
+      <!-- Screen one: the claim -->
+      <section class="screen screen--hero" aria-labelledby="title">
+        <div class="landing-scenes" aria-hidden="true">
+          <figure class="landing-scene landing-scene--kyiv"><img src="./assets/euromaidan-flags.jpg" alt="" /></figure>
+          <figure class="landing-scene landing-scene--tbilisi"><img src="./assets/tbilisi-europe.jpg" alt="" /></figure>
+          <figure class="landing-scene landing-scene--bucharest"><img src="./assets/bucharest-protest-2017.jpg" alt="" /></figure>
+          <figure class="landing-scene landing-scene--bucha"><img src="./assets/bucha-2022.jpg" alt="" /></figure>
+        </div>
+        <div class="landing-shade" aria-hidden="true"></div>
 
-        <nav class="landing-routes" aria-label="Story routes">
-          <a class="landing-route" href="./the-long-way-from-paris.html"><span>A story from Europe’s edge</span><small lang="fr">Une histoire aux confins de l’Europe</small></a>
-          <a class="landing-route" href="./manuc.html"><span>Manuc’s story &amp; his inn</span><small lang="fr">L’histoire de Manuc et son auberge</small></a>
-          <a class="landing-route" href="./architecture.html"><span>Architecture · Little Paris</span><small lang="fr">Architecture · Le Petit Paris</small></a>
-          <a class="landing-route" href="./art.html"><span>Art · poetry &amp; painting</span><small lang="fr">Art · poésie et peinture</small></a>
-        </nav>
+        <div class="hero-inner">
+          <header class="landing-intro">
+            <p class="landing-eyebrow">Europe, from the edge</p>
+            <h1 id="title">At Europe’s edge,<br /><em>freedom has a flag.</em></h1>
+            <p class="landing-fr" lang="fr">Aux confins de l’Europe, la liberté a un drapeau.</p>
+
+            <div class="landing-connection">
+              <p>Kyiv · Tbilisi · Bucharest: one claim — justice, freedom, independence. Bucha shows the imperial alternative: war, corruption, oppression. Romania’s past is one regional story, told here from home.</p>
+              <p class="landing-fr" lang="fr">Kyiv · Tbilissi · Bucarest&nbsp;: une même exigence — justice, liberté, indépendance. Boutcha montre l’autre voie impériale&nbsp;: la guerre, la corruption, l’oppression. L’histoire roumaine est l’un des récits de cette région, raconté ici depuis chez soi.</p>
+            </div>
+          </header>
+
+          <a class="hero-cue" href="#chapters">
+            <span>Four ways in</span>
+            <small lang="fr">Quatre entrées</small>
+            <i aria-hidden="true">↓</i>
+          </a>
+        </div>
       </section>
 
-      <p class="landing-credit"><a href="https://commons.wikimedia.org/wiki/File:The_rally_on_European_Square_in_Kiev_on_Sunday,_November_24,_2013.jpg">Kyiv · 2013 · Ivan Bandura</a> &nbsp; / &nbsp; <a href="https://commons.wikimedia.org/wiki/File:Tbilisi_-_Yes_to_Europe,_No_to_Russian_Law_28_April_2024_(2).jpg">Tbilisi · 2024 · Wikimedia Commons</a> &nbsp; / &nbsp; <a href="https://commons.wikimedia.org/wiki/File:2017.02.02_Romanian_protests_(3).jpg">Bucharest · 2017 · Wintereu</a> &nbsp; / &nbsp; <a href="https://commons.wikimedia.org/wiki/File:Bucha_after_Russian_invasion_of_Ukraine_4.jpg">Bucha · 2022 · Oleksandr Ratushniak</a></p>
+      <!-- Screen two: the chapters, and why each one -->
+      <section class="screen screen--chapters" id="chapters" aria-labelledby="chapters-title">
+        <div class="screen-inner">
+          <header class="screen-head">
+            <p class="landing-eyebrow">The chapters</p>
+            <h2 id="chapters-title">Four ways in</h2>
+            <p class="landing-fr" lang="fr">Quatre entrées</p>
+            <p class="screen-lede">The same border, four ways of looking across it. Each chapter is here because it answers a question the others cannot.</p>
+            <p class="screen-lede landing-fr" lang="fr">La même frontière, quatre façons de la regarder. Chaque chapitre est là parce qu’il répond à une question que les autres ne peuvent pas.</p>
+          </header>
+
+          <nav class="chapter-list" aria-label="Chapters">
+            <a class="chapter" href="./the-long-way-from-paris.html">
+              <span class="chapter-num">01</span>
+              <span class="chapter-body">
+                <span class="chapter-title">The Long Way from Paris</span>
+                <span class="chapter-title landing-fr" lang="fr">La longue route depuis Paris</span>
+                <span class="chapter-why">The spine. How the revolution’s vocabulary travelled east and came home as a constitution, a language, a state.</span>
+                <span class="chapter-why landing-fr" lang="fr">L’ossature. Comment le vocabulaire de la révolution est parti vers l’est et revenu en constitution, en langue, en État.</span>
+              </span>
+            </a>
+
+            <a class="chapter" href="./manuc.html">
+              <span class="chapter-num">02</span>
+              <span class="chapter-body">
+                <span class="chapter-title">Manuc’s Inn</span>
+                <span class="chapter-title landing-fr" lang="fr">L’auberge de Manuc</span>
+                <span class="chapter-why">One courtyard where Armenian merchants, Ottoman pacts and Jewish bankers met — and where half of Moldavia changed hands.</span>
+                <span class="chapter-why landing-fr" lang="fr">Une cour où marchands arméniens, traités ottomans et financiers juifs se sont rencontrés — et où la moitié de la Moldavie a changé de mains.</span>
+              </span>
+            </a>
+
+            <a class="chapter" href="./architecture.html">
+              <span class="chapter-num">03</span>
+              <span class="chapter-body">
+                <span class="chapter-title">Architecture · Little Paris</span>
+                <span class="chapter-title landing-fr" lang="fr">Architecture · Le Petit Paris</span>
+                <span class="chapter-why">How a provincial capital learned to look west: boulevards, concert halls, and the Athenaeum that borrowed them.</span>
+                <span class="chapter-why landing-fr" lang="fr">Comment une capitale de province a appris à regarder vers l’ouest&nbsp;: les boulevards, les salles de concert, et l’Athénée qui les a empruntés.</span>
+              </span>
+            </a>
+
+            <a class="chapter" href="./art.html">
+              <span class="chapter-num">04</span>
+              <span class="chapter-body">
+                <span class="chapter-title">Art · Poetry &amp; Painting</span>
+                <span class="chapter-title landing-fr" lang="fr">Art · poésie et peinture</span>
+                <span class="chapter-why">Rosenthal, Aman, Barbizon, Eminescu. What the West looked like once it had actually arrived.</span>
+                <span class="chapter-why landing-fr" lang="fr">Rosenthal, Aman, Barbizon, Eminescu. À quoi ressemblait l’Ouest une fois arrivé.</span>
+              </span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Screen three: the one door further -->
+      <section class="screen screen--cabinet" aria-labelledby="cabinet-title">
+        <div class="screen-inner">
+          <header class="screen-head">
+            <p class="landing-eyebrow">One door further</p>
+            <h2 id="cabinet-title">And six rooms more</h2>
+            <p class="landing-fr" lang="fr">Et six pièces de plus</p>
+            <p class="screen-lede">Language, the Paris generation, territory and the rest live in a cabinet behind the story — six rooms for what the chapters could only brush against.</p>
+            <p class="screen-lede landing-fr" lang="fr">La langue, la génération parisienne, le territoire et le reste vivent dans un cabinet derrière le récit — six pièces pour ce que les chapitres ne faisaient qu’effleurer.</p>
+          </header>
+
+          <a class="cabinet-door" href="./annexes/">
+            <span class="cabinet-rooms">Manuc · Architecture · Art · Language · Paris · Maps</span>
+            <span class="cabinet-cta">Enter the annexes <i aria-hidden="true">↓</i></span>
+            <span class="cabinet-cta landing-fr" lang="fr">Entrer dans les annexes</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="landing-footer">
+        <p class="landing-credit"><a href="https://commons.wikimedia.org/wiki/File:The_rally_on_European_Square_in_Kiev_on_Sunday,_November_24,_2013.jpg">Kyiv · 2013 · Ivan Bandura</a> &nbsp;/&nbsp; <a href="https://commons.wikimedia.org/wiki/File:Tbilisi_-_Yes_to_Europe,_No_to_Russian_Law_28_April_2024_(2).jpg">Tbilisi · 2024 · Wikimedia Commons</a> &nbsp;/&nbsp; <a href="https://commons.wikimedia.org/wiki/File:2017.02.02_Romanian_protests_(3).jpg">Bucharest · 2017 · Wintereu</a> &nbsp;/&nbsp; <a href="https://commons.wikimedia.org/wiki/File:Bucha_after_Russian_invasion_of_Ukraine_4.jpg">Bucha · 2022 · Oleksandr Ratushniak</a></p>
+        <p class="landing-foot-links">
+          <a href="./the-long-way-from-paris.html">The story <span lang="fr">· Le récit</span></a>
+          <a href="./annexes/">The annexes <span lang="fr">· Les annexes</span></a>
+          <a href="./routes.html">All routes <span lang="fr">· Toutes les routes</span></a>
+        </p>
+      </footer>
     </main>
   </body>
 </html>
