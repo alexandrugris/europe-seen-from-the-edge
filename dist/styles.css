@@ -43,7 +43,23 @@ h1 em { color: #e4c98d; font-weight: 400; }
 .begin { position: absolute; z-index: 3; bottom: 2rem; left: 2rem; display: flex; gap: .8rem; align-items: center; color: white; font-size: .62rem; font-weight: 750; text-decoration: none; }
 .begin span { color: var(--red-bright); font-size: 1rem; }
 
-.opening, .language-section, .pressure, .greatness { position: relative; padding: clamp(7rem, 13vw, 13rem) max(1.5rem, 6vw); overflow: hidden; }
+.now { position: relative; min-height: 72svh; overflow: hidden; display: grid; align-items: center; color: white; background: var(--night); }
+.now-photo, .now-wash { position: absolute; inset: 0; }
+.now-photo { background: url("./assets/tbilisi-europe.jpg") center / cover no-repeat; filter: saturate(.83) contrast(1.13); }
+.now-wash { background: linear-gradient(90deg, rgba(7,10,16,.93), rgba(7,10,16,.67) 54%, rgba(7,10,16,.2)), linear-gradient(0deg, rgba(7,10,16,.76), transparent); }
+.now-copy { position: relative; z-index: 2; width: min(780px, calc(100% - 48px)); margin-left: max(24px, calc((100% - 1120px) / 2)); padding-block: 12vh; }
+.now-copy .section-kicker { color: #e5c975; }
+.now-copy h2 { max-width: 720px; margin-bottom: 1.55rem; font-size: clamp(3.3rem, 6.5vw, 6.5rem); }
+.now-copy p { max-width: 650px; font-size: clamp(1.08rem, 1.6vw, 1.26rem); line-height: 1.7; }
+
+.frontier-map { position: relative; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: clamp(2.5rem, 7vw, 8rem); align-items: center; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); background: #e3d1b0; }
+.frontier-copy { max-width: 590px; }
+.frontier-copy h2 { margin-bottom: 1.45rem; font-size: clamp(3rem, 5.3vw, 5.8rem); }
+.frontier-copy p { font-size: clamp(1.08rem, 1.6vw, 1.28rem); line-height: 1.7; }
+.frontier-figure { margin: 0; padding: .8rem; background: #f1e3ca; box-shadow: 0 25px 65px rgba(66,47,28,.17); transform: rotate(.6deg); }
+.frontier-figure img { border: 1px solid rgba(46,35,23,.42); }
+
+.opening, .language-section, .pressure { position: relative; padding: clamp(7rem, 13vw, 13rem) max(1.5rem, 6vw); overflow: hidden; }
 .opening { min-height: 85vh; display: grid; align-content: center; background: var(--paper); }
 .section-kicker { margin-bottom: 1.4rem; color: var(--red); font-size: .68rem; font-weight: 750; }
 .opening > .section-kicker, .opening > h2 { width: min(1000px, 100%); margin-inline: auto; text-align: center; }
@@ -54,9 +70,9 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight
 .opening-grid { width: min(900px, 100%); margin: 2rem auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); }
 .opening-grid p { margin: 0; font-size: clamp(1.1rem, 1.75vw, 1.35rem); line-height: 1.68; }
 .fr-echo { margin-top: .55rem !important; color: #8a5540; font-size: .88em !important; font-style: italic; line-height: 1.55 !important; }
-.epoch--paris .fr-echo, .epoch--napoleon .fr-echo, .language-section .fr-echo, .pressure .fr-echo, .return .fr-echo { color: #b9b2a4; }
+.epoch--paris .fr-echo, .epoch--napoleon .fr-echo, .language-section .fr-echo, .pressure .fr-echo { color: #b9b2a4; }
 .opening-line { width: min(900px, 100%); margin: 4.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--red); text-align: center; font-size: clamp(1.45rem, 3vw, 2.6rem); font-style: italic; line-height: 1.25; }
-.opening-line span, .epoch-turn span, .pressure-line span, .greatness-line span { display: block; margin-top: .55rem; color: currentColor; font-size: .57em; font-style: italic; line-height: 1.35; opacity: .78; }
+.opening-line span, .epoch-turn span, .pressure-line span { display: block; margin-top: .55rem; color: currentColor; font-size: .57em; font-style: italic; line-height: 1.35; opacity: .78; }
 
 .timeline-intro { position: relative; z-index: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.4rem max(1.5rem, 6vw); color: #ddd8cb; background: var(--night); font-size: .64rem; }
 .timeline-intro > div { display: flex; align-items: center; gap: .65rem; }
@@ -110,6 +126,16 @@ blockquote { margin: 2rem 0 .65rem; padding: 1.1rem 0 0 1.25rem; border-left: 2p
 .pull-line { color: var(--red); font-size: clamp(1.5rem, 3vw, 2.7rem) !important; font-style: italic; line-height: 1.2 !important; }
 .epoch-turn { position: relative; z-index: 2; width: min(900px, 100%); margin: clamp(5rem, 9vw, 8rem) auto 0; color: #e0c47d; text-align: center; font-size: clamp(1.5rem, 3.2vw, 2.9rem); font-style: italic; line-height: 1.3; }
 
+.balcescu-moment { position: relative; z-index: 2; width: min(1000px, 100%); margin: clamp(5rem, 9vw, 8rem) auto 0; padding: clamp(1.4rem, 3vw, 2.4rem); display: grid; grid-template-columns: minmax(180px, .4fr) 1fr; gap: clamp(1.8rem, 4vw, 4rem); align-items: center; border-top: 1px solid rgba(255,255,255,.25); border-bottom: 1px solid rgba(255,255,255,.25); }
+.balcescu-moment figure { margin: 0; transform: rotate(-1.2deg); }
+.balcescu-moment figure img { max-height: 390px; object-fit: cover; filter: sepia(.24) contrast(.92); box-shadow: 0 18px 42px rgba(0,0,0,.38); }
+.balcescu-moment h3 { margin: 0 0 1.2rem; color: #f1eadc; font-size: clamp(2rem, 3.8vw, 3.6rem); font-weight: 400; line-height: 1; letter-spacing: -.045em; }
+.balcescu-moment p { color: #dad4c8; font-size: clamp(1.02rem, 1.45vw, 1.18rem); line-height: 1.68; }
+.balcescu-moment blockquote { margin-top: 1.5rem; color: #ead494; font-size: clamp(1.12rem, 1.9vw, 1.65rem); }
+.balcescu-moment .section-kicker { color: var(--gold); }
+.balcescu-moment .translation { color: #a9a69e; }
+.balcescu-moment .fr-echo { color: #b9b2a4; }
+
 .language-section { color: #f4ede0; background: #172033; }
 .language-section::before { content: ""; position: absolute; z-index: 0; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 47%, rgba(214,180,94,.05) 47% 53%, transparent 53%); }
 .language-heading, .language-grid, .argument { position: relative; z-index: 1; width: min(1170px, 100%); margin-inline: auto; }
@@ -157,23 +183,31 @@ blockquote { margin: 2rem 0 .65rem; padding: 1.1rem 0 0 1.25rem; border-left: 2p
 .napoleon-pair img { height: 270px; object-fit: cover; box-shadow: 0 25px 60px rgba(0,0,0,.33); }
 .napoleon-pair figure:first-child img { object-position: center top; }
 
-.greatness { text-align: center; background: var(--paper); }
-.greatness::after { content: "EUROPE"; position: absolute; z-index: 0; left: 0; right: 0; bottom: -9vw; color: rgba(173,49,59,.05); font-size: 25vw; font-style: italic; line-height: .8; pointer-events: none; }
-.greatness > * { position: relative; z-index: 1; }
-.greatness .section-kicker { color: var(--red); }
-.greatness h2 { margin-bottom: 2.5rem; font-size: clamp(4rem, 11vw, 11rem); }
-.greatness-copy { width: min(780px, 100%); margin: auto; text-align: left; }
-.greatness-copy p { font-size: clamp(1.12rem, 1.72vw, 1.34rem); line-height: 1.73; }
-.greatness-copy .fr-echo { margin-top: -.85rem !important; margin-bottom: 1.65rem; color: #8d5844; }
-.greatness-line { width: min(930px, 100%); margin: clamp(6rem, 11vw, 10rem) auto 0; padding-top: 2rem; border-top: 1px solid var(--line); color: var(--red); font-size: clamp(2rem, 4.5vw, 4.6rem); font-style: italic; line-height: 1.1; }
-
-.return { position: relative; min-height: 90svh; overflow: hidden; display: grid; align-items: center; color: white; background: var(--night); }
-.return-photo, .return-wash { position: absolute; inset: 0; }
-.return-photo { background: url("./assets/tbilisi-europe.jpg") center / cover no-repeat; filter: saturate(.83) contrast(1.13); }
-.return-wash { background: linear-gradient(90deg, rgba(7,10,16,.92), rgba(7,10,16,.65) 55%, rgba(7,10,16,.18)), linear-gradient(0deg, rgba(7,10,16,.7), transparent); }
-.return-copy { position: relative; z-index: 2; width: min(780px, calc(100% - 48px)); margin-left: max(24px, calc((100% - 1120px) / 2)); padding-block: 12vh; }
-.return-copy .section-kicker { color: #e5c975; }
-.return-copy p { max-width: 650px; font-size: clamp(1.08rem, 1.6vw, 1.26rem); line-height: 1.7; }
+.crossroads { position: relative; padding: clamp(7rem, 13vw, 12rem) max(1.5rem, 6vw); overflow: hidden; color: #f1eadf; background: #1a2231; }
+.crossroads::before { content: "INTERSECTION"; position: absolute; top: -2.5vw; left: -1vw; color: rgba(229,202,141,.045); font-size: 17vw; font-style: italic; line-height: 1; pointer-events: none; }
+.crossroads-heading, .crossroads-grid, .crossroads-line { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
+.crossroads-heading { max-width: 830px; margin-bottom: clamp(4rem, 8vw, 7rem); }
+.crossroads-heading .section-kicker { color: var(--gold); }
+.crossroads-heading h2 { margin-bottom: 1.4rem; }
+.crossroads-heading > p { color: #d6d1c7; font-size: clamp(1.08rem, 1.6vw, 1.28rem); line-height: 1.73; }
+.crossroads-heading .fr-echo { color: #b5b1aa; }
+.crossroads-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem, 6vw, 7rem); align-items: stretch; }
+.language-lives { padding: clamp(1.6rem, 3vw, 2.6rem); border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.035); }
+.language-lives ul { margin: 1.75rem 0; padding: 0; list-style: none; }
+.language-lives li { padding: 1rem 0; display: grid; grid-template-columns: minmax(100px, .7fr) 1.3fr; gap: 1rem; border-top: 1px solid rgba(255,255,255,.14); }
+.language-lives li:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
+.language-lives b { color: #e8ce8e; font-size: 1.05rem; font-weight: 400; }
+.language-lives span, .data-note { color: #c8c6c0; font-size: .95rem; line-height: 1.52; }
+.data-note { margin: 0; color: #aeadab; font-style: italic; }
+.german-thread { display: grid; grid-template-columns: minmax(120px, .38fr) 1fr; gap: clamp(1.3rem, 3vw, 2.7rem); align-items: start; padding: clamp(1.1rem, 2vw, 1.7rem) 0; }
+.german-thread figure { margin: 0; padding: .6rem; background: #d5c6a7; transform: rotate(1deg); }
+.german-thread figure img { height: 290px; object-fit: cover; object-position: top; filter: sepia(.1) contrast(.94); }
+.german-thread figcaption { color: #675d4e; }
+.german-thread h3 { margin: 0 0 1.1rem; color: #f0e9dd; font-size: clamp(2rem, 3.6vw, 3.45rem); font-weight: 400; line-height: 1; letter-spacing: -.045em; }
+.german-thread p { color: #d0cec7; font-size: 1.04rem; line-height: 1.67; }
+.german-thread .fr-echo { color: #aaa8a2; }
+.crossroads-line { margin-top: clamp(5rem, 9vw, 8rem); padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.18); color: #ead49d; font-size: clamp(1.6rem, 3.4vw, 3.2rem); font-style: italic; line-height: 1.2; }
+.crossroads-line span { display: block; margin-top: .65rem; color: #bdbab2; font-size: .58em; line-height: 1.35; }
 
 footer { padding: 2.7rem max(1.5rem, 6vw); color: #bbb9b4; background: #090c12; font-family: var(--sans); }
 footer details { width: min(1120px, 100%); margin: auto; }
@@ -190,6 +224,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 @media (max-width: 950px) {
   .hero-half--france { inset: 0 37% 0 0; }
   .hero-half--romania { inset: 0 0 0 63%; }
+  .frontier-map { grid-template-columns: .8fr 1.2fr; gap: 2.5rem; }
   .paired-timeline { grid-template-columns: minmax(0,1fr) 70px minmax(0,1fr); gap: 1.25rem; }
   .track-card--france { padding-right: 0; }
   .track-card--romania { padding-left: 0; }
@@ -197,11 +232,16 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .transfer span { font-size: .5rem; }
   .language-grid { grid-template-columns: .65fr 1fr; gap: 3rem; }
   .pressure-grid { grid-template-columns: repeat(3, 1fr); }
+  .crossroads-grid { gap: 2.5rem; }
   .pressure-card:nth-child(3) { border-right: 0; }
   .pressure-card:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.16); }
 }
 
 @media (max-width: 760px) {
+  .frontier-map, .crossroads-grid, .balcescu-moment { grid-template-columns: 1fr; }
+  .frontier-map { gap: 2.5rem; }
+  .now-copy { width: calc(100% - 42px); margin-left: 21px; }
+  .balcescu-moment figure { width: min(235px, 62%); }
   .paired-timeline { grid-template-columns: 1fr; gap: 2.4rem; }
   .paired-timeline::before { inset: 0 auto 0 14px; height: 100%; }
   .track-card--france, .track-card--romania { padding: 0 0 0 3rem; }
@@ -220,7 +260,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-deck { margin-left: 0; }
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
-  .opening, .language-section, .pressure, .greatness, .epoch { padding-inline: 1.35rem; }
+  .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
   .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-intro { gap: .8rem; }
   .timeline-note { grid-column: auto; }
@@ -239,7 +279,9 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .pressure-card:nth-child(3) { border-right: 0; }
   .pressure-card:last-child { border-bottom: 0; }
   .napoleon-pair img { height: 190px; }
-  .return-copy { width: calc(100% - 42px); margin-left: 21px; }
+  .german-thread { grid-template-columns: minmax(94px, .34fr) 1fr; gap: 1.25rem; }
+  .german-thread figure img { height: 230px; }
+  .language-lives li { grid-template-columns: 1fr; gap: .2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
