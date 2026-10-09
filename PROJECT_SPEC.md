@@ -9,7 +9,7 @@ This document is the continuity layer for the project. It records the product in
 - Continuation brief commit: `5247e7e`
 - Source: `dist/` (buildless HTML, CSS, and JavaScript)
 - Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site/?revision=f46bc968>
-- Working preview: root landing page and destination routes, including the expanded Architecture and Art & Poetry chapters, reviewed locally at desktop and 390px mobile widths; awaiting the implementing commit and push.
+- Working preview: root landing page and destination routes, including the expanded Architecture and Art & Poetry chapters, reviewed locally at desktop and 390px mobile widths; committed and ready to push.
 - Repository: <https://github.com/alexandrugris/europe-seen-from-the-edge>
 
 The baseline is approved. New work is additive unless a review explicitly asks to revise existing material.
@@ -206,7 +206,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Review:** “based on the markdowns in the folder but also on lots of research, do the full pages for art and for architecture. make them beautiful, historical, long. reference to the french schools of painting and the Hausmann Paris architecture. reference to german influences in philosophy, romantic writing, political agenda in writing, papers.”
 **Acceptance:** Architecture is a substantial, image-led historical chapter connecting Brâncovenesc Bucharest, the Parisian lesson in civic scale, the Athenaeum, Calea Victoriei, Neo-Romanian architecture and the distinct Saxon urban inheritance of Transylvania. Art & Poetry gives equal space to Rosenthal, Aman, Grigorescu and Barbizon, Alecsandri, Eminescu’s German intellectual formation, Junimea and the political press. Both pages retain sources, credits, desktop/mobile readability and a single editorial voice.
 **Resolution:** Rebuilt both short destination pages as long-form editorial chapters with an intentionally varied typographic rhythm, responsive visual systems, restrained French echoes and new credited images. The architecture page treats Haussmann as an influence on civic scale rather than a claim that Bucharest was remade as Paris; the art page distinguishes the French academic and Barbizon routes from German Romantic, philosophical and journalistic influences. Validated with `node --check`, `git diff --check`, browser-console checks, and visual review at desktop and 390px mobile widths.
-**Commit:** pending
+**Commit:** `7d9fe1a`
 
 ## Decision Log
 
