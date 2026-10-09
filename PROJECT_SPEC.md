@@ -156,7 +156,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Review:** “incorporate the changed texts in the page and do the translation to french as well.”
 **Acceptance:** The returned English editing copy is integrated into the historical story, with matching French echoes for the new and revised passages.
 **Resolution:** Integrated the revised narrative, including the Transylvanian thread from the <i>Supplex</i> through 1918; added French echoes throughout; corrected surface-language and chronology issues in the editing copy; and added sources for the new historical claims.
-**Commit:** pending
+**Commit:** `e8ac5e6`
 
 ## Decision Log
 
