@@ -186,7 +186,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Review:** “you have the story of manuc here, also as md in the project file. update the Manuc section of the site, make it really nice. Use words and titles from the story to make a visual story, with images, ... go for it.”
 **Acceptance:** The Manuc destination has a distinct, image-led narrative that gives his Armenian-Danubian biography, Bucharest’s multilingual commercial life, the 1812 treaty, and the building’s continuity clear visual and editorial weight. Existing Architecture and Art destinations retain their shared styles.
 **Resolution:** Rebuilt the destination as a full story drawn from the Manuc manuscript: a four-panel opening in the same structure as the root landing page, the identical bilingual four-route menu with Manuc marked current, an arrivals sequence, a life ledger, the Old Town guest list, the “costume, language, room” scene, a credited Szathmári image, the 1812 treaty sequence, and a final contemporary courtyard. Added a focused source drawer and preserved the shared annex treatment used by the other destinations.
-**Commit:** pending
+**Commit:** `1eefd9e`
 
 ### R-012 — Bring the story mechanism into the question screen
 
