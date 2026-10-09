@@ -170,13 +170,13 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 
 ### R-010 — Make Paris visible; remove the unexplained quotation
 
-**Status:** implemented locally; awaiting review
+**Status:** implemented
 **Priority:** high
 **Area:** main story, imagery, sourcing
 **Review:** “this requires a bit more work. the background is not great. do something else? maybe some image of paris at the epoch - very muted, but recognizable?” and “what is exactly this? where is the quote from?”
 **Acceptance:** The Paris question is set over a recognisable, restrained period view of Paris; no quotation remains unless it has an attributable source.
 **Resolution:** Replaced the Rights-of-Man background with Louis Daguerre’s public-domain 1838 Boulevard du Temple photograph, kept it muted beneath the editorial copy, credited it in the source drawer, and removed the unsupported “little Rome” line from the page and English manuscript.
-**Commit:** pending
+**Commit:** `3234ca6`
 
 ## Decision Log
 
