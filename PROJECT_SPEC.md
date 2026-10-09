@@ -190,13 +190,13 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 
 ### R-012 — Bring the story mechanism into the question screen
 
-**Status:** implemented locally; awaiting review
+**Status:** implemented
 **Priority:** high
 **Area:** main story, layout
 **Review:** “this is interesting, but doesn't fit properly on the screen. since this is the core idea of the slide, maybe put it somewhere else? make [it] a bit more standing?” and “this does not represent the slide. maybe call it the path to unification? or the path to modern Romania?”
 **Acceptance:** The France/Romania parallel-timeline key reads as the core mechanism of the Paris-question screen without creating a separate overflow strip; the Transylvanian section title reflects its route to 1918; mobile does not compress the key into unreadable columns.
 **Resolution:** Moved the two-timeline mechanism into a compact, clearly labelled part of the Paris-question screen and removed the detached dark strip; retitled the Transylvanian coda “The path to unification”; and made the key stack on narrow screens.
-**Commit:** pending
+**Commit:** `9d74ce8`
 
 ## Decision Log
 
