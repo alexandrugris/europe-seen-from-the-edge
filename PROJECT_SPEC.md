@@ -4,12 +4,12 @@ This document is the continuity layer for the project. It records the product in
 
 ## Current Checkpoint
 
-- Working branch: `codex/pdf-baseline`
+- Working branch: `master`
 - Approved visual/story baseline: tag `pdf-baseline-v1` (`1f0b9df`)
 - Continuation brief commit: `5247e7e`
 - Source: `dist/` (buildless HTML, CSS, and JavaScript)
 - Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site/?revision=f46bc968>
-- Working preview: root landing page and destination routes added locally; awaiting visual review before commit or publication.
+- Working preview: root landing page and destination routes, including the expanded Architecture and Art & Poetry chapters, reviewed locally at desktop and 390px mobile widths; awaiting the implementing commit and push.
 - Repository: <https://github.com/alexandrugris/europe-seen-from-the-edge>
 
 The baseline is approved. New work is additive unless a review explicitly asks to revise existing material.
@@ -198,6 +198,16 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Resolution:** Moved the two-timeline mechanism into a compact, clearly labelled part of the Paris-question screen and removed the detached dark strip; retitled the Transylvanian coda “The path to unification”; and made the key stack on narrow screens.
 **Commit:** `9d74ce8`
 
+### R-013 — Full architecture and art chapters
+
+**Status:** implemented
+**Priority:** high
+**Area:** annex, imagery, sourcing
+**Review:** “based on the markdowns in the folder but also on lots of research, do the full pages for art and for architecture. make them beautiful, historical, long. reference to the french schools of painting and the Hausmann Paris architecture. reference to german influences in philosophy, romantic writing, political agenda in writing, papers.”
+**Acceptance:** Architecture is a substantial, image-led historical chapter connecting Brâncovenesc Bucharest, the Parisian lesson in civic scale, the Athenaeum, Calea Victoriei, Neo-Romanian architecture and the distinct Saxon urban inheritance of Transylvania. Art & Poetry gives equal space to Rosenthal, Aman, Grigorescu and Barbizon, Alecsandri, Eminescu’s German intellectual formation, Junimea and the political press. Both pages retain sources, credits, desktop/mobile readability and a single editorial voice.
+**Resolution:** Rebuilt both short destination pages as long-form editorial chapters with an intentionally varied typographic rhythm, responsive visual systems, restrained French echoes and new credited images. The architecture page treats Haussmann as an influence on civic scale rather than a claim that Bucharest was remade as Paris; the art page distinguishes the French academic and Barbizon routes from German Romantic, philosophical and journalistic influences. Validated with `node --check`, `git diff --check`, browser-console checks, and visual review at desktop and 390px mobile widths.
+**Commit:** pending
+
 ## Decision Log
 
 | Date | Decision | Reason |
@@ -209,6 +219,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 | 2026-10-09 | Make the contemporary opening a standalone landing page with destination links. | The root should establish the structure; “The Long Way from Paris” must remain the checkpointed baseline in its own untouched destination. |
 | 2026-10-09 | Revise the historical hero at the reviewer’s request. | The new wording foregrounds the French Revolution as the source of a political possibility while retaining Romanian agency. |
 | 2026-10-09 | Keep a separate English-only Markdown editing copy of the historical story. | It gives the author a simple, round-trip-friendly way to revise prose without touching the page structure or bilingual presentation. |
+| 2026-10-09 | Make the Art and Architecture routes into distinct long-form chapters. | The material needs enough room for its sources, historical texture and different French/German threads to become legible without overloading the main story. |
 
 ## Resume Protocol
 
