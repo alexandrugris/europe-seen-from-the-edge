@@ -95,6 +95,54 @@ img { max-width: 100%; }
 .screen-lede { margin: 1.5rem 0 0; max-width: 40rem; font-size: clamp(1.02rem, 1.2vw, 1.15rem); line-height: 1.52; color: var(--muted); }
 .screen-lede.landing-fr { margin-top: .7rem; color: rgba(189,183,173,.82); }
 
+/* ---------- screen two: the text Europe already has ---------- */
+
+.screen--text {
+  background: var(--night-2);
+  border-top: 1px solid rgba(244,238,226,.09);
+  display: grid; align-items: center;
+}
+.screen-inner--narrow { max-width: 46rem; }
+.screen--text h2 {
+  margin: .9rem 0 .6rem;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 400; letter-spacing: -.045em; line-height: 1.02; text-wrap: balance;
+}
+.screen--text .landing-fr {
+  margin: 0; font-size: clamp(1.05rem, 1.55vw, 1.34rem); line-height: 1.4;
+}
+.screen--text .screen-lede { margin-top: 1.8rem; }
+
+/* ---------- screen three ---------- */
+
+/* the principle is the hinge of the whole page — give it a rule and air */
+.principle {
+  max-width: 42rem; margin: 2.6rem 0 0; padding-top: 1.8rem;
+  border-top: 1px solid rgba(223,197,126,.34);
+  color: var(--cream);
+  font-size: clamp(1.12rem, 1.6vw, 1.42rem); line-height: 1.5; letter-spacing: -.01em;
+}
+.principle.landing-fr {
+  margin-top: .9rem; padding-top: 0; border-top: 0;
+  color: var(--gold-dim); font-size: clamp(1rem, 1.3vw, 1.2rem);
+}
+
+.ladder-head { margin: clamp(2.6rem, 6vh, 4rem) 0 .5rem; }
+.ladder-head .screen-lede { margin-top: 0; color: var(--gold-dim); }
+
+/* ---------- screen four: the warning ---------- */
+
+.closing {
+  max-width: 34rem; margin: clamp(2.6rem, 6vh, 4rem) 0 0; padding-top: 1.8rem;
+  border-top: 1px solid rgba(244,238,226,.14);
+  color: var(--cream);
+  font-size: clamp(1.1rem, 1.55vw, 1.38rem); line-height: 1.5; font-style: italic;
+}
+.closing.landing-fr {
+  margin-top: .8rem; padding-top: 0; border-top: 0;
+  color: var(--gold-dim); font-size: clamp(.98rem, 1.25vw, 1.16rem);
+}
+
 .chapter-list { display: grid; gap: 0; border-top: 1px solid rgba(244,238,226,.14); }
 .chapter {
   display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 clamp(1.5rem, 3vw, 2.75rem);
@@ -228,6 +276,16 @@ img { max-width: 100%; }
   .screen-head h2 { font-size: clamp(1.95rem, 8.6vw, 2.6rem); }
   .screen-head .landing-fr { font-size: 1.05rem; }
   .screen-lede { font-size: .98rem; line-height: 1.48; }
+
+  .screen--text h2 { font-size: clamp(1.85rem, 8vw, 2.5rem); }
+  .screen--text .landing-fr { font-size: 1rem; }
+  .screen--text .screen-lede { margin-top: 1.4rem; }
+
+  .principle { margin-top: 2rem; padding-top: 1.4rem; font-size: 1.08rem; }
+  .principle.landing-fr { margin-top: .7rem; font-size: .98rem; }
+  .ladder-head { margin: 2.2rem 0 .4rem; }
+  .closing { margin-top: 2.2rem; padding-top: 1.4rem; font-size: 1.08rem; }
+  .closing.landing-fr { margin-top: .7rem; font-size: .98rem; }
 
   /* stack the number above the copy so nothing is squeezed into a column */
   .chapter { grid-template-columns: 1fr; gap: .5rem; padding: 1.5rem 0; }

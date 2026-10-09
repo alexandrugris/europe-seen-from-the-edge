@@ -12,7 +12,7 @@ This is a buildless historical narrative. Treat `dist/` as authored source. Sinc
 
 | File | Role | Stylesheet |
 | --- | --- | --- |
-| `dist/index.html` | Landing, in three screens: the claim, the four chapters with the reason each earns its place, then the annexes doorway | `landing.css` |
+| `dist/index.html` | Landing, in four screens: the claim; the shared text (the Revolution); the vantage point, the unity-preserves-individuality principle, and the four chapters at four scales; then the annexes doorway and the closing warning | `landing.css` |
 | `dist/the-long-way-from-paris.html` | **The historical story** — the approved baseline, preserved intact | `styles.css` |
 | `dist/manuc.html` | Hanul lui Manuc — layered cultures, diplomacy, 1812 treaty | `landing.css` + `annex.css` |
 | `dist/architecture.html` | Little Paris, Athenaeum, Saxon Transylvania | `annex.css` |
@@ -27,6 +27,20 @@ This is a buildless historical narrative. Treat `dist/` as authored source. Sinc
 | `.openai/hosting.json` | Private Sites configuration | — |
 
 The four landing routes are the intended entrances. Keep the story's linear journey intact within each chapter; do not introduce dashboards or nested menus inside a chapter.
+
+## The argument the landing carries
+
+The landing is an argument, not a table of contents. Its shape, in order:
+
+1. **The claim.** The four collage images are Europe's edge — a European flag in a demonstration (Kyiv), an anti-corruption protest (Bucharest), a European-leaning crowd (Tbilisi), and a war aftermath (Bucha). The copy names **no empire**; "a new age of empires" appears once, unglossed, and the pictures do the arguing. Do not add imagery outside Europe's border to illustrate this.
+2. **The shared text.** The French Revolution as Europe's founding document: the end of absolutism, a country being its people rather than its prince.
+3. **The vantage point.** The author cannot tell Europe's story — too large, belongs to no country — but can show what it looked like from the edge, from a country that stood where Europe stands now, two centuries ago.
+4. **The principle.** A united Europe is glorious, but unity must preserve individuality. Romania is not France and does not want to be, as no country does.
+5. **The four scales.** A state. A courtyard. A city. A culture. One argument, shown at four magnifications.
+
+The thesis is deliberately *European*, not Romanian. The earlier framing — "France gave Romanian elites a language for freedom" — ends at the Romanian border and is not what the landing claims. If you change the copy, keep that orientation: Romania illustrates Europe, it does not stand in for it.
+
+The essay remains the historical spine of the story page, but **it is not the source of the landing's argument** and does not contain it.
 
 ## Navigation
 
