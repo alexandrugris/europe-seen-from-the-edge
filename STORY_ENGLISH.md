@@ -14,11 +14,9 @@ A revolution in France. Students carry the idea east. A borderland turns it into
 
 # Between three empires, a country could lose more than land.
 
-Before a united Romania existed, Moldavia and Wallachia were squeezed between Ottoman power, the Habsburg world, and Russian expansion. The danger was not only territorial. A people could be erased: its political imagination, traditions, and language absorbed by a neighbouring empire.
+Before a united Romania, Moldavia and Wallachia lay between Ottoman power, the Habsburg world, and Russian expansion. What could be lost was more than territory: a language of law, a political imagination, a future of one’s own.
 
-As nationalism sharpened in the Habsburg lands, Romanians in Transylvania came under growing pressure on their political and cultural rights.
-
-The Enlightenment and the French Revolution offered a vocabulary of citizen, nation, and law — a horizon far enough away to imagine a country that did not yet exist, without the risk of being absorbed within its borders.
+The Enlightenment and the French Revolution offered a distant vocabulary of citizen, nation, and law—close enough to inspire, far enough not to absorb.
 
 *Image caption: Moldavia in 1810 · Bessarabia is still part of the principality · Auguste-Henri Dufour / David Rumsey Map Collection*
 
@@ -125,13 +123,13 @@ Bălcescu was not watching February from a lecture hall. After the fall of Louis
 
 Paris gave a young Romanian elite something Bucharest could not yet give them: the experience of being inside a revolution, and a Europe larger than the three empires around home.
 
-## 1848 · Revolution becomes a Romanian programme
+## 1848 · The Springtime of Nations reaches the Romanian lands
 
 ### France
 
-# February sends a shock through Europe.
+# 1848: the Springtime of Nations.
 
-The fall of the July Monarchy makes the French Revolution present tense again. Every people ruled by dynasty or empire is asked the same question: can legitimacy be remade?
+Paris is the first spark, not the whole story. In 1848, revolutions and national movements sweep across Europe. Every people ruled by dynasty or empire is asked the same question: can legitimacy be remade?
 
 ### Wallachia
 
@@ -147,7 +145,7 @@ Across the mountains, a parallel revolution is forming. On 3/15 May 1848, around
 
 ## The pressure from the east
 
-# When supposed allies become enemies.
+# When allies become enemies.
 
 A French-speaking, law-writing Romania was creating distance from the territorial appetite and the autocratic political model of the Russian Empire, and later the USSR.
 
@@ -171,7 +169,7 @@ After fighting beside Russia for independence, Romania is compelled to surrender
 
 The USSR takes Bessarabia and Northern Bukovina. Arrests, deportations, resettlement, and Russification follow the new border.
 
-The Romanian fear was never that Russia was "foreign." It was that an empire could make belonging, law, and memory answer to Moscow.
+The Romanian fear was not Russia’s foreignness. It was replacing Istanbul with an even more fervent, ideological, and centralised empire: Moscow.
 
 ## 1856—1864 · The diplomatic hinge: Napoleon III, union, law
 
@@ -191,11 +189,11 @@ In 1859 Moldavia and Wallachia elect the same prince, Alexandru Ioan Cuza. In 18
 
 A French code gives the country something aspirational: equal legal standing, civil marriage, property, contract, and a public state stronger than private patronage. The Civil Code was extended to Transylvania only in 1943, twenty-five years after union.
 
-## 1866—1914 · A German king, a French-speaking country, a European capital
+## 1866—1914 · A European claim, made at home
 
 ### French culture
 
-# A civilisation to enter, not merely admire.
+# A civilisation to make your own.
 
 French stays the language of educated conversation, study, literature, and diplomacy. Paris exports forms as much as words: boulevard, café, university, public school, civil service, capital city.
 
@@ -211,7 +209,7 @@ Bucharest’s boulevards, civic buildings, and Belle Époque façades openly sig
 
 > "Carol I is a German king in a Latin country."
 
-No contradiction to hide. French culture gives the country its preferred horizon; a German dynasty gives it continuity and diplomatic weight. Romanian independence is built by combining Europe’s strengths.
+With Napoleon III’s fall in 1870, the special French patronage behind union could no longer carry Romania’s eastern cause. A German dynasty offered continuity and diplomatic weight; French civic culture made European belonging visible at home. “Little Paris” was not imitation. It was a declaration that the country belonged in Europe.
 
 ### Transylvania under Hungary
 
@@ -223,7 +221,7 @@ That union comes on 1 December 1918. Around 1,228 delegates meet in the Great Na
 
 ## A European crossroads
 
-# Many languages. One political home.
+# East and West. One home.
 
 Romania is still a meeting place: Latin-speaking, shaped by French aspiration, with Hungarian, German, Turkish, Russian, and other inheritances running through its cities and regions. That is not a dilution of identity. It is identity made large enough to hold a continent.
 

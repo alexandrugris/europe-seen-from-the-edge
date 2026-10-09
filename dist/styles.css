@@ -43,26 +43,35 @@ h1 em { color: #e4c98d; font-weight: 400; }
 .begin { position: absolute; z-index: 3; bottom: 2rem; left: 2rem; display: flex; gap: .8rem; align-items: center; color: white; font-size: .62rem; font-weight: 750; text-decoration: none; }
 .begin span { color: var(--red-bright); font-size: 1rem; }
 
-.frontier-map { position: relative; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: clamp(2.5rem, 7vw, 8rem); align-items: center; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); background: #e3d1b0; }
-.frontier-copy { max-width: 590px; }
-.frontier-copy h2 { margin-bottom: 1.45rem; font-size: clamp(3rem, 5.3vw, 5.8rem); }
-.frontier-copy p { font-size: clamp(1.08rem, 1.6vw, 1.28rem); line-height: 1.7; }
-.frontier-figure { margin: 0; padding: .8rem; background: #f1e3ca; box-shadow: 0 25px 65px rgba(66,47,28,.17); transform: rotate(.6deg); }
-.frontier-figure img { border: 1px solid rgba(46,35,23,.42); }
+.frontier-map { position: relative; min-height: 100svh; display: grid; align-items: center; padding: clamp(4.5rem, 9vh, 7rem) max(1.5rem, 7vw); overflow: hidden; color: #f5eee2; background: #121925; }
+.frontier-map::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,15,23,.96) 0%, rgba(10,15,23,.82) 43%, rgba(10,15,23,.28) 76%, rgba(10,15,23,.48)), linear-gradient(0deg, rgba(10,15,23,.56), transparent 55%); z-index: 1; }
+.frontier-copy { position: relative; z-index: 2; width: min(670px, 58%); }
+.frontier-copy .section-kicker { color: #e5c779; }
+.frontier-copy h2 { margin-bottom: 1.15rem; color: #f6f0e4; font-size: clamp(3.1rem, 5.4vw, 6.2rem); line-height: .91; }
+.frontier-copy p { max-width: 610px; margin-bottom: .8rem; color: #e0dacf; font-size: clamp(1rem, 1.35vw, 1.18rem); line-height: 1.55; }
+.frontier-copy .fr-echo { color: #c5b9a6; }
+.empire-key { width: min(560px, 100%); margin: 1.7rem 0 0; padding: .9rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; border-block: 1px solid rgba(255,255,255,.22); list-style: none; color: #d4cec3; font: .66rem/1.5 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+.empire-key li { display: grid; gap: .12rem; }
+.empire-key b { color: #e9c977; font-size: .58rem; letter-spacing: .13em; }
+.frontier-figure { position: absolute; z-index: 0; inset: 0; margin: 0; transform: none; }
+.frontier-figure img { width: 100%; height: 100%; border: 0; object-fit: cover; object-position: 55% center; filter: sepia(.5) saturate(.62) contrast(1.05); }
+.frontier-figure figcaption { position: absolute; z-index: 2; right: max(1.5rem, 7vw); bottom: 1.5rem; max-width: 310px; margin: 0; color: rgba(246,238,225,.68); text-align: right; }
 
 .opening, .language-section, .pressure { position: relative; padding: clamp(7rem, 13vw, 13rem) max(1.5rem, 6vw); overflow: hidden; }
-.opening { min-height: 85vh; display: grid; align-content: center; background: var(--paper); }
+.opening { padding-block: clamp(3.75rem, 6vh, 5rem); }
+.opening { min-height: 100svh; display: grid; align-content: center; background: linear-gradient(90deg, rgba(239,234,221,.97) 0%, rgba(239,234,221,.91) 50%, rgba(239,234,221,.53) 100%), url("./assets/rights-of-man-1789.jpg") right center / min(64vw, 900px) auto no-repeat, var(--paper); }
+.opening::before { content: ""; position: absolute; inset: 2.2rem max(1.5rem, 6vw); pointer-events: none; border-block: 1px solid rgba(23,26,33,.12); }
 .section-kicker { margin-bottom: 1.4rem; color: var(--red); font-size: .68rem; font-weight: 750; }
 .opening > .section-kicker, .opening > h2 { width: min(1000px, 100%); margin-inline: auto; text-align: center; }
 .title-fr { margin: -1rem auto 2.2rem; color: var(--red); font-size: clamp(1.12rem, 2vw, 1.55rem); font-style: italic; line-height: 1.35; }
 .track-card > .title-fr { margin: -1.25rem 0 2.2rem; }
 .epoch--paris .title-fr, .epoch--napoleon .title-fr { color: #e4ca8d; }
 h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight: 400; letter-spacing: -.055em; line-height: .96; text-wrap: balance; }
-.opening-grid { width: min(900px, 100%); margin: 2rem auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); }
-.opening-grid p { margin: 0; font-size: clamp(1.1rem, 1.75vw, 1.35rem); line-height: 1.68; }
+.opening-grid { width: min(940px, 100%); margin: 1.35rem auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 7vw, 7rem); }
+.opening-grid p { margin: 0; font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.55; }
 .fr-echo { margin-top: .55rem !important; color: #8a5540; font-size: .88em !important; font-style: italic; line-height: 1.55 !important; }
 .epoch--paris .fr-echo, .epoch--napoleon .fr-echo, .language-section .fr-echo, .pressure .fr-echo { color: #b9b2a4; }
-.opening-line { width: min(900px, 100%); margin: 4.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--red); text-align: center; font-size: clamp(1.45rem, 3vw, 2.6rem); font-style: italic; line-height: 1.25; }
+.opening-line { width: min(940px, 100%); margin: 1.35rem auto 0; padding-top: .9rem; border-top: 1px solid var(--line); color: var(--red); text-align: center; font-size: clamp(1.2rem, 2.1vw, 1.9rem); font-style: italic; line-height: 1.25; }
 .opening-line span, .epoch-turn span, .pressure-line span { display: block; margin-top: .55rem; color: currentColor; font-size: .57em; font-style: italic; line-height: 1.35; opacity: .78; }
 
 .timeline-intro { position: relative; z-index: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.4rem max(1.5rem, 6vw); color: #ddd8cb; background: var(--night); font-size: .64rem; }
@@ -75,6 +84,8 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight
 
 .epoch { position: relative; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); overflow: hidden; }
 .epoch--paper, .epoch--islaz, .epoch--little-paris { background: var(--paper); }
+.epoch--little-paris { background: linear-gradient(90deg, rgba(239,234,221,.95), rgba(239,234,221,.84)), url("./assets/calea-victoriei-1900.jpg") center / cover; }
+.epoch--little-paris::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(110deg, transparent 45%, rgba(173,49,59,.08) 45% 46%, transparent 46%); }
 .epoch--paris, .epoch--napoleon { color: #f3ede2; background: var(--night); }
 .epoch--paris::after, .epoch--napoleon::after, .pressure::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .17; background-image: radial-gradient(rgba(255,255,255,.22) .5px, transparent .5px); background-size: 7px 7px; }
 .epoch-date { position: relative; z-index: 2; width: min(1210px, 100%); margin: 0 auto clamp(4.5rem, 8vw, 7rem); padding-bottom: .85rem; display: flex; justify-content: space-between; gap: 2rem; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .64rem; font-weight: 750; }
@@ -221,7 +232,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 @media (max-width: 950px) {
   .hero-half--france { inset: 0 37% 0 0; }
   .hero-half--romania { inset: 0 0 0 63%; }
-  .frontier-map { grid-template-columns: .8fr 1.2fr; gap: 2.5rem; }
+  .frontier-copy { width: min(710px, 72%); }
   .paired-timeline { grid-template-columns: minmax(0,1fr) 70px minmax(0,1fr); gap: 1.25rem; }
   .track-card--france { padding-right: 0; }
   .track-card--romania { padding-left: 0; }
@@ -235,8 +246,13 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 }
 
 @media (max-width: 760px) {
-  .frontier-map, .crossroads-grid, .balcescu-moment { grid-template-columns: 1fr; }
-  .frontier-map { gap: 2.5rem; }
+  .crossroads-grid, .balcescu-moment { grid-template-columns: 1fr; }
+  .frontier-map { min-height: auto; padding-block: 7rem; }
+  .frontier-map::before { background: linear-gradient(90deg, rgba(10,15,23,.96), rgba(10,15,23,.72)), linear-gradient(0deg, rgba(10,15,23,.7), transparent 60%); }
+  .frontier-copy { width: min(590px, 100%); }
+  .frontier-copy h2 { font-size: clamp(3.2rem, 13vw, 5rem); }
+  .frontier-figure img { object-position: 62% center; }
+  .frontier-figure figcaption { right: 1.35rem; left: 1.35rem; bottom: 1.1rem; max-width: none; text-align: left; }
   .balcescu-moment figure { width: min(235px, 62%); }
   .paired-timeline { grid-template-columns: 1fr; gap: 2.4rem; }
   .paired-timeline::before { inset: 0 auto 0 14px; height: 100%; }
@@ -259,6 +275,8 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
   .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
+  .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.96), rgba(239,234,221,.78)), url("./assets/rights-of-man-1789.jpg") 72% center / auto 82% no-repeat, var(--paper); }
+  .opening::before { inset: 1.3rem; }
   .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-intro { gap: .8rem; }
   .timeline-note { grid-column: auto; }
