@@ -2,41 +2,45 @@
 
 ## Project Structure & Module Organization
 
-This repository is an initial, empty worktree. Establish this layout as implementation begins:
+This repository contains a buildless, single-page historical narrative:
 
-- `src/` — application source, organized by feature or page (for example, `src/timeline/`).
-- `assets/` — images, fonts, and other static history-site media.
-- `tests/` — automated tests that mirror `src/` paths.
-- `public/` — files served unchanged by the site, if the selected framework uses one.
-- `docs/` — sources and architecture decisions.
+- `dist/index.html` — semantic story structure, copy, citations, and image credits.
+- `dist/styles.css` — responsive editorial layout, palette, and motion.
+- `dist/script.js` — reading progress and reveal behaviour.
+- `dist/assets/` — locally hosted archival and documentary images.
+- `.openai/hosting.json` — private Sites deployment configuration.
 
-Keep generated output (such as `dist/` and coverage reports) out of version control. Add a README when the stack is chosen.
+Treat `dist/` as the authored static site, not generated output. Keep the experience linear: new material should strengthen the existing narrative rather than introduce dashboards, menus, or parallel entry paths.
 
-## Build, Test, and Development Commands
+## Development and Validation Commands
 
-No build system or package manifest exists yet. Once introduced, record its canonical commands in `README.md`. A JavaScript setup should provide:
+No dependency installation or build step is required. Preview locally with:
 
 ```sh
-npm install       # install dependencies
-npm run dev       # start the local development server
-npm run build     # create a production build
-npm test          # run the automated test suite
+python3 -m http.server 4173 --directory dist
 ```
 
-Do not add commands to this guide until they are backed by project scripts.
+Then open `http://127.0.0.1:4173/`. Before committing, run:
+
+```sh
+node --check dist/script.js  # validate JavaScript syntax
+git diff --check             # catch whitespace errors
+```
+
+Verify the opening, one archival section, and the ending at desktop and mobile widths. Check that all local images load and that the browser console remains clean.
 
 ## Coding Style & Naming Conventions
 
-Use the project's formatter and linter; do not hand-format around their output. Prefer 2-space indentation for web files unless the toolchain says otherwise. Name components and classes in `PascalCase`, functions and variables in `camelCase`, and files in lowercase kebab-case (for example, `event-card.tsx`). Use descriptive dates in content filenames, such as `1945-05-08-ve-day.md`.
+Use 2-space indentation in HTML, CSS, JavaScript, JSON, and SVG. Prefer semantic HTML, descriptive CSS classes in lowercase kebab-case, and JavaScript variables in `camelCase`. Keep CSS tokens in `:root`; reuse the established paper, navy, red, and gold palette. Respect `prefers-reduced-motion` when adding animation.
 
-## Testing Guidelines
+## Historical and Editorial Standards
 
-Add tests alongside each feature or in the matching `tests/` path. Name them after the unit under test (for example, `event-card.test.tsx`) and cover user-visible behavior, edge cases, and data transformations. Run the full test command before opening a pull request.
+Write short, literary passages supported by specific facts. Distinguish documented events from interpretation, avoid collective blame, and name regimes or state policies precisely. Add authoritative sources for factual claims and preserve creator, title, date, and licence information for every image. Never use generated imagery as historical evidence.
 
 ## Commit & Pull Request Guidelines
 
-There is no commit history yet, so use concise imperative subjects: `Add timeline event card` or `Fix era filter focus state`. Keep commits narrow. Pull requests should explain the change, link related issues when available, list validation, and include screenshots for visual or responsive UI changes. Flag new historical sources, licenses, or attribution requirements.
+Use concise imperative subjects, such as `Refine 1848 narrative` or `Fix mobile Carol portrait`. Keep commits focused. Pull requests should summarize the narrative or visual change, list validation performed, link relevant sources, and include desktop and mobile screenshots for layout changes.
 
-## Content, Sources, and Security
+## Security & Deployment
 
-Preserve citations and licensing information for historical text and media. Never commit API keys or local configuration; use documented environment variables and an ignored `.env` file when needed.
+Never commit credentials or tokens. Preserve the existing Sites project ID and private audience unless a change is explicitly requested.
