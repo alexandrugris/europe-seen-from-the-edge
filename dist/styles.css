@@ -43,27 +43,21 @@ h1 em { color: #e4c98d; font-weight: 400; }
 .begin { position: absolute; z-index: 3; bottom: 2rem; left: 2rem; display: flex; gap: .8rem; align-items: center; color: white; font-size: .62rem; font-weight: 750; text-decoration: none; }
 .begin span { color: var(--red-bright); font-size: 1rem; }
 
-.now { position: relative; overflow: hidden; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); color: white; background: var(--night); }
-.now::before { content: "NOW"; position: absolute; z-index: 0; top: -7vw; right: -1vw; color: rgba(229,202,141,.045); font-size: 26vw; font-style: italic; line-height: 1; pointer-events: none; }
-.now-copy, .edge-triptych, .now-line { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
-.now-copy { max-width: 790px; margin-left: max(0px, calc((100% - 1120px) / 2)); }
-.now-copy .section-kicker { color: #e5c975; }
-.now-copy h2 { max-width: 720px; margin-bottom: 1.55rem; font-size: clamp(3.3rem, 6.5vw, 6.5rem); }
-.now-copy p { max-width: 650px; font-size: clamp(1.08rem, 1.6vw, 1.26rem); line-height: 1.7; }
-.edge-triptych { margin-top: clamp(3rem, 6vw, 6rem); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.7rem, 1.5vw, 1.25rem); }
-.edge-frame { position: relative; min-height: 390px; margin: 0; overflow: hidden; background: #111; }
-.edge-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(4,7,12,.92), transparent 60%); pointer-events: none; }
-.edge-frame img { height: 100%; min-height: 390px; object-fit: cover; filter: saturate(.82) contrast(1.08); transition: transform 1.3s ease; }
-.edge-frame:hover img { transform: scale(1.035); }
-.edge-frame--kyiv img { object-position: center; }
-.edge-frame--tbilisi img { object-position: center; }
-.edge-frame--bucharest img { object-position: center; filter: saturate(.65) contrast(1.13); }
-.edge-frame figcaption { position: absolute; z-index: 2; left: 1.2rem; right: 1.2rem; bottom: 1.2rem; margin: 0; color: white; font-family: var(--serif); letter-spacing: 0; text-transform: none; }
-.edge-frame figcaption b, .edge-frame figcaption span { display: block; }
-.edge-frame figcaption b { margin-bottom: .3rem; color: #ead59a; font: 700 .72rem/1.2 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
-.edge-frame figcaption span { font-size: 1rem; line-height: 1.32; }
-.now-line { margin-top: clamp(4rem, 7vw, 6rem); padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,.2); color: #ead59a; font-size: clamp(1.5rem, 3vw, 2.8rem); font-style: italic; line-height: 1.18; }
-.now-line span { display: block; max-width: 760px; margin-top: .65rem; color: #b9b4a9; font-size: .58em; line-height: 1.35; }
+.now { position: relative; min-height: 100svh; overflow: hidden; padding: clamp(7rem, 11vw, 10rem) max(1.5rem, 6vw) clamp(4rem, 7vw, 7rem); color: white; background: var(--night); }
+.now-photo-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.now-photo { background-position: center; background-size: cover; filter: saturate(.7) contrast(1.1); }
+.now-photo--kyiv { background-image: url("./assets/euromaidan-flags.jpg"); }
+.now-photo--tbilisi { background-image: url("./assets/tbilisi-europe.jpg"); }
+.now-photo--bucharest { background-image: url("./assets/bucharest-wall-of-light-2017.jpg"); }
+.now-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,9,14,.56), rgba(6,9,14,.16) 50%, rgba(6,9,14,.34)), linear-gradient(0deg, rgba(6,9,14,.82), transparent 52%, rgba(6,9,14,.34)); }
+.now-copy, .now-city-rail { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
+.now-copy { max-width: 940px; margin: 9vh auto 0; text-align: center; text-shadow: 0 3px 28px rgba(0,0,0,.75); }
+.now-copy h2 { margin-bottom: .8rem; font-size: clamp(3.6rem, 7.4vw, 7.4rem); }
+.now-copy p { margin: 0 auto; color: #ead59c; font-size: clamp(1rem, 1.65vw, 1.4rem); font-style: italic; line-height: 1.35; }
+.now-city-rail { position: absolute; z-index: 2; left: max(1.5rem, 6vw); right: max(1.5rem, 6vw); bottom: 1.4rem; width: auto; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.35); }
+.now-city-rail p { margin: 0; padding: .85rem .9rem 0; border-right: 1px solid rgba(255,255,255,.24); text-align: center; }
+.now-city-rail p:last-child { border-right: 0; }
+.now-city-rail b { display: block; color: #f1dfae; font: 750 .62rem/1.25 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
 
 .frontier-map { position: relative; display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: clamp(2.5rem, 7vw, 8rem); align-items: center; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); background: #e3d1b0; }
 .frontier-copy { max-width: 590px; }
@@ -222,55 +216,19 @@ blockquote { margin: 2rem 0 .65rem; padding: 1.1rem 0 0 1.25rem; border-left: 2p
 .crossroads-line { margin-top: clamp(5rem, 9vw, 8rem); padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.18); color: #ead49d; font-size: clamp(1.6rem, 3.4vw, 3.2rem); font-style: italic; line-height: 1.2; }
 .crossroads-line span { display: block; margin-top: .65rem; color: #bdbab2; font-size: .58em; line-height: 1.35; }
 
-.annex { position: relative; overflow: hidden; padding: clamp(7rem, 12vw, 11rem) max(1.5rem, 6vw); }
-.annex-heading, .architecture-grid, .lexicon-layout, .annex-line { position: relative; z-index: 1; width: min(1120px, 100%); margin-inline: auto; }
-.annex-heading { max-width: 900px; margin-bottom: clamp(3.5rem, 7vw, 6.5rem); }
-.annex-heading h2 { margin-bottom: 1.35rem; }
-.annex-heading > p:not(.section-kicker):not(.fr-echo) { max-width: 760px; font-size: clamp(1.08rem, 1.65vw, 1.27rem); line-height: 1.72; }
-.annex-heading .fr-echo { max-width: 720px; }
-.architecture-annex { background: #ded1ba; }
-.architecture-annex::before { content: "CITY"; position: absolute; top: -5vw; right: -1vw; color: rgba(114,71,46,.06); font-size: 24vw; font-style: italic; line-height: 1; pointer-events: none; }
-.architecture-annex .section-kicker { color: #8a4a38; }
-.architecture-grid { display: grid; grid-template-columns: 1.12fr .94fr .94fr; grid-auto-rows: 265px; gap: clamp(.75rem, 1.5vw, 1.25rem); }
-.architecture-card { position: relative; margin: 0; overflow: hidden; background: #181a1e; }
-.architecture-card--calea { grid-row: span 2; }
-.architecture-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(9,12,17,.88), transparent 57%); pointer-events: none; }
-.architecture-card img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(1.04); transition: transform 1.2s ease; }
-.architecture-card:hover img { transform: scale(1.035); }
-.architecture-card--calea img { object-position: center; filter: sepia(.18) saturate(.78) contrast(1.02); }
-.architecture-card--athenaeum img { object-position: center 42%; }
-.architecture-card--sibiu img { object-position: center; }
-.architecture-card figcaption { position: absolute; z-index: 1; inset: auto 1.15rem 1.1rem; margin: 0; color: #f7f1e5; font-family: var(--serif); font-weight: 400; letter-spacing: 0; text-transform: none; }
-.architecture-card figcaption b, .architecture-card figcaption span { display: block; }
-.architecture-card figcaption b { margin-bottom: .35rem; color: #e8cf8e; font: 750 .68rem/1.25 var(--sans); letter-spacing: .15em; text-transform: uppercase; }
-.architecture-card figcaption span { font-size: .98rem; line-height: 1.35; }
-.annex-line { margin-top: clamp(4rem, 8vw, 7rem); padding-top: 1.65rem; border-top: 1px solid rgba(38,29,21,.25); color: #864b3b; font-size: clamp(1.55rem, 3.15vw, 3rem); font-style: italic; line-height: 1.2; }
-.annex-line span { display: block; max-width: 800px; margin-top: .65rem; color: #735d52; font-size: .58em; line-height: 1.38; }
-
-.lexicon-annex { color: #f1ebdf; background: #152033; }
-.lexicon-annex::before { content: "LIMBĂ"; position: absolute; top: -5vw; left: -1vw; color: rgba(228,202,141,.045); font-size: 21vw; font-style: italic; line-height: 1; pointer-events: none; }
-.lexicon-annex .section-kicker, .lexicon-annex .track-label { color: #e4ca8d; }
-.lexicon-annex .annex-heading h2 em { color: #e2c67f; font-weight: 400; }
-.lexicon-annex .annex-heading > p:not(.section-kicker):not(.fr-echo) { color: #d1cec6; }
-.lexicon-annex .fr-echo { color: #aaa9a5; }
-.lexicon-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(260px, .78fr); gap: clamp(3rem, 9vw, 9rem); align-items: start; }
-.lexicon-core { padding: clamp(1.4rem, 2.8vw, 2.3rem); border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.025); }
-.lexicon-intro { max-width: 500px; margin-bottom: 2rem; color: #dad7d0; font-size: 1.1rem; line-height: 1.62; }
-.origin-bars { border-top: 1px solid rgba(255,255,255,.18); }
-.origin-row { display: grid; grid-template-columns: 4.7rem minmax(0,1fr); column-gap: .85rem; align-items: center; padding: .85rem 0 .9rem; border-bottom: 1px solid rgba(255,255,255,.15); }
-.origin-row b { grid-row: 1 / span 2; color: #edcf87; font: 750 clamp(1.05rem, 1.7vw, 1.35rem)/1 var(--sans); letter-spacing: -.04em; }
-.origin-row span { color: #e8e2d6; font-size: 1.02rem; }
-.origin-row i { grid-column: 2; display: block; width: var(--amount); min-width: 4px; height: 5px; margin-top: .55rem; background: linear-gradient(90deg, #d0ab62, #e9d09a); }
-.origin-row:nth-child(2) i { background: linear-gradient(90deg, #b7554d, #e0987d); }
-.origin-row:nth-child(3) i { background: linear-gradient(90deg, #9a8b6c, #d0c29f); }
-.origin-row:nth-child(4) i { background: linear-gradient(90deg, #6686a4, #a6c0d2); }
-.origin-row:nth-child(5) i { background: linear-gradient(90deg, #728d7e, #b8c9ba); }
-.lexicon-core .data-note { margin-top: 1.3rem; }
-.lexicon-reading { padding-top: .3rem; }
-.lexicon-reading p:not(.track-label) { margin-bottom: 1.3rem; color: #d4d1c9; font-size: clamp(1.08rem, 1.55vw, 1.22rem); line-height: 1.68; }
-.lexicon-reading strong { color: #f0d596; font-weight: 400; }
-.lexicon-annex .annex-line { border-color: rgba(255,255,255,.18); color: #ecd79c; }
-.lexicon-annex .annex-line span { color: #b7b4ad; }
+.annex-door { position: relative; min-height: 86svh; display: grid; align-items: center; overflow: hidden; padding: clamp(7rem, 12vw, 11rem) max(1.5rem, 6vw); color: #f4ede0; background: #10151e; }
+.annex-door-photo { position: absolute; inset: 0; background: url("./assets/hanul-manuc-courtyard.jpg") center / cover no-repeat; filter: saturate(.58) contrast(1.08); }
+.annex-door-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,15,22,.95), rgba(11,15,22,.78) 54%, rgba(11,15,22,.38)), linear-gradient(0deg, rgba(11,15,22,.88), transparent 50%); }
+.annex-door-copy { position: relative; z-index: 1; width: min(800px, 100%); margin-left: max(0px, calc((100% - 1120px) / 2)); }
+.annex-door .section-kicker { color: #e3c681; }
+.annex-door h2 { margin-bottom: 1.4rem; }
+.annex-door-copy > p:not(.section-kicker):not(.fr-echo):not(.annex-door-list) { max-width: 660px; font-size: clamp(1.08rem, 1.65vw, 1.28rem); line-height: 1.72; }
+.annex-door .fr-echo { max-width: 660px; color: #beb8ad; }
+.annex-door-list { margin: 2.4rem 0 1.8rem; color: #e8d39b; font: 750 .64rem/1.7 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
+.annex-door-link { display: inline-flex; align-items: center; gap: 1rem; padding: .95rem 1.25rem; border: 1px solid rgba(255,255,255,.42); color: white; font: 750 .69rem/1 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; transition: color .25s ease, background .25s ease; }
+.annex-door-link:hover { color: #171a21; background: #e8d39b; }
+.annex-door-link span { color: #dfbd6d; font-size: 1.1rem; }
+.annex-door-link:hover span { color: #8e3b35; }
 
 footer { padding: 2.7rem max(1.5rem, 6vw); color: #bbb9b4; background: #090c12; font-family: var(--sans); }
 footer details { width: min(1120px, 100%); margin: auto; }
@@ -296,18 +254,14 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .language-grid { grid-template-columns: .65fr 1fr; gap: 3rem; }
   .pressure-grid { grid-template-columns: repeat(3, 1fr); }
   .crossroads-grid { gap: 2.5rem; }
-  .architecture-grid { grid-auto-rows: 230px; }
   .pressure-card:nth-child(3) { border-right: 0; }
   .pressure-card:nth-child(-n+3) { border-bottom: 1px solid rgba(255,255,255,.16); }
 }
 
 @media (max-width: 760px) {
-  .frontier-map, .crossroads-grid, .balcescu-moment, .edge-triptych, .lexicon-layout { grid-template-columns: 1fr; }
+  .frontier-map, .crossroads-grid, .balcescu-moment { grid-template-columns: 1fr; }
   .frontier-map { gap: 2.5rem; }
   .now-copy { width: 100%; margin-left: 0; }
-  .edge-frame, .edge-frame img { min-height: 300px; }
-  .architecture-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 245px; }
-  .architecture-card--calea { grid-row: span 1; grid-column: span 2; }
   .balcescu-moment figure { width: min(235px, 62%); }
   .paired-timeline { grid-template-columns: 1fr; gap: 2.4rem; }
   .paired-timeline::before { inset: 0 auto 0 14px; height: 100%; }
@@ -327,7 +281,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-deck { margin-left: 0; }
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
-  .opening, .language-section, .pressure, .crossroads, .epoch, .annex { padding-inline: 1.35rem; }
+  .opening, .language-section, .pressure, .crossroads, .epoch, .annex-door { padding-inline: 1.35rem; }
   .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-intro { gap: .8rem; }
   .timeline-note { grid-column: auto; }
@@ -349,9 +303,11 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .german-thread { grid-template-columns: minmax(94px, .34fr) 1fr; gap: 1.25rem; }
   .german-thread figure img { height: 230px; }
   .language-lives li { grid-template-columns: 1fr; gap: .2rem; }
-  .architecture-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
-  .architecture-card--calea { grid-column: auto; }
-  .origin-row { grid-template-columns: 4.25rem minmax(0,1fr); column-gap: .65rem; }
+  .now { min-height: auto; padding-bottom: 2.2rem; }
+  .now-photo-grid { grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
+  .now-city-rail { position: relative; inset: auto; margin-top: 3rem; grid-template-columns: 1fr; }
+  .now-city-rail p { padding: .8rem 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
+  .now-city-rail p:last-child { border-bottom: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
