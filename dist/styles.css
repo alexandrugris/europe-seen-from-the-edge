@@ -24,7 +24,7 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 
 .reading-progress { position: fixed; z-index: 100; inset: 0 0 auto; height: 3px; background: rgba(255,255,255,.1); }
 .reading-progress span { display: block; width: 0; height: 100%; background: var(--red-bright); }
-.eyebrow, .section-kicker, .track-label, .epoch-date, .timeline-intro, figcaption, .begin, .footer-note { font-family: var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow, .section-kicker, .track-label, .epoch-date, figcaption, .begin, .footer-note { font-family: var(--sans); letter-spacing: .16em; text-transform: uppercase; }
 
 .hero { position: relative; height: 100svh; min-height: 40rem; overflow: hidden; display: grid; place-items: center; color: #faf4e7; background: var(--night); }
 .hero-half { position: absolute; inset: 0 50% 0 0; background-position: center; background-size: cover; filter: saturate(.78) contrast(1.08); }
@@ -71,16 +71,14 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight
 .opening-grid p { margin: 0; font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.55; }
 .fr-echo { margin-top: .55rem !important; color: #8a5540; font-size: .88em !important; font-style: italic; line-height: 1.55 !important; }
 .epoch--paris .fr-echo, .epoch--napoleon .fr-echo, .language-section .fr-echo, .pressure .fr-echo { color: #b9b2a4; }
-.opening-line { width: min(940px, 100%); margin: 1.35rem auto 0; padding-top: .9rem; border-top: 1px solid var(--line); color: var(--red); text-align: center; font-size: clamp(1.2rem, 2.1vw, 1.9rem); font-style: italic; line-height: 1.25; }
-.opening-line span, .epoch-turn span, .pressure-line span { display: block; margin-top: .55rem; color: currentColor; font-size: .57em; font-style: italic; line-height: 1.35; opacity: .78; }
-
-.timeline-intro { position: relative; z-index: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.4rem max(1.5rem, 6vw); color: #ddd8cb; background: var(--night); font-size: .64rem; }
-.timeline-intro > div { display: flex; align-items: center; gap: .65rem; }
-.timeline-intro p { margin: 0; color: #aaa8a4; font: .7rem/1.5 var(--serif); letter-spacing: 0; text-transform: none; }
+.timeline-key { position: relative; z-index: 1; width: min(940px, 100%); margin: 1.35rem auto 0; padding: .8rem 0 .9rem; border-block: 1px solid var(--line); text-align: center; }
+.timeline-key-label { margin: 0 0 .55rem; color: var(--red); font: 750 .59rem/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
+.timeline-key-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 5vw, 4rem); }
+.timeline-key-grid p { margin: 0; display: grid; grid-template-columns: auto auto 1fr; justify-content: center; align-items: center; gap: .45rem; color: #5e5b56; font: .72rem/1.35 var(--serif); text-align: left; }
+.timeline-key-grid b { color: var(--ink); font: 750 .57rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
 .track-dot { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
 .track-dot--france { background: var(--red-bright); box-shadow: 0 0 0 4px rgba(214,85,91,.2); }
 .track-dot--romania { background: var(--romania); box-shadow: 0 0 0 4px rgba(214,180,94,.18); }
-.timeline-note { grid-column: 1 / -1; padding-top: .8rem; border-top: 1px solid rgba(255,255,255,.12); }
 
 .epoch { position: relative; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); overflow: hidden; }
 .epoch--paper, .epoch--islaz, .epoch--little-paris { background: var(--paper); }
@@ -277,9 +275,9 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
   .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.97), rgba(239,234,221,.82)), url("./assets/paris-boulevard-1838.jpg") 65% center / auto 100% no-repeat, var(--paper); }
   .opening::before { inset: 1.3rem; }
-  .opening-grid, .timeline-intro, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
-  .timeline-intro { gap: .8rem; }
-  .timeline-note { grid-column: auto; }
+  .opening-grid, .timeline-key-grid, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
+  .timeline-key-grid { gap: .55rem; }
+  .timeline-key-grid p { justify-content: start; }
   .epoch-date { align-items: flex-start; gap: 1rem; font-size: .55rem; }
   .epoch-date p { max-width: 46%; }
   .track-card--france, .track-card--romania { padding-left: 2.2rem; }

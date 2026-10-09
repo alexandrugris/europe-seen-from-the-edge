@@ -30,13 +30,11 @@ France offered a Latin relative, a political language of citizen and law, and a 
 
 **Revolution → education → language → law → state.**
 
-## How to read the parallel timelines
+## Two timelines. One story.
 
 **France** — the idea is born, argued, codified, projected.
 
 **Romania** — the idea is learned, translated, contested, made useful.
-
-Read each pair across. The line between them is the story.
 
 ## 1789—1804 · A common political vocabulary
 
@@ -211,7 +209,7 @@ With Napoleon III’s fall in 1870, the special French patronage behind union co
 
 ### Transylvania under Hungary
 
-# One nation in three empires.
+# The path to unification.
 
 In 1867, the Austro-Hungarian Compromise folds Transylvania into the Kingdom of Hungary. The Magyarisation that follows—school laws in 1879, 1891, and 1907—pressures Romanian churches, schools, and electoral rights. The 1892 *Memorandum* of the Romanian National Party is sent to Emperor Franz Joseph and returned unread. Its authors stand trial in Cluj in 1894. Many are by then thinking the unthinkable: union with Romania.
 
