@@ -37,6 +37,22 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-scroll { position: absolute; z-index: 3; right: max(2rem, 6vw); bottom: 1.9rem; color: rgba(244,238,226,.85); font: 700 .59rem/1.25 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
 .manuc-scroll span { margin-left: .5rem; color: var(--gold); font-size: 1.15rem; }
 
+/* The Manuc route opens with the landing page's four-image grammar and route menu. */
+.manuc-landing .landing-scenes { grid-template-columns: 1.12fr .92fr .88fr 1.08fr; }
+.manuc-landing { color: var(--cream); }
+.manuc-landing .landing-scene img { filter: saturate(.58) sepia(.08) contrast(1.08) brightness(.68); }
+.manuc-landing .manuc-scene--facade img { object-position: 60% center; }
+.manuc-landing .manuc-scene--historic img { object-position: 54% center; filter: sepia(.58) saturate(.54) contrast(1.04) brightness(.69); }
+.manuc-landing .manuc-scene--map img { object-position: 54% center; filter: sepia(.48) saturate(.52) contrast(1.12) brightness(.64); }
+.manuc-landing .manuc-scene--courtyard img { object-position: 54% center; }
+.manuc-landing .landing-shade { background: linear-gradient(90deg, rgba(7,10,16,.92), rgba(7,10,16,.66) 48%, rgba(7,10,16,.38)), linear-gradient(0deg, rgba(7,10,16,.91), transparent 64%, rgba(7,10,16,.3)); }
+.manuc-landing .landing-route[aria-current="page"] { color: var(--gold); border-bottom-color: var(--gold); }
+.manuc-landing .landing-route[aria-current="page"] small { color: #ead6a5; }
+.manuc-landing .landing-route[aria-current="page"]:hover, .manuc-landing .landing-route[aria-current="page"]:focus-visible { color: #11151d; }
+.manuc-landing .landing-route[aria-current="page"]:hover small, .manuc-landing .landing-route[aria-current="page"]:focus-visible small { color: #3c2a21; }
+.manuc-landing .landing-credit { right: 10rem; }
+.manuc-landing .manuc-scroll { right: 2rem; bottom: 2.8rem; }
+
 .manuc-story { overflow: hidden; }
 .manuc-arrivals { width: min(1180px, calc(100% - 48px)); margin: auto; padding: clamp(6rem, 13vw, 12rem) 0; display: grid; grid-template-columns: .32fr 1fr; gap: clamp(2rem, 8vw, 9rem); }
 .manuc-section-head { padding-top: .6rem; display: flex; flex-direction: column; justify-content: space-between; border-top: 1px solid rgba(23,26,33,.25); }
@@ -71,6 +87,13 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-historic { position: relative; width: min(1020px, calc(100% - 48px)); margin: 0 auto; padding: clamp(.75rem, 1.4vw, 1.2rem); background: #dac8a5; transform: rotate(-.7deg); }
 .manuc-historic img { width: 100%; max-height: 77svh; object-fit: cover; object-position: center; filter: sepia(.2) contrast(.94); }
 .manuc-historic figcaption, .manuc-courtyard figcaption { margin-top: .75rem; color: var(--muted); font: .6rem/1.45 var(--sans); letter-spacing: .09em; text-transform: uppercase; }
+.manuc-room { width: min(1180px, calc(100% - 48px)); margin: clamp(1.5rem, 4vw, 4rem) auto clamp(7rem, 13vw, 12rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: clamp(3rem, 8vw, 9rem); align-items: center; }
+.manuc-room .manuc-historic { width: 100%; margin: 0; }
+.manuc-room-copy h2 { margin: 0 0 1.6rem; color: var(--ink); font-size: clamp(2.8rem, 5.2vw, 5.8rem); font-weight: 400; letter-spacing: -.06em; line-height: .86; }
+.manuc-room-copy > p:not(.annex-kicker) { color: #4c4943; font-size: clamp(1.03rem, 1.45vw, 1.2rem); line-height: 1.7; }
+.manuc-room blockquote { margin: clamp(2rem, 4vw, 3.5rem) 0 0; padding: 1rem 0 0 1.3rem; border-left: 2px solid var(--red); }
+.manuc-room blockquote p { margin: 0; color: var(--red); font-size: clamp(1.35rem, 2.1vw, 2.05rem); font-style: italic; line-height: 1.28; }
+.manuc-room cite { display: block; margin-top: .7rem; color: var(--muted); font: .66rem/1.35 var(--sans); letter-spacing: .1em; text-transform: uppercase; }
 
 .manuc-treaty { position: relative; margin-top: clamp(7rem, 14vw, 13rem); padding: clamp(6rem, 12vw, 12rem) max(1.5rem, 7vw); overflow: hidden; color: #f0eadf; background: #10151f; }
 .manuc-treaty::before { position: absolute; top: -2.8vw; right: -1vw; color: rgba(223,197,126,.045); content: "1812"; font-size: 23vw; font-style: italic; line-height: 1; pointer-events: none; }
@@ -147,6 +170,9 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-hero h1 { font-size: clamp(3.6rem, 17vw, 5.5rem); }
   .manuc-deck { margin-left: 0; font-size: 1rem; line-height: 1.48; }
   .manuc-scroll { right: 1rem; bottom: 1.2rem; }
+  .manuc-landing .landing-scenes { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+  .manuc-landing .landing-credit { right: .7rem; }
+  .manuc-landing .manuc-scroll { right: .8rem; bottom: 1.85rem; font-size: .44rem; }
   .manuc-arrivals, .manuc-man, .manuc-treaty-intro, .manuc-courtyard { grid-template-columns: 1fr; }
   .manuc-arrivals, .manuc-names, .manuc-courtyard { width: calc(100% - 32px); }
   .manuc-arrivals { gap: 2.4rem; padding-block: 5rem; }
@@ -160,6 +186,9 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-name-grid div { min-height: 125px; }
   .manuc-names-note { width: 100%; }
   .manuc-historic { width: calc(100% - 32px); transform: none; }
+  .manuc-room { width: calc(100% - 32px); margin: 1.5rem auto 5.5rem; grid-template-columns: 1fr; gap: 3rem; }
+  .manuc-room .manuc-historic { width: 100%; }
+  .manuc-room-copy h2 { font-size: clamp(2.7rem, 12vw, 4.25rem); }
   .manuc-treaty { margin-top: 5rem; padding: 5rem 1rem; }
   .manuc-treaty-intro { gap: .5rem; }
   .manuc-treaty-intro .manuc-number { display: none; }

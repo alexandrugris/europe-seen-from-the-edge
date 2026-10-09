@@ -1,25 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#10141d" /><meta name="description" content="Manuc's Inn: a Romanian story of commerce, diplomacy, and a city of arrivals." /><title>Manuc’s Inn — Europe, Seen from the Edge</title><link rel="stylesheet" href="./annex.css" /></head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10141d" />
+    <meta name="description" content="Hanul lui Manuc: a story of trade, languages, diplomacy, and a treaty that changed the map." />
+    <title>Hanul lui Manuc — Europe, Seen from the Edge</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./landing.css" />
+    <link rel="stylesheet" href="./annex.css" />
+  </head>
   <body class="manuc-page">
-    <header class="annex-header">
-      <a class="annex-home" href="./index.html">Europe, from the edge</a>
-      <nav class="annex-nav" aria-label="Related pages">
-        <a href="./the-long-way-from-paris.html">The story</a>
-        <a href="./architecture.html">Architecture</a>
-        <a href="./art.html">Art</a>
-      </nav>
-    </header>
-
     <main>
-      <section class="manuc-hero" aria-labelledby="title">
-        <figure aria-hidden="true"><img src="./assets/manucs-inn.jpg" alt="" /></figure>
-        <div class="manuc-hero-copy">
-          <p class="annex-kicker">Hanul lui Manuc · Bucharest · 1808</p>
-          <h1 id="title">A courtyard<br />for a <em>continent.</em></h1>
-          <p class="annex-fr" lang="fr">Une cour pour un continent.</p>
-          <p class="manuc-deck">A boy from the Danube grew into Manuc Bey: Armenian merchant, Ottoman diplomat, and host to the room in which empires changed the map.</p>
+      <section class="landing manuc-landing" aria-labelledby="title">
+        <div class="landing-scenes" aria-hidden="true">
+          <figure class="landing-scene manuc-scene manuc-scene--facade"><img src="./assets/manucs-inn.jpg" alt="" /></figure>
+          <figure class="landing-scene manuc-scene manuc-scene--historic"><img src="./assets/hanul-manuc-historic.jpg" alt="" /></figure>
+          <figure class="landing-scene manuc-scene manuc-scene--map"><img src="./assets/moldavia-1810.png" alt="" /></figure>
+          <figure class="landing-scene manuc-scene manuc-scene--courtyard"><img src="./assets/hanul-manuc-courtyard.jpg" alt="" /></figure>
         </div>
+        <div class="landing-shade" aria-hidden="true"></div>
+
+        <div class="landing-content">
+          <header class="landing-intro">
+            <p>Hanul lui Manuc · Bucharest · 1808</p>
+            <h1 id="title">A capital of<br /><em>strangers.</em></h1>
+            <p class="landing-fr" lang="fr">Une capitale d’étrangers.</p>
+            <div class="landing-connection">
+              <p>An Armenian merchant builds a courtyard for commerce, travellers, secrets and negotiation. Four years later, in this inn, two empires sign away half of Moldavia.</p>
+              <p class="landing-fr" lang="fr">Un marchand arménien bâtit une cour pour le commerce, les voyageurs, les secrets et la négociation. Quatre ans plus tard, deux empires y signent le partage de la Moldavie.</p>
+            </div>
+          </header>
+
+          <nav class="landing-routes" aria-label="Story routes">
+            <a class="landing-route" href="./the-long-way-from-paris.html"><span>A story from Europe’s edge</span><small lang="fr">Une histoire aux confins de l’Europe</small></a>
+            <a class="landing-route" href="./manuc.html" aria-current="page"><span>Manuc’s story &amp; his inn</span><small lang="fr">L’histoire de Manuc et son auberge</small></a>
+            <a class="landing-route" href="./architecture.html"><span>Architecture · Little Paris</span><small lang="fr">Architecture · Le Petit Paris</small></a>
+            <a class="landing-route" href="./art.html"><span>Art · poetry &amp; painting</span><small lang="fr">Art · poésie et peinture</small></a>
+          </nav>
+        </div>
+
+        <p class="landing-credit">Hanul lui Manuc today &nbsp; / &nbsp; <a href="https://commons.wikimedia.org/wiki/File:Szathmary_-_Hanul_lui_Manuc.jpg">Carol Popp de Szathmári · c. 1867–1870 · public domain</a> &nbsp; / &nbsp; <a href="https://commons.wikimedia.org/wiki/File:Mold._1810.png">Moldavia · 1810 · Dufour / David Rumsey · public domain</a></p>
         <a class="manuc-scroll" href="#arrivals">Enter the courtyard <span aria-hidden="true">↓</span></a>
       </section>
 
@@ -27,9 +48,10 @@
         <section class="manuc-arrivals" id="arrivals">
           <div class="manuc-section-head"><p class="annex-kicker">Bucharest, 1808</p><p class="manuc-number">01</p></div>
           <div class="manuc-arrivals-copy">
-            <h2>A capital of<br /><em>strangers.</em></h2>
-            <p class="manuc-lede">A city of around eighty thousand, more than half born elsewhere. Greek in the coffee houses. Armenian in the jewellery shops. German in the workshops. Bulgarian in the cloth warehouses. French at the prince’s table. Romanian, at last, on the street.</p>
-            <p class="annex-fr" lang="fr">Une capitale d’arrivées&nbsp;: les langues de l’Europe et du Levant se croisent avant même que la Roumanie ne devienne un État.</p>
+            <h2>A city made<br />by <em>arrivals.</em></h2>
+            <p class="manuc-lede">Greek in the coffee houses. Armenian in the jewellery shops. German on the lips of Saxon craftsmen. Bulgarian in the cloth warehouses. French at the prince’s table. Romanian, at last, given the dignity of a public language on the street.</p>
+            <p>Manuc’s inn was built for this moving city: people needing a bed, a bargain, a letter, a meal, a witness, or simply the latest news from a Europe at war.</p>
+            <p class="annex-fr" lang="fr">Une ville faite d’arrivées&nbsp;: langues, métiers et nouvelles traversent la même cour.</p>
           </div>
         </section>
 
@@ -37,19 +59,20 @@
           <div class="manuc-man-copy">
             <p class="annex-kicker">The man</p>
             <h2>Emanuel<br /><em>Mârzaian.</em></h2>
-            <p>Born in Ruse in 1769, in the Ottoman port then called Rustchuk, he arrived in Iași at twelve in the service of an Armenian merchant. Romanian first; then French; then Russian. Within a few years, contemporaries said he could move between a dozen languages.</p>
-            <p>His name travelled with him: merchant, banker, <em>paharnic</em>, Grand Dragoman of the Sublime Porte, and finally Manuc Bey of Moldavia. He never ruled the principality. But he knew how to make a place where those who did might speak.</p>
+            <p>Born in Ruse in 1769 — Ottoman Rustchuk, on the Lower Danube — he came to Iași at twelve in the service of an Armenian merchant. Romanian first; then French; then Russian. Within a few years, contemporaries said he could move between a dozen languages.</p>
+            <p>His public names kept accumulating: merchant, banker, <em>paharnic</em>, Grand Dragoman of the Sublime Porte, and finally Manuc Bey of Moldavia. He never ruled the principality. But he knew how to make a room in which those who did might speak.</p>
           </div>
           <aside class="manuc-passport" aria-label="Manuc Bey at a glance">
             <p class="annex-kicker">A life in motion</p>
             <ol>
               <li><b>1769</b><span>Ruse / Rustchuk</span></li>
               <li><b>c. 1781</b><span>Iași</span></li>
+              <li><b>1803</b><span><em>Paharnic</em> of Wallachia</span></li>
               <li><b>1807</b><span>Grand Dragoman</span></li>
               <li><b>1808</b><span>Hanul lui Manuc</span></li>
               <li><b>1812</b><span>Treaty of Bucharest</span></li>
             </ol>
-            <p class="manuc-passport-note">The old title for the indispensable person between languages: dragoman.</p>
+            <p class="manuc-passport-note">A dragoman was the person who could cross a political frontier without leaving the room.</p>
           </aside>
         </section>
 
@@ -63,21 +86,29 @@
             <div><b>Blănari</b><span>furriers</span></div>
             <div><b>Zarafi</b><span>money-changers</span></div>
           </div>
-          <p class="manuc-names-note">The inn did not stand beside an abstract crossroads. It stood inside an operating one: horses, textiles, letters, currencies, officials and gossip, all looking for a roof.</p>
+          <p class="manuc-names-note">The inn did not stand beside an abstract crossroads. It stood inside an operating one: horses, textiles, currencies, officials and gossip, all looking for a roof.</p>
         </section>
 
-        <figure class="manuc-historic"><img src="./assets/hanul-manuc-historic.jpg" alt="Nineteenth-century view of Hanul lui Manuc, with its wooden gallery and carts in the courtyard" /><figcaption>Hanul lui Manuc, c. 1867–1870 · Carol Popp de Szathmári · public domain.</figcaption></figure>
+        <section class="manuc-room">
+          <figure class="manuc-historic"><img src="./assets/hanul-manuc-historic.jpg" alt="Nineteenth-century view of Hanul lui Manuc, with its wooden gallery and carts in the courtyard" /><figcaption>Hanul lui Manuc, c. 1867–1870 · Carol Popp de Szathmári · public domain.</figcaption></figure>
+          <div class="manuc-room-copy">
+            <p class="annex-kicker">The costume, the language, the room</p>
+            <h2>Half top hats.<br /><em>Half kaftans.</em></h2>
+            <p>The seams of the city were visible everywhere. Boyars might wear Ottoman court dress one day and a “German” suit the next. Educated Romanians read French and German; Armenian, Greek, Ladino, Yiddish, Romanian and Saxon dialects lived in the same streets.</p>
+            <blockquote><p>“The meeting place of oriental and European manners.”</p><cite>Robert Walsh on Bucharest</cite></blockquote>
+          </div>
+        </section>
 
         <section class="manuc-treaty">
-          <div class="manuc-treaty-intro"><p class="annex-kicker">The continent at the door</p><p class="manuc-number">02</p><h2>The room<br />becomes a <em>frontier.</em></h2></div>
+          <div class="manuc-treaty-intro"><p class="annex-kicker">A continent at the door</p><p class="manuc-number">02</p><h2>The war, the room,<br />the <em>treaty.</em></h2></div>
           <div class="manuc-treaty-copy">
-            <p>The war between Russia and the Ottoman Empire had run through the principalities since 1806. Beyond it lay the calculations of Napoleon, Alexander I, Constantinople and Paris. Bucharest was a listening post, a rear base, and a city under pressure.</p>
+            <p>The war between Russia and the Ottoman Empire had run through the principalities since 1806. Behind it lay the calculations of Napoleon, Alexander I, Constantinople and Paris. Bucharest was a listening post, a rear base, and a city under pressure.</p>
             <p>For five months in 1811–12, Russian and Ottoman delegates met under Manuc’s roof. Kutuzov stood behind one side; Galib efendi led the other. The courtyard that had made room for travellers was now making room for peace.</p>
             <blockquote><p>28 May 1812</p><span>The Treaty of Bucharest is signed at Manuc’s Inn.</span></blockquote>
           </div>
           <div class="manuc-treaty-fallout">
             <p><b>13 days later</b> Napoleon’s Grande Armée crosses the Niemen.</p>
-            <p><b>On this map</b> Russia takes the eastern half of Moldavia, between the Prut and Dniester: the territory soon called Bessarabia.</p>
+            <p><b>On the map</b> Russia takes the eastern half of Moldavia, between the Prut and Dniester: the territory soon called Bessarabia.</p>
             <p><b>For Romania</b> a merchant’s room begins an argument that will outlast the empires around it.</p>
           </div>
         </section>
@@ -93,14 +124,15 @@
         </section>
 
         <p class="manuc-statement">To face west does not require<br /><em>forgetting the road behind.</em><span lang="fr">Se tourner vers l’Ouest ne demande pas d’oublier la route parcourue.</span></p>
+
         <section class="manuc-sources">
           <h2>Sources &amp; image credits</h2>
           <ul>
             <li><a href="https://hanumanucrestaurant.ro/istoric/">Hanu’ lui Manuc</a> — historical timeline of the inn.</li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Szathmary_-_Hanul_lui_Manuc.jpg">Carol Popp de Szathmári, <i>Hanul lui Manuc</i></a> — c. 1867–1870, public domain.</li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Hanul_lui_Manuc.jpg">Hanul lui Manuc, Bucharest</a> — Korinna, CC BY-SA 3.0 RO.</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Mold._1810.png">Moldavia in 1810</a> — Auguste-Henri Dufour / David Rumsey Map Collection, public domain.</li>
             <li><a href="https://annalsreview.geo.unibuc.ro/2013/Full_2013.pdf">University of Bucharest</a> — urban regeneration and affective connections in Bucharest.</li>
-            <li><i>Limba Română</i>, “Manuc Bey – personaj secret al culiselor Păcii de la București din 1812”; ICR, “The Foreigners and the Modernization of Bucharest”; and Encyclopedia.com, “Treaty of Bucharest.”</li>
+            <li><i>Limba Română</i>, “Manuc Bey – personaj secret al culiselor Păcii de la București din 1812”; ICR, “The Foreigners and the Modernization of Bucharest”; Robert Walsh, <i>Voyage en Europe</i>; and Encyclopedia.com, “Treaty of Bucharest.”</li>
           </ul>
         </section>
       </article>
