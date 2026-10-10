@@ -24,7 +24,7 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .annex-kicker { margin: 0 0 1rem; color: var(--red); font: 750 .64rem/1.25 var(--sans); letter-spacing: .16em; text-transform: uppercase; }
 .annex-fr { margin: 1.1rem 0 0; color: var(--muted); font-size: clamp(.98rem, 1.3vw, 1.1rem); font-style: italic; line-height: 1.55; }
 
-.manuc-hero { position: relative; min-height: 100svh; overflow: hidden; display: grid; align-items: end; color: var(--cream); background: var(--night); }
+.manuc-hero { position: relative; min-height: 100svh; overflow: hidden; display: grid; align-items: center; color: var(--cream); background: var(--night); }
 .manuc-hero figure, .manuc-hero figure img { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
 .manuc-hero figure img { object-fit: cover; object-position: center 52%; filter: saturate(.56) contrast(1.1) brightness(.64); }
 .manuc-hero::after { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(7,10,16,.94), rgba(7,10,16,.57) 54%, rgba(7,10,16,.15)), linear-gradient(0deg, rgba(7,10,16,.82), transparent 64%); }
@@ -36,22 +36,13 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-deck { max-width: 610px; margin: 1.7rem 0 0 clamp(.15rem, 8vw, 6.2rem); font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; }
 .manuc-scroll { position: absolute; z-index: 3; right: max(2rem, 6vw); bottom: 1.9rem; color: rgba(244,238,226,.85); font: 700 .59rem/1.25 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
 .manuc-scroll span { margin-left: .5rem; color: var(--gold); font-size: 1.15rem; }
-
-/* The Manuc route opens with the landing page's four-image grammar and route menu. */
-.manuc-landing .landing-scenes { grid-template-columns: 1.12fr .92fr .88fr 1.08fr; }
-.manuc-landing { color: var(--cream); }
-.manuc-landing .landing-scene img { filter: saturate(.58) sepia(.08) contrast(1.08) brightness(.68); }
-.manuc-landing .manuc-scene--facade img { object-position: 60% center; }
-.manuc-landing .manuc-scene--historic img { object-position: 54% center; filter: sepia(.58) saturate(.54) contrast(1.04) brightness(.69); }
-.manuc-landing .manuc-scene--map img { object-position: 54% center; filter: sepia(.48) saturate(.52) contrast(1.12) brightness(.64); }
-.manuc-landing .manuc-scene--courtyard img { object-position: 54% center; }
-.manuc-landing .landing-shade { background: linear-gradient(90deg, rgba(7,10,16,.92), rgba(7,10,16,.66) 48%, rgba(7,10,16,.38)), linear-gradient(0deg, rgba(7,10,16,.91), transparent 64%, rgba(7,10,16,.3)); }
-.manuc-landing .landing-route[aria-current="page"] { color: var(--gold); border-bottom-color: var(--gold); }
-.manuc-landing .landing-route[aria-current="page"] small { color: #ead6a5; }
-.manuc-landing .landing-route[aria-current="page"]:hover, .manuc-landing .landing-route[aria-current="page"]:focus-visible { color: #11151d; }
-.manuc-landing .landing-route[aria-current="page"]:hover small, .manuc-landing .landing-route[aria-current="page"]:focus-visible small { color: #3c2a21; }
-.manuc-landing .landing-credit { right: 10rem; }
-.manuc-landing .manuc-scroll { right: 2rem; bottom: 2.8rem; }
+.manuc-credit {
+  position: absolute; z-index: 3; left: max(1.5rem, 6vw); bottom: 1.9rem;
+  max-width: 42%; margin: 0;
+  color: rgba(244,238,226,.62); font: 500 .6rem/1.6 var(--sans);
+}
+.manuc-credit a { color: inherit; text-decoration: none; }
+.manuc-credit a:hover, .manuc-credit a:focus-visible { color: var(--gold); text-decoration: underline; }
 
 .manuc-story { overflow: hidden; }
 .manuc-arrivals { width: min(1180px, calc(100% - 48px)); margin: auto; padding: clamp(6rem, 13vw, 12rem) 0; display: grid; grid-template-columns: .32fr 1fr; gap: clamp(2rem, 8vw, 9rem); }
@@ -166,10 +157,8 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-hero-copy { width: calc(100% - 32px); padding: 7rem 0 5.2rem; }
   .manuc-hero h1 { font-size: clamp(3.6rem, 17vw, 5.5rem); }
   .manuc-deck { margin-left: 0; font-size: 1rem; line-height: 1.48; }
-  .manuc-scroll { right: 1rem; bottom: 1.2rem; }
-  .manuc-landing .landing-scenes { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
-  .manuc-landing .landing-credit { right: .7rem; }
-  .manuc-landing .manuc-scroll { right: .8rem; bottom: 1.85rem; font-size: .44rem; }
+  .manuc-scroll { right: 1rem; bottom: 1.2rem; font-size: .48rem; }
+  .manuc-credit { left: 1rem; bottom: 1rem; max-width: 55%; font-size: .5rem; }
   .manuc-arrivals, .manuc-man, .manuc-treaty-intro, .manuc-courtyard { grid-template-columns: 1fr; }
   .manuc-arrivals, .manuc-names, .manuc-courtyard { width: calc(100% - 32px); }
   .manuc-arrivals { gap: 2.4rem; padding-block: 5rem; }
