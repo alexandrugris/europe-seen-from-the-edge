@@ -99,6 +99,16 @@ Tag `pdf-baseline-v1` (`1f0b9df`) is the approved baseline; it lives on `codex/p
 
 Write literary passages grounded in facts. Separate events from interpretation, name regimes precisely, and avoid collective blame. Preserve citations and image credits. Never use generated imagery as historical evidence.
 
+### The Story page is the frozen reference
+
+The Story (`dist/the-long-way-from-paris.html`, styled only by `dist/styles.css`) is the best of the seven pages and is deliberately frozen. It is the standard the others are being brought up to.
+
+- Do not restyle it, extend its vertical rhythm, patch its CSS, or fold it into any shared scale.
+- Improvements travel *toward* it. The other six pages move to match it; it is not edited to match them.
+- `dist/editorial.css` therefore covers only the six companion pages, and the visible difference between the Story and the rest is expected — not a regression to be closed.
+
+The freeze lifts only when the other six pages have reached the same standard, and only on the author's explicit word.
+
 ## Known Gaps
 
 Verified by a full-site crawl (all seven pages, desktop 1440 and mobile 390: zero console errors, zero failed requests, zero broken images, zero horizontal overflow, one nav per page, correct `aria-current`).
@@ -107,6 +117,9 @@ Verified by a full-site crawl (all seven pages, desktop 1440 and mobile 390: zer
 - **Language, the Paris generation and territory still have no chapter of their own.** They exist only as rooms inside `annexes/` and as "still to come" entries on `routes.html`. Promoting them to destinations is the main remaining structural gap.
 - **Figure captions, image credits and the sources drawer carry no French.** Deliberate — apparatus, not narrative — but it is a visible asymmetry.
 - The essay carries three defects that have propagated nowhere yet but should be fixed at source: a garbled doubled clause on the Italian campaign (p.4), `« l'infusion raciale »` (p.15), and a triplicated `« l'attraction du Sénat »` (p.17).
+- **The Story page has no keyboard focus ring.** `dist/styles.css` sets `outline: 0` on `:focus-visible`; the six companion pages get a visible outline from `dist/editorial.css`. Left deliberately under the reference freeze above, and recorded here so it reads as an accepted accessibility gap rather than an oversight.
+- **Section rhythm differs by page, on purpose.** The annex rhythm is `clamp(4.5rem, 8vw, 7.5rem)` in `annex.css` (architecture, art, manuc). `dist/styles.css` (Story — frozen) and `dist/annexes/styles.css` (annexes index) still carry the older, larger spacing. Do not "correct" the Story one.
+- **Three unused images remain on disk** (~896 KB): `bucharest-wall-of-light-2017.webp` (actually a protest crowd, and mislabelled), `noaptea-ca-hotii-2017.webp` (Casa Scînteii at night), `tbilisi-2024.webp` (the wrong city). None is referenced by any page. Deletion is uncontroversial but was deferred by the author for time, not on editorial grounds.
 
 ## Planned Additive Features
 
