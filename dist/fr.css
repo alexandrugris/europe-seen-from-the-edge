@@ -24,6 +24,20 @@
   line-height: 1.4;
 }
 
+/* Display headings on this site are set between line-height .8 and .88, so the
+   line box is shorter than the glyphs and descenders spill below it — the tail
+   of a y or a g reaches roughly a fifth of the heading's own font size past the
+   element. At .5rem the echo sat inside that spill and the descender struck
+   through it. Every such heading here is a vw-based clamp, so a vw clearance
+   tracks them at every breakpoint without a fixed number per size.
+
+   Specified on h1/h2/h3 + .fr-echo--head rather than on .fr-echo--head alone,
+   so paragraph echoes keep their .5rem and this only ever applies under a
+   heading. */
+h1 + .fr-echo--head,
+h2 + .fr-echo--head,
+h3 + .fr-echo--head { margin-top: clamp(1.05rem, 2.3vw, 2.6rem); }
+
 /* Anything in French that is not one of the two echo classes — the quotation
    blocks, the room theses, the word-bank — still has to carry the marker.
 
