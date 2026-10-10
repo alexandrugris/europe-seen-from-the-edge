@@ -205,6 +205,37 @@ img { max-width: 100%; }
 .landing-foot-links a span { font-family: var(--serif); font-style: italic; letter-spacing: 0; text-transform: none; color: var(--gold-dim); }
 .landing-foot-links a:hover, .landing-foot-links a:focus-visible { color: var(--gold); outline: 0; }
 
+/* the sources drawer: apparatus, so it stays French-free and closed by default */
+.landing-sources { width: 100%; margin: 0; text-align: left; }
+.landing-sources summary {
+  cursor: pointer; justify-self: center; color: rgba(244,238,226,.62);
+  font: 600 clamp(.58rem, .72vw, .68rem)/1.6 var(--sans);
+  letter-spacing: .13em; text-transform: uppercase;
+}
+.landing-sources summary:hover, .landing-sources summary:focus-visible { color: var(--gold); outline: 0; }
+.landing-sources[open] summary { color: var(--gold); }
+
+.landing-sources-grid {
+  margin-top: 1.8rem; padding-top: 1.6rem;
+  border-top: 1px solid rgba(244,238,226,.14);
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.6rem, 4vw, 3rem);
+}
+.landing-sources-grid h3 {
+  margin: 0 0 .7rem; color: var(--gold-dim);
+  font: 600 clamp(.58rem, .72vw, .68rem)/1.4 var(--sans);
+  letter-spacing: .13em; text-transform: uppercase;
+}
+.landing-sources-grid h3 + p + h3 { margin-top: 1.5rem; }
+.landing-sources-grid p, .landing-sources-grid li {
+  color: rgba(244,238,226,.62);
+  font: 500 clamp(.62rem, .78vw, .73rem)/1.65 var(--sans);
+}
+.landing-sources-grid ul { margin: 0; padding: 0; list-style: none; }
+.landing-sources-grid li + li { margin-top: .4rem; }
+.landing-sources-grid a { color: inherit; text-decoration: none; }
+.landing-sources-grid a:hover, .landing-sources-grid a:focus-visible { color: var(--gold); text-decoration: underline; }
+.landing-sources-grid cite { font-family: var(--serif); font-style: italic; }
+
 /* ---------- compatibility: the Manuc chapter ----------
    manuc.html still reuses the old landing scaffolding (`landing`,
    `landing-content`, `landing-intro`). The landing itself became a scrolling
@@ -305,6 +336,7 @@ img { max-width: 100%; }
 
   .cabinet-cta { font-size: 1.2rem; }
   .landing-credit { font-size: .6rem; line-height: 1.7; }
+  .landing-sources-grid { grid-template-columns: 1fr; gap: 1.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
