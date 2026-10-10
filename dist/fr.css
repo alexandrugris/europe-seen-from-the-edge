@@ -28,6 +28,15 @@
    blocks, the room theses, the word-bank — still has to carry the marker. */
 [lang="fr"] { font-style: italic; }
 
+/* The annex room index styles bare `span`s with the `font` shorthand, whose
+   implied font-style: normal outranks the blanket rule above on specificity.
+   That left the six French room names upright and the same near-white as their
+   English partners, with nothing to mark where the English stopped. Restate
+   the marker here — and on hover, where the card turns gold and a gold French
+   would vanish into it, drop it to the red the room number uses. */
+.room-index [lang="fr"] { font-style: italic; color: var(--fr-ink); }
+.room-index a:hover [lang="fr"] { color: #7a2c2c; }
+
 /* Echoes that live inside a display-scale line. They previously had no rule
    at all and rendered at full display weight, running straight into the
    English with no line break. */
@@ -77,33 +86,33 @@
 .annex-hero-copy > .fr-echo--head { max-width: 780px; margin-inline: auto; }
 
 /* --- contextual colours -------------------------------------------------
-   French is one voice on this site: always italic, always gold. Only the
-   value shifts with the surface it sits on, so the language marker is never
-   lost. Anything that was a neutral grey here used to make the French read
-   as plain body copy, which is what made it hard to see where the English
-   stopped. */
+   French is one voice on this site: always italic, always gold. What changes
+   is the value, and it has to follow the surface it is painted on — the same
+   gold that is legible on navy disappears on cream.
 
-:root { --fr-ink: #e0c68e; }
+   The default is therefore the DARK gold, which is safe on paper, and every
+   dark surface re-declares the light gold. Because this is a custom property,
+   it inherits: anything new dropped into a dark section picks up the right
+   colour without needing a rule of its own. Set the variable on the painted
+   surface, never on the individual French element. */
 
-/* --- on navy and other dark surfaces --- */
-.hero .fr-echo, .hero .fr-echo--head { color: #dfc385; }
-.chapter-hero .fr-echo, .chapter-hero .fr-echo--head { color: #e6d3a4; }
-.annex-hero .fr-echo, .annex-hero .fr-echo--head { color: #dfcaa0; }
-.manuc-hero .fr-echo, .manuc-hero .fr-echo--head { color: #e6d5a8; }
-.chapter-split--ink .fr-echo, .chapter-split--ink .fr-echo--head { color: #cbbd97; }
-.chapter-essay--art .fr-echo, .chapter-essay--art .fr-echo--head { color: #cfc3a2; }
-.epoch--paris .fr-echo--head, .epoch--napoleon .fr-echo--head { color: #e4ca8d; }
-.room--art .fr-echo--head { color: #d3c69c; }
-.room--language .fr-echo--head { color: #d3c69c; }
-.room--maps .fr-echo--head { color: #d0c398; }
+:root { --fr-ink: #6f5211; }
 
-/* --- on paper: the same gold, darkened so it still reads on cream --- */
-.chapter-closing .fr-echo, .chapter-closing .fr-echo--head { color: #85661d; }
-.art-closing .fr-echo, .art-closing .fr-echo--head { color: #f0d688; }
-.annex-intro .fr-echo, .annex-panel .fr-echo { color: #85661d; }
+/* on the deep red closing panel the gold has to be lighter still */
+.art-closing { --fr-ink: #f4dc9a; }
 
-/* --- the landing page, whose French is .landing-fr rather than .fr-echo --- */
-.screen-lede.landing-fr { color: #d8c294; }
+/* --- surfaces that need the light gold --- */
+.site-nav, .annex-nav,
+.hero, .landing, .screen,
+.manuc-hero, .annex-hero, .manuc-man, .manuc-treaty,
+.chapter-hero, .chapter-split--ink, .chapter-essay--art,
+.chapter-cards, .chapter-german,
+.epoch--paris, .epoch--napoleon, .pressure, .language-section, .crossroads,
+.frontier-map, .room-index, .room--language, .room--art, .room--maps,
+.word-bank, footer
+{ --fr-ink: #e0c68e; }
+
+/* --- the landing page and routes are dark at the root, so they set it there --- */
 
 /* --- apparatus: tiny uppercase labels, so the echo must be smaller --- */
 .manuc-sources .fr-echo--head,
