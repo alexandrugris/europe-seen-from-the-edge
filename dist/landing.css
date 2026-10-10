@@ -25,8 +25,12 @@ img { max-width: 100%; }
   letter-spacing: .16em; text-transform: uppercase;
 }
 
-/* French sits at full size beside its English — an echo, never a footnote. */
-.landing-fr { font-style: italic; color: #d9d1c1; }
+/* French sits at full size beside its English — an echo, never a footnote.
+   The colour reads --fr-ink so it stays gold like every other French passage on
+   the site; the body is dark, so landing.css sets the light gold on
+   body.landing-page. Hardcoding it here is what left the landing French looking
+   like plain cream copy, indistinguishable from the English. */
+.landing-fr { font-style: italic; color: var(--fr-ink); }
 
 /* ---------- screen one: the claim ---------- */
 
@@ -70,7 +74,7 @@ img { max-width: 100%; }
 .landing-connection { max-width: 36rem; margin-top: 1.6rem; display: grid; gap: .7rem; }
 .landing-connection p { margin: 0; font-size: clamp(1rem, 1.15vw, 1.09rem); line-height: 1.5; }
 /* same size as its English twin — the hero-title rule would otherwise win here */
-.landing-connection .landing-fr { font-size: clamp(1rem, 1.15vw, 1.09rem); color: #d9d1c1; }
+.landing-connection .landing-fr { font-size: clamp(1rem, 1.15vw, 1.09rem); color: var(--fr-ink); }
 
 .hero-cue {
   justify-self: start;
@@ -96,7 +100,7 @@ img { max-width: 100%; }
 }
 .screen-head .landing-fr { margin: 0; font-size: clamp(1.1rem, 1.6vw, 1.4rem); }
 .screen-lede { margin: 1.5rem 0 0; max-width: 40rem; font-size: clamp(1.02rem, 1.2vw, 1.15rem); line-height: 1.52; color: var(--muted); }
-.screen-lede.landing-fr { margin-top: .7rem; color: rgba(189,183,173,.82); }
+.screen-lede.landing-fr { margin-top: .7rem; color: var(--fr-ink); }
 
 /* ---------- screen two: the text Europe already has ---------- */
 
@@ -155,7 +159,7 @@ img { max-width: 100%; }
 }
 .closing.landing-fr {
   margin-top: .8rem; padding-top: 0; border-top: 0;
-  color: var(--gold-dim); font-size: clamp(.98rem, 1.25vw, 1.16rem);
+  color: var(--fr-ink); font-size: clamp(.98rem, 1.25vw, 1.16rem);
 }
 /* the attribution line: apparatus, so it stays French-free */
 .closing-attr {
@@ -182,9 +186,9 @@ img { max-width: 100%; }
 }
 .chapter-body { display: grid; gap: .45rem; max-width: 52rem; }
 .chapter-title { font-size: clamp(1.35rem, 2.1vw, 1.95rem); line-height: 1.15; letter-spacing: -.02em; }
-.chapter-title.landing-fr { font-size: clamp(1.05rem, 1.4vw, 1.28rem); color: var(--gold-dim); }
+.chapter-title.landing-fr { font-size: clamp(1.05rem, 1.4vw, 1.28rem); color: var(--fr-ink); }
 .chapter-why { font-size: clamp(.98rem, 1.12vw, 1.08rem); line-height: 1.5; color: var(--muted); }
-.chapter-why.landing-fr { color: rgba(189,183,173,.8); }
+.chapter-why.landing-fr { color: var(--fr-ink); }
 
 /* ---------- screen three: the cabinet ---------- */
 
@@ -203,7 +207,7 @@ img { max-width: 100%; }
 }
 .cabinet-cta { font-size: clamp(1.2rem, 1.9vw, 1.6rem); letter-spacing: -.02em; }
 .cabinet-cta i { color: var(--gold); font-style: normal; }
-.cabinet-cta.landing-fr { font-size: clamp(.98rem, 1.2vw, 1.1rem); color: var(--gold-dim); }
+.cabinet-cta.landing-fr { font-size: clamp(.98rem, 1.2vw, 1.1rem); color: var(--fr-ink); }
 
 /* ---------- footer ---------- */
 

@@ -56,7 +56,7 @@ h2 { margin-bottom: 1.6rem; font-size: clamp(3.1rem, 6.6vw, 6.7rem); font-weight
 .room-heading > p:not(.kicker):not(.fr-echo):not(.fr-echo--head) { max-width: 760px; font-size: clamp(1.08rem, 1.65vw, 1.3rem); line-height: 1.72; }
 .room-heading .fr { max-width: 720px; }
 .room-thesis { margin-top: clamp(4rem, 8vw, 7rem); padding-top: 1.6rem; border-top: 1px solid var(--line); color: #91443e; font-size: clamp(1.55rem, 3.2vw, 3.1rem); font-style: italic; line-height: 1.22; }
-.room-thesis span { display: block; max-width: 830px; margin-top: .65rem; color: #765d51; font-size: .56em; line-height: 1.4; }
+.room-thesis span { display: block; max-width: 830px; margin-top: .65rem; color: var(--fr-ink); font-size: .56em; line-height: 1.4; }
 
 .room--manuc { background: #e3d6bf; }
 .room--manuc::before { content: "COURTYARD"; position: absolute; top: -3vw; right: -1vw; color: rgba(91,58,36,.05); font-size: 14vw; font-style: italic; line-height: 1; pointer-events: none; }
@@ -95,7 +95,7 @@ figcaption { margin-top: .7rem; color: #6c6255; font-size: .57rem; font-weight: 
 .art-pair figcaption { margin: 0 0 1rem; color: #b7b2a8; font-family: var(--serif); font-size: 1rem; font-weight: 400; letter-spacing: 0; line-height: 1.55; text-transform: none; }
 .art-pair figcaption b { display: block; margin-bottom: .65rem; color: #e6cc8c; font: 750 .67rem/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
 .room--art .room-thesis { border-color: rgba(255,255,255,.18); color: #ecd69e; }
-.room--art .room-thesis span { color: #b7b3aa; }
+.room--art .room-thesis span { color: var(--fr-ink); }
 
 .room--language { color: #f4ede0; background: #111820; }
 .room--language .kicker, .room--language .mini-label { color: var(--gold); }
@@ -118,7 +118,7 @@ figcaption { margin-top: .7rem; color: #6c6255; font-size: .57rem; font-weight: 
 .lexicon-reading > p:not(.mini-label):not(.fr-echo):not(.fr-echo--head) { color: #d4d1ca; font-size: clamp(1.08rem, 1.55vw, 1.22rem); line-height: 1.7; }
 .lexicon-reading strong { color: #ecd197; font-weight: 400; }
 .room--language .room-thesis { border-color: rgba(255,255,255,.17); color: #ecd69e; }
-.room--language .room-thesis span { color: #b6b3ac; }
+.room--language .room-thesis span { color: var(--fr-ink); }
 
 .room--paris { background: #e4d7c0; }
 .paris-portraits { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.8rem, 1.7vw, 1.4rem); }
@@ -142,7 +142,7 @@ figcaption { margin-top: .7rem; color: #6c6255; font-size: .57rem; font-weight: 
 .border-dates b { color: #df6a68; font: 400 clamp(1.8rem, 3vw, 3rem)/1 var(--serif); }
 .border-dates span { color: #d4d0c8; font-size: 1.02rem; line-height: 1.58; }
 .room--maps .room-thesis { border-color: rgba(255,255,255,.17); color: #ecd69e; }
-.room--maps .room-thesis span { color: #b6b3ac; }
+.room--maps .room-thesis span { color: var(--fr-ink); }
 
 .return { min-height: 72svh; padding: clamp(7rem, 12vw, 11rem) max(1.5rem, 6vw); display: grid; align-content: center; color: var(--ink); background: #e6dac5; text-align: center; }
 .return .kicker { color: var(--red); }

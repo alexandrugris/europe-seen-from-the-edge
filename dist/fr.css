@@ -25,8 +25,21 @@
 }
 
 /* Anything in French that is not one of the two echo classes — the quotation
-   blocks, the room theses, the word-bank — still has to carry the marker. */
-[lang="fr"] { font-style: italic; }
+   blocks, the room theses, the word-bank — still has to carry the marker.
+
+   The colour is pinned rather than merely suggested, because this is the exact
+   failure the stylesheet exists to prevent. Page stylesheets set colours on
+   bare `p` inside containers — `.chapter-feature-copy p:not(.chapter-kicker)`
+   is (0,2,1), `.route-list p` is (0,1,1) — and both out-specify `.fr-echo` at
+   (0,1,0). When that happened the French quietly reverted to body colour and
+   the two languages became indistinguishable, which is the one thing the
+   reader must never have to guess at. Chasing specificity page by page only
+   moves the problem, so the invariant is declared once, here.
+
+   The value is still --fr-ink, set by the painted surface, so the correct
+   colour for each background comes from one place. A local override is still
+   possible, it just has to say so deliberately. */
+[lang="fr"] { font-style: italic; color: var(--fr-ink) !important; }
 
 /* The annex room index styles bare `span`s with the `font` shorthand, whose
    implied font-style: normal outranks the blanket rule above on specificity.
@@ -35,7 +48,7 @@
    the marker here — and on hover, where the card turns gold and a gold French
    would vanish into it, drop it to the red the room number uses. */
 .room-index [lang="fr"] { font-style: italic; color: var(--fr-ink); }
-.room-index a:hover [lang="fr"] { color: #7a2c2c; }
+.room-index a:hover [lang="fr"] { color: #7a2c2c !important; }
 
 /* Echoes that live inside a display-scale line. They previously had no rule
    at all and rendered at full display weight, running straight into the
@@ -48,8 +61,8 @@
   line-height: 1.42;
   letter-spacing: -.01em;
 }
-.epoch-turn span { color: #e8d3a0; }
-.pressure-line span { color: #dcc79a; }
+.epoch-turn span { color: var(--fr-ink); }
+.pressure-line span { color: var(--fr-ink); }
 
 /* Bring the annex room thesis onto the same .44em scale as the other
    display-line echoes. */
@@ -63,9 +76,18 @@
    font-size on bare `p`, which outranks a single-class heading echo.
    --------------------------------------------------------------------------- */
 
-/* the hero sits on near-black navy — the rust has no contrast there */
+/* The hero sits on near-black navy. It is already on the dark-surface list
+   below, so the token resolves correctly here — but restating it at this
+   specificity is what stops a bare `p` rule inside .hero from out-specifying
+   the marker. */
 .hero .fr-echo,
-.hero .fr-echo--head { color: #dfc385; }
+.hero .fr-echo--head { color: var(--fr-ink); }
+
+/* Quotation blocks take their colour from the blockquote itself, which is a
+   rule the marker cannot out-specify. The French inside them is still French
+   and still has to read as French. */
+blockquote [lang="fr"],
+blockquote[lang="fr"] { color: var(--fr-ink); }
 
 /* card-scale headings get a compact echo, or it outweighs the title itself */
 .press-grid .fr-echo--head,
@@ -101,7 +123,15 @@
 /* on the deep red closing panel the gold has to be lighter still */
 .art-closing { --fr-ink: #f4dc9a; }
 
-/* --- surfaces that need the light gold --- */
+/* --- surfaces that need the light gold ---
+   Verified by measuring each section's own opaque background, not by eye:
+   every selector below paints between #090c12 and #233249. The dark gold
+   scores 1.5–2.6:1 on them, so they need the light one.
+
+   Measure the section's own background. Several of these — .language-section,
+   .crossroads, .room--maps — contain lighter inner blocks, and reading the
+   lightest background found inside them will wrongly suggest they are paper.
+   That mistake has already been made once here. */
 .site-nav, .annex-nav,
 .hero, .landing, .screen,
 .manuc-hero, .annex-hero, .manuc-man, .manuc-treaty,
