@@ -10,6 +10,7 @@
   margin-top: .6rem;
   font-size: .92em;          /* one ratio, everywhere */
   font-style: italic;
+  color: var(--fr-ink);
   line-height: 1.56;
 }
 
@@ -19,8 +20,13 @@
   font-size: clamp(1.02rem, 1.8vw, 1.42rem);
   font-style: italic;
   font-weight: 400;
+  color: var(--fr-ink);
   line-height: 1.4;
 }
+
+/* Anything in French that is not one of the two echo classes — the quotation
+   blocks, the room theses, the word-bank — still has to carry the marker. */
+[lang="fr"] { font-style: italic; }
 
 /* Echoes that live inside a display-scale line. They previously had no rule
    at all and rendered at full display weight, running straight into the
@@ -33,8 +39,8 @@
   line-height: 1.42;
   letter-spacing: -.01em;
 }
-.epoch-turn span { color: #efe4cd; }
-.pressure-line span { color: #ded5c2; }
+.epoch-turn span { color: #e8d3a0; }
+.pressure-line span { color: #dcc79a; }
 
 /* Bring the annex room thesis onto the same .44em scale as the other
    display-line echoes. */
@@ -71,26 +77,33 @@
 .annex-hero-copy > .fr-echo--head { max-width: 780px; margin-inline: auto; }
 
 /* --- contextual colours -------------------------------------------------
-   Each of these used to be carried by a now-removed class (.annex-fr,
-   .chapter-fr, .fr). Sections sit on paper, navy or red, so the value has to
-   follow the surface, not the role. */
+   French is one voice on this site: always italic, always gold. Only the
+   value shifts with the surface it sits on, so the language marker is never
+   lost. Anything that was a neutral grey here used to make the French read
+   as plain body copy, which is what made it hard to see where the English
+   stopped. */
 
-/* --- on navy --- */
+:root { --fr-ink: #e0c68e; }
+
+/* --- on navy and other dark surfaces --- */
 .hero .fr-echo, .hero .fr-echo--head { color: #dfc385; }
-.chapter-hero .fr-echo, .chapter-hero .fr-echo--head { color: rgba(246,238,224,.82); }
-.annex-hero .fr-echo, .annex-hero .fr-echo--head { color: #d0c5af; }
-.manuc-hero .fr-echo, .manuc-hero .fr-echo--head { color: rgba(244,238,226,.82); }
-.chapter-split--ink .fr-echo, .chapter-split--ink .fr-echo--head { color: #aaa69d; }
-.chapter-essay--art .fr-echo, .chapter-essay--art .fr-echo--head { color: #aeb1b8; }
+.chapter-hero .fr-echo, .chapter-hero .fr-echo--head { color: #e6d3a4; }
+.annex-hero .fr-echo, .annex-hero .fr-echo--head { color: #dfcaa0; }
+.manuc-hero .fr-echo, .manuc-hero .fr-echo--head { color: #e6d5a8; }
+.chapter-split--ink .fr-echo, .chapter-split--ink .fr-echo--head { color: #cbbd97; }
+.chapter-essay--art .fr-echo, .chapter-essay--art .fr-echo--head { color: #cfc3a2; }
 .epoch--paris .fr-echo--head, .epoch--napoleon .fr-echo--head { color: #e4ca8d; }
-.room--art .fr-echo--head { color: #aaa8a3; }
-.room--language .fr-echo--head { color: #aaa8a2; }
-.room--maps .fr-echo--head { color: #a9a6a0; }
+.room--art .fr-echo--head { color: #d3c69c; }
+.room--language .fr-echo--head { color: #d3c69c; }
+.room--maps .fr-echo--head { color: #d0c398; }
 
-/* --- on paper --- */
-.chapter-closing .fr-echo, .chapter-closing .fr-echo--head { color: #82614d; }
+/* --- on paper: the same gold, darkened so it still reads on cream --- */
+.chapter-closing .fr-echo, .chapter-closing .fr-echo--head { color: #85661d; }
 .art-closing .fr-echo, .art-closing .fr-echo--head { color: #f0d688; }
-.annex-intro .fr-echo, .annex-panel .fr-echo { color: var(--muted); }
+.annex-intro .fr-echo, .annex-panel .fr-echo { color: #85661d; }
+
+/* --- the landing page, whose French is .landing-fr rather than .fr-echo --- */
+.screen-lede.landing-fr { color: #d8c294; }
 
 /* --- apparatus: tiny uppercase labels, so the echo must be smaller --- */
 .manuc-sources .fr-echo--head,

@@ -115,16 +115,19 @@ img { max-width: 100%; }
 
 /* ---------- screen three ---------- */
 
-/* the principle is the hinge of the whole page — give it a rule and air */
-.principle {
-  max-width: 42rem; margin: 2.6rem 0 0; padding-top: 1.8rem;
-  border-top: 1px solid rgba(223,197,126,.34);
-  color: var(--cream);
-  font-size: clamp(1.12rem, 1.6vw, 1.42rem); line-height: 1.5; letter-spacing: -.01em;
-}
-.principle.landing-fr {
-  margin-top: .9rem; padding-top: 0; border-top: 0;
-  color: var(--gold-dim); font-size: clamp(1rem, 1.3vw, 1.2rem);
+/* A hint of where the edge is: the tricolour Romania used from 1867 to 1948,
+   set to the right of the text and faded back. Decorative only — the screen
+   reads the same without it. */
+.chapters-flag {
+  position: absolute; z-index: -1; pointer-events: none;
+  top: clamp(2.5rem, 8vh, 5.5rem); right: 0;
+  width: clamp(260px, 27vw, 520px);
+  aspect-ratio: 3 / 2;
+  background: url(./assets/romania-flag-1867.webp) center / cover no-repeat;
+  opacity: .17;
+  filter: saturate(.9);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 46%, #000);
+          mask-image: linear-gradient(to right, transparent, #000 46%, #000);
 }
 
 /* ---------- screen four: the warning ---------- */
@@ -280,8 +283,9 @@ img { max-width: 100%; }
   .screen--text .landing-fr { font-size: 1rem; }
   .screen--text .screen-lede { margin-top: 1.4rem; }
 
-  .principle { margin-top: 2rem; padding-top: 1.4rem; font-size: 1.08rem; }
-  .principle.landing-fr { margin-top: .7rem; font-size: .98rem; }
+  /* the tricolour would sit under the text on a phone — tuck it into the corner */
+  .chapters-flag { width: 150px; opacity: .1; top: 4.6rem; }
+
   .chapter-list { margin-top: 1.9rem; }
   .closing { margin-top: 2.2rem; padding-top: 1.4rem; font-size: 1.08rem; }
   .closing.landing-fr { margin-top: .7rem; font-size: .98rem; }
