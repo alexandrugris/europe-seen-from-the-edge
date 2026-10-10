@@ -127,9 +127,6 @@ img { max-width: 100%; }
   color: var(--gold-dim); font-size: clamp(1rem, 1.3vw, 1.2rem);
 }
 
-.ladder-head { margin: clamp(2.6rem, 6vh, 4rem) 0 .5rem; }
-.ladder-head .screen-lede { margin-top: 0; color: var(--gold-dim); }
-
 /* ---------- screen four: the warning ---------- */
 
 .closing {
@@ -142,8 +139,16 @@ img { max-width: 100%; }
   margin-top: .8rem; padding-top: 0; border-top: 0;
   color: var(--gold-dim); font-size: clamp(.98rem, 1.25vw, 1.16rem);
 }
+/* the attribution line: apparatus, so it stays French-free */
+.closing-attr {
+  max-width: 34rem; margin: .9rem 0 0;
+  color: rgba(244,238,226,.4);
+  font: 600 .6rem/1.45 var(--sans);
+  letter-spacing: .09em; text-transform: uppercase;
+}
+.closing-attr cite { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: .02em; text-transform: none; }
 
-.chapter-list { display: grid; gap: 0; border-top: 1px solid rgba(244,238,226,.14); }
+.chapter-list { display: grid; gap: 0; margin-top: clamp(2.2rem, 5vh, 3.2rem); border-top: 1px solid rgba(244,238,226,.14); }
 .chapter {
   display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 clamp(1.5rem, 3vw, 2.75rem);
   align-items: start;
@@ -287,9 +292,10 @@ img { max-width: 100%; }
 
   .principle { margin-top: 2rem; padding-top: 1.4rem; font-size: 1.08rem; }
   .principle.landing-fr { margin-top: .7rem; font-size: .98rem; }
-  .ladder-head { margin: 2.2rem 0 .4rem; }
+  .chapter-list { margin-top: 1.9rem; }
   .closing { margin-top: 2.2rem; padding-top: 1.4rem; font-size: 1.08rem; }
   .closing.landing-fr { margin-top: .7rem; font-size: .98rem; }
+  .closing-attr { margin-top: .7rem; }
 
   /* stack the number above the copy so nothing is squeezed into a column */
   .chapter { grid-template-columns: 1fr; gap: .5rem; padding: 1.5rem 0; }
