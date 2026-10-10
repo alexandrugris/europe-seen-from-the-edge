@@ -60,9 +60,17 @@ Some material — the Jewish, Ukrainian and other communities named in the
 cities — is **not** in the essay and is added from the sources listed in the
 landing page's "Beyond the essay" section.
 
-## Known follow-up
+## Images
 
-Nine of the thirty-three images exceed 1 MB (`assets/cec-palace.jpg` is
-8.9 MB at 4819 px wide; `assets/` totals 38 MB). The site is correct and
-fast enough on desktop, but these are worth recompressing before any
-significant traffic — and remember the 84-day nginx image cache when you do.
+All 33 images are **WebP**, encoded with `cwebp` at q82 (photographs) and
+q88 (the two text-heavy maps). Anything over 2000 px on the long edge was
+downscaled; nothing was upscaled. `assets/` went from **38.7 MB to 8.4 MB**.
+
+Renaming to `.webp` also sidesteps the nginx image cache: the vhost's
+84-day `Cache-Control` covers `.gif`, `.jpg` and `.png` but **not** `.webp`,
+so replacing a WebP in place takes effect immediately.
+
+Three images are currently on disk but referenced by no page —
+`bucharest-wall-of-light-2017.webp`, `noaptea-ca-hotii-2017.webp`,
+`tbilisi-2024.webp` (896 KB together). They were orphaned by earlier cuts to
+the Manuc collage and the Architecture quote panel; delete them or use them.
