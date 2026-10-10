@@ -36,13 +36,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-deck { max-width: 610px; margin: 1.7rem 0 0 clamp(.15rem, 8vw, 6.2rem); font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; }
 .manuc-scroll { position: absolute; z-index: 3; right: max(2rem, 6vw); bottom: 1.9rem; color: rgba(244,238,226,.85); font: 700 .59rem/1.25 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
 .manuc-scroll span { margin-left: .5rem; color: var(--gold); font-size: 1.15rem; }
-.manuc-credit {
-  position: absolute; z-index: 3; left: max(1.5rem, 6vw); bottom: 1.9rem;
-  max-width: 42%; margin: 0;
-  color: rgba(244,238,226,.62); font: 500 .6rem/1.6 var(--sans);
-}
-.manuc-credit a { color: inherit; text-decoration: none; }
-.manuc-credit a:hover, .manuc-credit a:focus-visible { color: var(--gold); text-decoration: underline; }
 
 .manuc-story { overflow: hidden; }
 .manuc-arrivals { width: min(1180px, calc(100% - 48px)); margin: auto; padding: clamp(6rem, 13vw, 12rem) 0; display: grid; grid-template-columns: .32fr 1fr; gap: clamp(2rem, 8vw, 9rem); }
@@ -158,7 +151,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-hero h1 { font-size: clamp(3.6rem, 17vw, 5.5rem); }
   .manuc-deck { margin-left: 0; font-size: 1rem; line-height: 1.48; }
   .manuc-scroll { right: 1rem; bottom: 1.2rem; font-size: .48rem; }
-  .manuc-credit { left: 1rem; bottom: 1rem; max-width: 55%; font-size: .5rem; }
   .manuc-arrivals, .manuc-man, .manuc-treaty-intro, .manuc-courtyard { grid-template-columns: 1fr; }
   .manuc-arrivals, .manuc-names, .manuc-courtyard { width: calc(100% - 32px); }
   .manuc-arrivals { gap: 2.4rem; padding-block: 5rem; }
