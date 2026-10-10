@@ -312,9 +312,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-card--image { position: relative; overflow: hidden; }
 .chapter-card--image img { width: 100%; height: 100%; min-height: 405px; object-fit: cover; }
 .chapter-card--image figcaption { position: absolute; right: 1.4rem; bottom: 1.2rem; left: 1.4rem; margin: 0; color: #fff7e7; text-shadow: 0 1px 4px rgba(0,0,0,.8); }
-.chapter-card--quote { grid-column: 1 / -1; padding: clamp(2.3rem, 5vw, 4.5rem); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; color: #202534; background: #e5ce8c; }
-.chapter-card--quote p { max-width: 550px; margin: 0; font-size: clamp(1.8rem, 3.3vw, 3.6rem); font-style: italic; letter-spacing: -.045em; line-height: 1.05; }
-.chapter-card--quote span { align-self: end; font-size: 1.08rem; line-height: 1.5; }
 .chapter-transylvania { padding: clamp(7rem, 14vw, 13rem) 0; display: grid; grid-template-columns: minmax(0,1.08fr) minmax(280px,.92fr); gap: clamp(3rem, 9vw, 10rem); align-items: center; }
 .chapter-transylvania figure { order: 2; }
 .chapter-transylvania figure img { width: 100%; min-height: 570px; object-fit: cover; filter: saturate(.76) contrast(1.03); }
@@ -414,8 +411,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-cards { width: calc(100% - 32px); margin-top: 5rem; grid-template-columns: 1fr; }
   .chapter-card--copy { min-height: auto; }
   .chapter-card--image, .chapter-card--image img { min-height: 330px; }
-  .chapter-card--quote { grid-column: auto; grid-template-columns: 1fr; }
-  .chapter-card--quote span { font-size: 1rem; }
   .chapter-transylvania figcaption { margin-bottom: 0; }
   .chapter-closing, .chapter-circuit { width: calc(100% - 32px); padding-block: 5rem; }
   .chapter-closing > p:not(.chapter-kicker):not(.fr-echo):not(.fr-echo--head) { margin-top: 1.4rem; }
