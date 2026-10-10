@@ -292,8 +292,10 @@ img { max-width: 100%; }
 @media (max-width: 760px) {
   /* On a phone the four images become four small squares, too small to carry
      anything. Bucha alone fills the screen instead, which is also the image
-     the closing line of the caption is about. */
-  .landing-scene:not(.landing-scene--bucha) { display: none; }
+     the closing line of the caption is about. Scoped to the landing hero:
+     the chapter pages reuse .landing-scene for their own four images, and
+     they are meant to keep all of them. */
+  .screen--hero .landing-scene:not(.landing-scene--bucha) { display: none; }
   .landing-scenes { grid-template-columns: 1fr; grid-template-rows: 1fr; }
   .landing-scene img { object-position: center; }
   .landing-shade {

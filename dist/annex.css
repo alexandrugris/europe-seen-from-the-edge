@@ -31,7 +31,7 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-hero-copy { position: relative; z-index: 2; width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 8rem 0 clamp(5rem, 12vh, 8rem); }
 .manuc-hero .annex-kicker { color: var(--gold); }
 .manuc-hero h1 { max-width: 820px; margin: 0; font-size: clamp(4.1rem, 9vw, 9.1rem); font-weight: 400; letter-spacing: -.073em; line-height: .8; }
-.manuc-hero h1 em, h2 em, .manuc-statement em { color: var(--gold); font-weight: 400; }
+.manuc-hero h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .manuc-hero .annex-fr { color: rgba(244,238,226,.79); }
 .manuc-deck { max-width: 610px; margin: 1.7rem 0 0 clamp(.15rem, 8vw, 6.2rem); font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.55; }
 .manuc-scroll { position: absolute; z-index: 3; right: max(2rem, 6vw); bottom: 1.9rem; color: rgba(244,238,226,.85); font: 700 .59rem/1.25 var(--sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
@@ -118,9 +118,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-courtyard-copy p + p { margin-top: 1.15rem; }
 .manuc-courtyard figure { margin: 0; }
 .manuc-courtyard img { width: 100%; aspect-ratio: 1 / .86; object-fit: cover; filter: saturate(.74) contrast(1.03); box-shadow: 20px 24px 0 rgba(158,52,57,.12); }
-.manuc-statement { margin: 0; padding: clamp(4.5rem, 9vw, 8rem) max(1.5rem, 7vw); color: var(--cream); background: var(--red); font-size: clamp(2.2rem, 5.2vw, 5.6rem); line-height: .91; letter-spacing: -.06em; text-align: center; }
-.manuc-statement em { color: #f1d58e; }
-.manuc-statement span { display: block; margin-top: 1.1rem; color: rgba(255,255,255,.8); font-size: .44em; font-style: italic; letter-spacing: 0; line-height: 1.3; }
 .manuc-sources { width: min(850px, calc(100% - 48px)); margin: auto; padding: clamp(4.5rem, 8vw, 7rem) 0; }
 .manuc-sources h2 { margin: 0 0 1rem; color: var(--red); font: 750 .66rem/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; }
 .manuc-sources ul { margin: 0; padding-left: 1rem; }
@@ -197,7 +194,6 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-treaty-fallout { grid-template-columns: 1fr; gap: 1.6rem; }
   .manuc-courtyard { gap: 3.5rem; padding-block: 6rem; }
   .manuc-courtyard-copy { max-width: none; }
-  .manuc-statement { padding-inline: 1.25rem; font-size: clamp(2.2rem, 10vw, 3.8rem); }
   .manuc-sources { width: calc(100% - 32px); }
   .annex-hero { min-height: 88svh; }
   .annex-hero::after { background: linear-gradient(0deg, rgba(7,10,16,.92), rgba(7,10,16,.38) 72%, rgba(7,10,16,.62)); }
