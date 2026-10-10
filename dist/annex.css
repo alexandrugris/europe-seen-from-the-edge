@@ -86,6 +86,10 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-treaty-intro .annex-kicker { align-self: start; color: var(--gold); }
 .manuc-treaty-intro .manuc-number { margin: 0; }
 .manuc-treaty-intro h2 { grid-column: 2; margin-top: -1rem; color: #f5efe4; }
+/* The heading echo belongs in the heading's column, exactly as the h2 above.
+   This was an inline style="grid-column: 2" on the element; same declaration,
+   kept with the rest of the layout instead of on the markup. */
+.manuc-treaty-intro .fr-echo--head { grid-column: 2; }
 .manuc-treaty-copy { max-width: 760px; margin: clamp(3rem, 6vw, 6rem) 0 0 calc(33.333% + clamp(2rem, 4vw, 4rem)); }
 .manuc-treaty-copy > p { color: #d3cec5; font-size: clamp(1.05rem, 1.55vw, 1.25rem); line-height: 1.73; }
 .manuc-treaty-copy > p + p { margin-top: 1.2rem; }
@@ -276,14 +280,28 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-essay::before { position: absolute; z-index: 0; top: -3vw; right: -1vw; color: rgba(55,48,39,.06); content: "PARIS"; font-size: 21vw; font-style: italic; letter-spacing: -.1em; line-height: 1; pointer-events: none; }
 .chapter-essay-grid, .chapter-avenue, .chapter-feature, .chapter-cards, .chapter-transylvania, .chapter-closing, .chapter-sources, .chapter-circuit { position: relative; z-index: 1; width: min(1100px, 100%); margin-inline: auto; }
 .chapter-essay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 10vw, 12rem); }
-.chapter-essay-grid h2 { align-self: start; }
-.chapter-essay-grid > div { max-width: 620px; }
+/* The bilingual contract puts the French echo immediately after the heading it
+   mirrors, as a sibling. In a two-column grid that sibling is not a caption —
+   it becomes a third grid item, so auto-placement threw the French into column 2
+   and pushed the body down into column 1, leaving the right half empty. An echo
+   that reads as belonging to nothing is the one thing the bilingual contract
+   cannot afford, so placement is now stated rather than inferred from document
+   order. Adding further French can no longer move anything. */
+.chapter-essay-grid > h2 { grid-column: 1; grid-row: 1; align-self: start; }
+.chapter-essay-grid > .fr-echo--head { grid-column: 1; grid-row: 2; }
+.chapter-essay-grid > div { grid-column: 2; grid-row: 1 / span 2; max-width: 620px; }
 .chapter-essay-grid p { margin: 0; }
 .chapter-essay-grid p + p { margin-top: 1.2rem; }
 .chapter-avenue { padding: clamp(7rem, 13vw, 12rem) 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 10vw, 11rem); }
 .chapter-avenue h2 { margin-bottom: 1.7rem; }
 .chapter-avenue-head > p:last-child { max-width: 480px; color: #5a554f; }
-.avenue-notes { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--chapter-line); }
+/* The year list is shorter than the text column beside it. Left to stretch it
+   fills the row and its first entry rides up against the section top, so the
+   two columns start at different heights and the list reads as a stray column.
+   Centring it against the taller column is the same treatment .chapter-feature
+   already gives its own two-column grid. Collapses to a no-op on mobile, where
+   the grid is a single column and each row is its own height. */
+.avenue-notes { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--chapter-line); align-self: center; }
 .avenue-notes li { padding: 1.4rem 0; display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; border-bottom: 1px solid var(--chapter-line); }
 .avenue-notes b { color: var(--chapter-red); font-size: clamp(1.8rem, 2.8vw, 2.7rem); font-weight: 400; letter-spacing: -.06em; line-height: 1; }
 .avenue-notes span { color: #504e4a; font-size: 1.03rem; line-height: 1.55; }
@@ -409,9 +427,19 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-press::before { position: absolute; top: -1.5rem; right: -1.5rem; color: rgba(38,43,56,.045); content: "PRESS"; font: italic 20vw/.8 var(--serif); letter-spacing: -.1em; pointer-events: none; }
 .press-head, .press-grid, .press-afterword { position: relative; z-index: 1; width: min(1100px, 100%); margin-inline: auto; }
 .press-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; }
-.press-head .chapter-kicker { grid-column: 1 / -1; margin-bottom: 0; }
-.press-head h2 { margin: 0; }
-.press-head > p:last-child { max-width: 430px; margin: 0; color: #5a554e; }
+.press-head .chapter-kicker { grid-column: 1 / -1; grid-row: 1; margin-bottom: 0; }
+/* Same reason as .chapter-essay-grid: echoes sat as bare siblings in a two-column
+   grid, so auto-placement zig-zagged every item — kicker and its echo stacked in
+   the left column, the h2 stranded alone on the right, row 1 column 2 left empty.
+   Each rule keys off the element it echoes, because the grid may hold a kicker
+   echo, a heading echo and a deck echo, and a positional selector would put two
+   of them on the same row. The kicker keeps its full-bleed row; title and its
+   echo stack in column 1; the deck and its echo hold column 2. */
+.press-head .chapter-kicker + .fr-echo { grid-column: 1 / -1; grid-row: 2; }
+.press-head h2 { grid-column: 1; grid-row: 3; margin: 0; }
+.press-head h2 + .fr-echo--head { grid-column: 1; grid-row: 4; }
+.press-head h2 + .fr-echo--head + p { grid-column: 2; grid-row: 3 / span 2; max-width: 430px; margin: 0; color: #5a554e; }
+.press-head h2 + .fr-echo--head + p + .fr-echo { grid-column: 2; grid-row: 5; max-width: 430px; margin: 1.2rem 0 0; }
 .press-grid { margin-top: clamp(4rem, 8vw, 7rem); display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--chapter-line); border-left: 1px solid var(--chapter-line); }
 .press-grid article { min-height: 260px; padding: clamp(1.2rem, 2.4vw, 2.1rem); border-right: 1px solid var(--chapter-line); border-bottom: 1px solid var(--chapter-line); }
 .press-date { margin: 0 0 2.2rem; color: var(--chapter-red); font: 700 .67rem/1 var(--sans) !important; letter-spacing: .1em; }
@@ -450,6 +478,14 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-image img { max-height: 68svh; }
   .chapter-split, .chapter-essay, .chapter-german, .chapter-press { padding: 5rem 1rem; }
   .chapter-split, .chapter-essay-grid, .chapter-avenue, .chapter-feature, .chapter-transylvania, .chapter-german, .press-head, .press-afterword { grid-template-columns: 1fr; }
+  /* Explicit column placement above would otherwise create a phantom second
+     column once the grid collapses to one, overlapping the title and the body. */
+  .chapter-essay-grid > h2, .chapter-essay-grid > .fr-echo--head, .chapter-essay-grid > div,
+  .press-head .chapter-kicker, .press-head .chapter-kicker + .fr-echo, .press-head h2,
+  .press-head h2 + .fr-echo--head, .press-head h2 + .fr-echo--head + p,
+  .press-head h2 + .fr-echo--head + p + .fr-echo,
+  .manuc-treaty-intro h2, .manuc-treaty-intro .fr-echo--head { grid-column: auto; grid-row: auto; }
+  .chapter-essay-grid > div, .press-head h2 + .fr-echo--head + p { grid-row: auto; }
   .chapter-split { gap: 2.5rem; }
   .chapter-essay-grid { gap: 2.5rem; }
   .chapter-avenue, .chapter-feature, .chapter-transylvania { width: calc(100% - 32px); gap: 3rem; padding-block: 5rem; }
