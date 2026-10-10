@@ -10,7 +10,7 @@ This document is the continuity layer for the project. It records the product in
 - Source: `dist/` (buildless HTML, CSS, and JavaScript)
 - Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site>
 - Original reference confirmed by the user: <https://alexandrugris.ro/from-the-edges/>. On 2026-10-10, fetched Story HTML, `styles.css`, and `script.js` from this origin and verified that all three match the restored review source byte-for-byte. Use this public original when comparing behavior, not assumptions about the GitHub copy.
-- Working preview: <http://127.0.0.1:4173/>. **R-015** is implemented and verified at five responsive widths. Started from GitHub `master` at `97c3c3f`; the user has now authorized committing and pushing this review edition on `codex/site-polish-review` for desktop inspection. Publication is to the existing private Sites project only; the personal-domain deployment is outside this pass.
+- Working preview: <http://127.0.0.1:4173/>. **R-015** introduced the companion-page layout polish; **R-016** corrects its missing companion reveals and the emoji-rendered landing arrows. The review remains subject to user acceptance. Started from GitHub `master` at `97c3c3f`; the user has now authorized committing and pushing this review edition on `codex/site-polish-review` for desktop inspection. Publication is to the existing private Sites project only; the personal-domain deployment is outside this pass.
 - Review restriction: the user has authorized a separate GitHub branch for inspection at home. Commit and push `codex/site-polish-review`; do not merge into `master` before approval. The separate Sites publishing snapshot was also authorized.
 - Source of truth for French: the essay *De la Révolution française à la Grande Guerre, 1789–1914* (Claw, octobre 2026) is written in French and is the original of this English rendering. Prefer its French over any translation written from the English.
 - Repository: <https://github.com/alexandrugris/europe-seen-from-the-edge>
@@ -56,7 +56,7 @@ The central idea is that French revolutionary ideals, language, education, and c
 
 ## Active Milestone
 
-**Current review pass — R-015: bring the companion pages to The Story's level of polish.** Preserve the Story's HTML and CSS, publish the private Sites review edition, and retain the changes on the separately authorized `codex/site-polish-review` branch pending desktop review. The earlier M2 acceptance criteria below remain historical context rather than authorization to commit or publish elsewhere.
+**Current review pass — R-016: remove the landing arrows and carry The Story's reveals across its companion pages.** Preserve the Story's HTML and CSS, publish the private Sites review edition, and retain the changes on the separately authorized `codex/site-polish-review` branch pending desktop review. The earlier M2 acceptance criteria below remain historical context rather than authorization to commit or publish elsewhere.
 
 **M2 — Build the first three destination stories and make the entrance work on mobile.**
 
@@ -288,10 +288,26 @@ python3 -m http.server 4173 --directory dist
 
 Open <http://localhost:4173/>. If the branch already exists locally, switch to it and pull with `--ff-only`.
 
+### R-016 — Remove the emoji arrows and enable companion reveals
+
+**Status:** implemented; awaiting user review
+**Priority:** high
+**Area:** interaction, opening
+**Review:** “1/ wtf is that icon there?!?? 2/ I don’t see the animation anywhere else except on the story page. Honestly, your work is really bad !” The supplied iPhone screenshot shows the landing chapter arrows rendered as blue emoji.
+**Acceptance:** No diagonal arrow icons beside the chapter links. Actual fade-and-rise transitions while scrolling on the landing, Manuc, Architecture, Art, Annexes and Routes, using The Story's motion. Preserve The Story's original HTML, stylesheet and script. Reduced-motion and JavaScript-disabled readers can see all content.
+**Resolution:** Removed the generated arrow and its reserved grid column at every breakpoint. Added the existing deferred `script.js` to the five companion pages that did not load it, and authored 77 reveal groups there. Enabled the annexes' existing 19 groups by removing the CSS rule that suppressed their animation. Shared companion CSS uses the Story's exact 24px movement, .82s opacity and .9s transform transitions; the unchanged observer supplies its original threshold and one-time behavior. English/French pairs remain together, heroes remain immediately visible, keyboard-focused content is visible, and reduced-motion content is static. The Story's three original files are unchanged from `master`.
+
+The earlier R-015 entries record the first pass and its limitations: static companion content was not a completed implementation of the requested polish. This correction supersedes the description of annex content as deliberately static and the decision to add arrows.
+
+**Verification:** Passed Chromium scrolling checks on all seven pages at 390×844 and 1440×900: an offscreen group starts at opacity 0 / translateY(24px), emits opacity and transform transition events, passes through an intermediate opacity, and ends at opacity 1 / no transform. Incremental traversal leaves every reveal visible (96 companion groups plus the Story's 44), with no nested reveals, horizontal overflow, missing images/backgrounds, failed requests or JavaScript errors. All seven pages also passed reduced-motion and JavaScript-disabled visibility checks. Mobile menu/Escape behavior and absent chapter pseudo-element arrows were checked. Inspected mobile chapter links and mobile/desktop reading screenshots in `/tmp/history-r16/`; detailed evidence: `/tmp/history-r16/verification.json`. These are Chromium checks, not an on-device iPhone/Safari test. `node --check` for both scripts, `git diff --check`, and an exact comparison of the three Story files against `master` passed.
+**Publication:** Successfully deployed on 2026-10-10 to <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site>, preserving its owner-private audience. Sites snapshot `1f21e3f9d42b215f5d2b3eb182ed5256210fb437`; saved version `appgprj_6ac8aabaa9288191b0a11f5f5603ee1c~appgver_e9600e3de10081918956b44fe3f250e6`. The staged `dist/` matched this checkout exactly before deployment.
+**Commit:** Follow-up to `104c29e` on `codex/site-polish-review`; no merge into `master`.
+
 ## Decision Log
 
 | Date | Decision | Reason |
 | --- | --- | --- |
+| 2026-10-10 | Apply The Story's reveal behavior to all six companion pages; remove landing link arrows. | User reported that the arrows rendered as unwanted emoji on iPhone and that the companion pages still lacked animations. |
 | 2026-10-10 | Commit and push the review edition to `codex/site-polish-review`, leaving `master` unchanged. | User explicitly requested a separate branch to inspect on the home desktop. This supersedes the earlier no-GitHub-commit restriction for that branch only. |
 | 2026-10-10 | Use The Story as the visual reference; apply a common editorial stylesheet only to its six companion pages. | Improve spacing, type, images and navigation while preserving the approved reference composition. |
 | 2026-10-10 | Keep the GitHub checkout uncommitted; publish only through an isolated Sites source snapshot. | User requested in-depth review before any GitHub commit and explicitly approved the snapshot required for Sites publication. |
@@ -312,7 +328,7 @@ Open <http://localhost:4173/>. If the branch already exists locally, switch to i
 At the start of a new conversation, ask the agent to:
 
 1. Read `AGENTS.md` and this file completely.
-2. For the pending R-015 desktop review, use `codex/site-polish-review`; otherwise the normal working branch is `master`. Understand the working tree before editing. (`codex/pdf-baseline` is the frozen approved-baseline branch and is far behind — do not switch to it to continue work.)
+2. For the pending R-015/R-016 desktop review, use `codex/site-polish-review`; otherwise the normal working branch is `master`. Understand the working tree before editing. (`codex/pdf-baseline` is the frozen approved-baseline branch and is far behind — do not switch to it to continue work.)
 3. Treat `pdf-baseline-v1` as read-only reference, then inspect the latest commits and open reviews.
 4. Work only on the active milestone or explicitly selected review IDs.
 5. Preview and validate the result before committing.

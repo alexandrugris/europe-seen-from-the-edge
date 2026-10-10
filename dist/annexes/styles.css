@@ -161,8 +161,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
 .sources p, .sources li { font-size: .75rem; line-height: 1.62; }
 .sources ul { margin-top: 0; padding-left: 1.1rem; }
 .footer-note { width: min(1120px, 100%); margin: 2.5rem auto 0; color: #74716d; font-size: .55rem; letter-spacing: .16em; text-transform: uppercase; }
-
-.has-js .reveal { opacity: 1; transform: none; }
+/* Reveal transitions are shared with the other companion pages in editorial.css. */
 
 @media (max-width: 1000px) {
   .room-index { grid-template-columns: repeat(3, 1fr); }
