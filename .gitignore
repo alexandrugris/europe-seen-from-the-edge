@@ -1,2 +1,6 @@
 tmp/
 .sites-publish/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
