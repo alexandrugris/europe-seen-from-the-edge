@@ -67,6 +67,12 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .manuc-name-grid b { color: var(--red); font-size: clamp(1.75rem, 3.1vw, 3.1rem); font-weight: 400; letter-spacing: -.05em; }
 .manuc-name-grid span { max-width: 12rem; color: var(--muted); font: .76rem/1.4 var(--sans); letter-spacing: .025em; }
 .manuc-names-note { width: min(600px, 88%); margin: clamp(3rem, 6vw, 5rem) 0 0 auto; color: #4d4a45; font-size: clamp(1.13rem, 1.7vw, 1.42rem); font-style: italic; line-height: 1.55; }
+/* The note is a 600px column, set right. Its French echo is a sibling rather than
+   a child, so it inherits neither the measure nor the alignment: it ran the full
+   width of the section at the base size, and the two halves of one sentence read
+   as two unrelated blocks. Tied to the note by adjacency so the pair stays one
+   visual unit whatever else is added to the section. */
+.manuc-names-note + .fr-echo { width: min(600px, 88%); margin: .7rem 0 0 auto; font-size: clamp(1rem, 1.5vw, 1.25rem); }
 
 .manuc-historic { position: relative; width: min(1020px, calc(100% - 48px)); margin: 0 auto; padding: clamp(.75rem, 1.4vw, 1.2rem); background: #dac8a5; transform: rotate(-.7deg); }
 .manuc-historic img { width: 100%; max-height: 77svh; object-fit: cover; object-position: center; filter: sepia(.2) contrast(.94); }
@@ -167,6 +173,7 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .manuc-name-grid { grid-template-columns: repeat(2, 1fr); }
   .manuc-name-grid div { min-height: 125px; }
   .manuc-names-note { width: 100%; }
+  .manuc-names-note + .fr-echo { width: 100%; }
   .manuc-historic { width: calc(100% - 32px); transform: none; }
   .manuc-room { width: calc(100% - 32px); margin: 1.5rem auto 5.5rem; grid-template-columns: 1fr; gap: 3rem; }
   .manuc-room .manuc-historic { width: 100%; }
@@ -246,6 +253,9 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-fr { margin: 1.2rem 0 0; color: #79685b; font-size: clamp(.98rem, 1.25vw, 1.12rem); font-style: italic; line-height: 1.55; }
 .chapter-hero .chapter-fr { color: rgba(246,238,224,.79); }
 .chapter-deck { max-width: 660px; margin: 1.5rem 0 0 clamp(0rem, 7vw, 6.4rem); font-size: clamp(1.07rem, 1.62vw, 1.38rem); line-height: 1.55; }
+/* Same reason as .manuc-names-note: the deck is a 660px measure, and the echo
+   beside it took the full width of the hero. */
+.chapter-deck + .fr-echo { max-width: 660px; margin-left: clamp(0rem, 7vw, 6.4rem); }
 .chapter-down { position: absolute; right: max(1.5rem, 5vw); bottom: 1.65rem; color: #f8f0e2; font: 720 .62rem/1 var(--sans); letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
 .chapter-down span { margin-left: .5rem; color: #e6c979; font-size: 1.15rem; }
 .chapter-story { overflow: hidden; }
@@ -449,7 +459,11 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .press-afterword p { margin: 0; color: #5a554e; }
 .chapter-circuit { padding: clamp(7rem, 13vw, 12rem) 0; text-align: center; }
 .chapter-circuit h2 { margin-bottom: clamp(3rem, 7vw, 6rem); }
-.chapter-circuit > p:last-child { max-width: 760px; margin: clamp(3rem, 7vw, 6rem) auto 0; color: #58534c; }
+/* :last-child was the body paragraph until an echo was added after it; the echo
+   then inherited the 760px measure and centring and the English lost them, so the
+   two traded places. Both are named explicitly instead. */
+.chapter-circuit > p:not(.chapter-kicker):not(.fr-echo) { max-width: 760px; margin: clamp(3rem, 7vw, 6rem) auto 0; color: #58534c; }
+.chapter-circuit > p.fr-echo { max-width: 760px; margin: 1.2rem auto 0; }
 .circuit-line { display: flex; align-items: center; justify-content: center; gap: 1.1rem; color: #8e343a; font: 700 clamp(.62rem, .9vw, .76rem)/1 var(--sans); letter-spacing: .11em; text-transform: uppercase; }
 .circuit-line i { width: clamp(1.5rem, 5vw, 6rem); height: 1px; background: #aa8e57; }
 .art-closing { color: #f2ecdf; background: #9c3c42; }
@@ -464,6 +478,7 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-hero-copy { width: calc(100% - 32px); padding: 7rem 0 5rem; }
   .chapter-hero h1 { font-size: clamp(3.4rem, 15vw, 6.1rem); line-height: .82; }
   .chapter-deck { margin-left: 0; font-size: 1rem; line-height: 1.48; }
+  .chapter-deck + .fr-echo { margin-left: 0; }
   .chapter-down { right: 1rem; bottom: 1.1rem; }
   .chapter-story h2 { font-size: clamp(2.8rem, 12vw, 4.8rem); }
   .chapter-opening { width: calc(100% - 32px); padding-block: 5rem; grid-template-columns: 1fr; gap: 2.2rem; }
