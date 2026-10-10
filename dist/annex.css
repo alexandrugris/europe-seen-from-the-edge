@@ -280,16 +280,16 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-essay::before { position: absolute; z-index: 0; top: -3vw; right: -1vw; color: rgba(55,48,39,.06); content: "PARIS"; font-size: 21vw; font-style: italic; letter-spacing: -.1em; line-height: 1; pointer-events: none; }
 .chapter-essay-grid, .chapter-avenue, .chapter-feature, .chapter-cards, .chapter-transylvania, .chapter-closing, .chapter-sources, .chapter-circuit { position: relative; z-index: 1; width: min(1100px, 100%); margin-inline: auto; }
 .chapter-essay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 10vw, 12rem); }
-/* The bilingual contract puts the French echo immediately after the heading it
-   mirrors, as a sibling. In a two-column grid that sibling is not a caption —
-   it becomes a third grid item, so auto-placement threw the French into column 2
-   and pushed the body down into column 1, leaving the right half empty. An echo
-   that reads as belonging to nothing is the one thing the bilingual contract
-   cannot afford, so placement is now stated rather than inferred from document
-   order. Adding further French can no longer move anything. */
-.chapter-essay-grid > h2 { grid-column: 1; grid-row: 1; align-self: start; }
-.chapter-essay-grid > .fr-echo--head { grid-column: 1; grid-row: 2; }
-.chapter-essay-grid > div { grid-column: 2; grid-row: 1 / span 2; max-width: 620px; }
+/* A fr-echo is a sibling of the English it mirrors, but in a two-column grid a
+   sibling is a grid item — so the echo was auto-placed into column 2, pushing
+   the body into column 1 and leaving the right half of the section empty. The
+   title and its echo are now one item, .chapter-essay-head, in the manner of
+   .chapter-feature-copy, so grid flow has nothing to misplace. Placing them
+   explicitly instead was tried first and is not enough: the body column then
+   spans both rows, its height stretches the first row, and the echo is pushed
+   to the bottom of the column away from the title it belongs to. */
+.chapter-essay-grid > div { max-width: 620px; }
+.chapter-essay-grid > .chapter-essay-head { max-width: none; align-self: start; }
 .chapter-essay-grid p { margin: 0; }
 .chapter-essay-grid p + p { margin-top: 1.2rem; }
 .chapter-avenue { padding: clamp(7rem, 13vw, 12rem) 0; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 10vw, 11rem); }
@@ -480,12 +480,11 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-split, .chapter-essay-grid, .chapter-avenue, .chapter-feature, .chapter-transylvania, .chapter-german, .press-head, .press-afterword { grid-template-columns: 1fr; }
   /* Explicit column placement above would otherwise create a phantom second
      column once the grid collapses to one, overlapping the title and the body. */
-  .chapter-essay-grid > h2, .chapter-essay-grid > .fr-echo--head, .chapter-essay-grid > div,
   .press-head .chapter-kicker, .press-head .chapter-kicker + .fr-echo, .press-head h2,
   .press-head h2 + .fr-echo--head, .press-head h2 + .fr-echo--head + p,
   .press-head h2 + .fr-echo--head + p + .fr-echo,
   .manuc-treaty-intro h2, .manuc-treaty-intro .fr-echo--head { grid-column: auto; grid-row: auto; }
-  .chapter-essay-grid > div, .press-head h2 + .fr-echo--head + p { grid-row: auto; }
+  .press-head h2 + .fr-echo--head + p { grid-row: auto; }
   .chapter-split { gap: 2.5rem; }
   .chapter-essay-grid { gap: 2.5rem; }
   .chapter-avenue, .chapter-feature, .chapter-transylvania { width: calc(100% - 32px); gap: 3rem; padding-block: 5rem; }
