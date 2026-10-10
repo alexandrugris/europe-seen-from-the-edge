@@ -314,6 +314,65 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-closing h2 { max-width: 930px; margin-inline: auto; }
 .chapter-closing > p:not(.chapter-kicker):not(.fr-echo):not(.fr-echo--head) { max-width: 780px; margin: 2rem auto 0; color: #5a554f; }
 .chapter-closing .chapter-fr { color: #82614d; }
+
+/* The closing claim is that the layers all survive, so two of them sit behind
+   the claim: Calea Victoriei as a 1900 postcard on one side, the same street in
+   2022 on the other. Multiplied onto the paper rather than laid over it, which
+   keeps only the darker line-work — the sky and the pale stone drop out on
+   their own and the screen stays as quiet as the rest of the page.
+
+   One pseudo-element per photograph, each carrying a single-axis mask. Two
+   stacked masks would need mask-composite to fade the horizontal and vertical
+   edges together, and that composite is not reliably applied — the fades
+   silently collapse and the photographs show their own rectangular borders.
+   `cover` fills the section on both axes so no vertical edge is ever exposed,
+   which leaves the horizontal fade as the only mask each one needs.
+
+   z-index:-1 is safe because annex.css already gives .chapter-closing a
+   z-index:1, making the section a stacking context, so the layers paint above
+   its own background and below the text. Scoped to this page on purpose:
+   art.html's closing is the deep red panel and must not inherit any of it. */
+.architecture-page .chapter-closing { isolation: isolate; }
+.architecture-page .chapter-closing::before,
+.architecture-page .chapter-closing::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  pointer-events: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  filter: grayscale(.85);
+  opacity: .16;
+}
+/* A veil of paper rides on top of each photograph, clear at the outer edge and
+   opaque by the middle. The photographs can then stay legible where they are
+   not fighting the text, while the centred column of type gets plain paper
+   instead of stonework. It is why the weight can sit at .16 rather than the
+   .10 that would be needed without it. */
+.architecture-page .chapter-closing::before {
+  background-image:
+    linear-gradient(to right,
+      color-mix(in srgb, var(--paper) 12%, transparent) 0%,
+      color-mix(in srgb, var(--paper) 48%, transparent) 12%,
+      color-mix(in srgb, var(--paper) 84%, transparent) 26%,
+      color-mix(in srgb, var(--paper) 92%, transparent) 49%),
+    url(./assets/calea-victoriei-1900.webp);
+  background-position: left center;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 32%, transparent 49%);
+          mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 32%, transparent 49%);
+}
+.architecture-page .chapter-closing::after {
+  background-image:
+    linear-gradient(to left,
+      color-mix(in srgb, var(--paper) 12%, transparent) 0%,
+      color-mix(in srgb, var(--paper) 48%, transparent) 12%,
+      color-mix(in srgb, var(--paper) 84%, transparent) 26%,
+      color-mix(in srgb, var(--paper) 92%, transparent) 49%),
+    url(./assets/calea-victoriei-2022.webp);
+  background-position: right center;
+  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 14%, #000 32%, transparent 49%);
+          mask-image: linear-gradient(to left, transparent 0, #000 14%, #000 32%, transparent 49%);
+}
 .chapter-sources { padding: 3rem 0 5rem; border-top: 1px solid var(--chapter-line); }
 .chapter-sources > h2 { margin-bottom: 2rem; color: var(--chapter-red); font: 760 .68rem/1.3 var(--sans); letter-spacing: .15em; text-transform: uppercase; }
 .chapter-source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); }
@@ -406,6 +465,34 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-transylvania figcaption { margin-bottom: 0; }
   .chapter-closing, .chapter-circuit { width: calc(100% - 32px); padding-block: 5rem; }
   .chapter-closing > p:not(.chapter-kicker):not(.fr-echo):not(.fr-echo--head) { margin-top: 1.4rem; }
+  /* Half-width views of the pair leave nothing legible on a phone, so the
+     photographs turn on their side: 1900 above, 2022 below, which also reads in
+     chronological order. The veil and the mask both switch to the vertical
+     axis, meeting in the middle where the type sits. */
+  .architecture-page .chapter-closing::before {
+    background-image:
+      linear-gradient(to bottom,
+        color-mix(in srgb, var(--paper) 12%, transparent) 0%,
+        color-mix(in srgb, var(--paper) 52%, transparent) 14%,
+        color-mix(in srgb, var(--paper) 88%, transparent) 30%,
+        color-mix(in srgb, var(--paper) 94%, transparent) 47%),
+      url(./assets/calea-victoriei-1900.webp);
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 11%, #000 29%, transparent 47%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 11%, #000 29%, transparent 47%);
+  }
+  .architecture-page .chapter-closing::after {
+    background-image:
+      linear-gradient(to top,
+        color-mix(in srgb, var(--paper) 12%, transparent) 0%,
+        color-mix(in srgb, var(--paper) 52%, transparent) 14%,
+        color-mix(in srgb, var(--paper) 88%, transparent) 30%,
+        color-mix(in srgb, var(--paper) 94%, transparent) 47%),
+      url(./assets/calea-victoriei-2022.webp);
+    background-position: center bottom;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 53%, #000 71%, #000 89%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 53%, #000 71%, #000 89%, transparent 100%);
+  }
   .chapter-sources { width: calc(100% - 32px); padding-bottom: 4rem; }
   .chapter-source-grid { grid-template-columns: 1fr; gap: 2rem; }
   .chapter-german { gap: 3rem; }
