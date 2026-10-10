@@ -13,6 +13,8 @@
   var links = nav.querySelector('.site-links');
   if (!toggle || !links) return;
 
+  document.documentElement.classList.add('js');
+
   function isOpen() {
     return toggle.getAttribute('aria-expanded') === 'true';
   }

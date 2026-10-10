@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./annex.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./fr.css" />
-      <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="./editorial.css" />
   </head>
-  <body class="chapter-page architecture-page">
+  <body class="polished-page chapter-page architecture-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main">
     <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
@@ -28,9 +29,9 @@
       <li><a href="./routes.html">Routes</a></li>
     </ul>
   </nav>
-    <main>
+    <main id="main-content">
       <section class="chapter-hero architecture-hero" aria-labelledby="title">
-        <figure aria-hidden="true"><img src="./assets/calea-victoriei-1900.webp" alt="" /></figure>
+        <figure aria-hidden="true"><img src="./assets/calea-victoriei-1900.webp" alt="" width="1920" height="1163" /></figure>
         <div class="chapter-hero-copy">
           <p class="chapter-kicker">Bucharest · 1692–1914</p>
           <h1 id="title">A statement of<br /><em>identity in stone.</em></h1>
@@ -56,7 +57,7 @@
         </section>
 
         <figure class="chapter-image image--church">
-          <img src="./assets/stavropoleos-church.webp" alt="The carved stone porch of Stavropoleos Monastery in Bucharest" loading="lazy" />
+          <img src="./assets/stavropoleos-church.webp" alt="The carved stone porch of Stavropoleos Monastery in Bucharest" loading="lazy" width="2000" height="2667" />
           <figcaption>Stavropoleos Monastery · 1724 · a late Brâncovenesc language of carved vine, arcade and stone.</figcaption>
         </figure>
 
@@ -108,7 +109,7 @@
 
         <section class="chapter-feature feature--athenaeum">
           <figure>
-            <img src="./assets/romanian-athenaeum.webp" alt="Front view of the Romanian Athenaeum in Bucharest" loading="lazy" />
+            <img src="./assets/romanian-athenaeum.webp" alt="Front view of the Romanian Athenaeum in Bucharest" loading="lazy" width="1615" height="1080" />
             <figcaption>Romanian Athenaeum · Albert Galleron · begun 1886 · photograph by Mihai Petre, CC BY-SA 3.0 RO.</figcaption>
           </figure>
           <div class="chapter-feature-copy">
@@ -131,7 +132,7 @@
             <p class="fr-echo" lang="fr">La manière Beaux-Arts donna à Bucarest une grammaire commune&nbsp;: soubassements à bossages, entrées monumentales, dômes, sculpture, toits en mansarde et arrivée soigneusement maîtrisée. La transformation de Paris par Haussmann est devenue le modèle des villes européennes&nbsp;: les grands boulevards, les parcs publics, les immeubles haussmanniens sont devenus universels. Les architectes français Paul Gottereau et Cassien Bernard, aux côtés d’architectes roumains formés dans les mêmes écoles, firent que la banque, la musique et la richesse privée parussent appartenir à une capitale assez sûre de durer.</p>
           </div>
           <figure class="chapter-card chapter-card--image">
-            <img src="./assets/cec-palace.webp" alt="The domed CEC Palace in Bucharest" loading="lazy" />
+            <img src="./assets/cec-palace.webp" alt="The domed CEC Palace in Bucharest" loading="lazy" width="2000" height="1595" />
             <figcaption>CEC Palace · Paul Gottereau and Ion Socolescu · 1897–1900. A public bank given the scale of a palace.</figcaption>
           </figure>
           </section>
@@ -152,7 +153,7 @@
 
         <section class="chapter-transylvania">
           <figure>
-            <img src="./assets/sibiu-piata-mare.webp" alt="The historic square of Sibiu, with its dense Saxon-era urban fabric" loading="lazy" />
+            <img src="./assets/sibiu-piata-mare.webp" alt="The historic square of Sibiu, with its dense Saxon-era urban fabric" loading="lazy" width="1920" height="1285" />
             <figcaption>Piața Mare, Sibiu / Hermannstadt · a Transylvanian townscape shaped by Saxon settlement, trade and later Romanian life.</figcaption>
           </figure>
           <div>
@@ -174,32 +175,42 @@
           <p class="fr-echo" lang="fr">Les séismes, la guerre, les démolitions et la dictature ont emporté beaucoup. Pourtant, sur la même carte subsistent l’église brâncoveane, la banque Beaux-Arts, le dôme de l’Athénée, une place saxonne et une façade moderniste du XXe siècle. L’héritage bâti de la Roumanie ne raconte pas une seule origine. Il enregistre une société qui n’a cessé de choisir, de traduire et de rebâtir sa place en Europe.</p>
         </section>
 
-        <section class="chapter-sources">
-          <h2>Sources &amp; image credits</h2>
-          <div class="chapter-source-grid">
-            <div>
-              <h3>History and architecture</h3>
-              <ul>
-                <li><a href="https://filarmonicaenescu.ro/en/istoric-ateneul-roman">George Enescu Philharmonic</a> — the Athenaeum’s 1886–97 construction, Galleron, Garnier, the subscription campaign and European Heritage Label.</li>
-                <li><a href="https://whc.unesco.org/en/tentativelists/1929/">UNESCO: Historic Centre of Sibiu</a> — Saxon settlement, urban form, fortifications, civic and commercial history.</li>
-                <li><a href="https://whc.unesco.org/document/153838">UNESCO: Biertan evaluation</a> — Saxon settlement and the wider influence of Transylvanian defensive architecture.</li>
-                <li><a href="https://www.bucharest.ro/articles/piata-victoriei-the-site-of-bucharest-s-protests-a-brief-history-how-the-government-building-changed-over-time-1932">Bucharest.ro</a> — Podul Mogoșoaiei and its 1878 renaming as Calea Victoriei.</li>
-                <li>Florica Dumitrescu et al., <i>Bucharest: An Architectural Guide</i>; Romanian Cultural Institute, <i>The Foreigners and the Modernization of Bucharest</i>.</li>
-              </ul>
+        <nav class="chapter-next" aria-label="Continue reading">
+          <p class="next-label">Continue · 04</p>
+          <a href="./art.html"><span>A people learns to speak<span class="fr-echo" lang="fr">Un peuple apprend à parler</span></span><span aria-hidden="true">→</span></a>
+          <a class="next-home" href="./index.html#chapters">Back to the four chapters</a>
+        </nav>
+
+        <footer class="chapter-colophon">
+          <details>
+            <summary>Sources &amp; image credits</summary>
+            <div class="colophon-content">
+              <div class="chapter-source-grid">
+                <div>
+                  <h3>History and architecture</h3>
+                  <ul>
+                    <li><a href="https://filarmonicaenescu.ro/en/istoric-ateneul-roman">George Enescu Philharmonic</a> — the Athenaeum’s 1886–97 construction, Galleron, Garnier, the subscription campaign and European Heritage Label.</li>
+                    <li><a href="https://whc.unesco.org/en/tentativelists/1929/">UNESCO: Historic Centre of Sibiu</a> — Saxon settlement, urban form, fortifications, civic and commercial history.</li>
+                    <li><a href="https://whc.unesco.org/document/153838">UNESCO: Biertan evaluation</a> — Saxon settlement and the wider influence of Transylvanian defensive architecture.</li>
+                    <li><a href="https://www.bucharest.ro/articles/piata-victoriei-the-site-of-bucharest-s-protests-a-brief-history-how-the-government-building-changed-over-time-1932">Bucharest.ro</a> — Podul Mogoșoaiei and its 1878 renaming as Calea Victoriei.</li>
+                    <li>Florica Dumitrescu et al., <i>Bucharest: An Architectural Guide</i>; Romanian Cultural Institute, <i>The Foreigners and the Modernization of Bucharest</i>.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Images</h3>
+                  <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/Category:Historical_images_of_Calea_Victoriei">Calea Victoriei historic postcard</a> — hero image, and the left-hand layer behind the closing screen.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:48-50_Calea_Victoriei,_Bucharest_(01).jpg">Calea Victoriei 48–50, 2022</a> — photograph by Neoclassicism Enthusiast, CC BY-SA 4.0; the right-hand layer behind the closing screen. The building is the former Imobiliara Insurance Company headquarters, a Beaux-Arts work of the 1890s that is still standing and still in use.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Bucharest_-_Stavropoleos_Monastery_by_nickispeaki_2018_01.jpg">Stavropoleos Monastery</a> — photograph by nickispeaki, Wikimedia Commons.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Ateneul_Rom%C3%A2n_-_Vedere_Frontala.jpg">Romanian Athenaeum</a> — Mihai Petre, CC BY-SA 3.0 RO.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Palacio_CEC,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_64.jpg">CEC Palace</a> — Diego Delso, CC BY-SA 4.0.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Sibiu_Piata_Mare.jpg">Piața Mare, Sibiu</a> — Andrei kokelburg, CC BY-SA 3.0 RO.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3>Images</h3>
-              <ul>
-                <li><a href="https://commons.wikimedia.org/wiki/Category:Historical_images_of_Calea_Victoriei">Calea Victoriei historic postcard</a> — hero image, and the left-hand layer behind the closing screen.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:48-50_Calea_Victoriei,_Bucharest_(01).jpg">Calea Victoriei 48–50, 2022</a> — photograph by Neoclassicism Enthusiast, CC BY-SA 4.0; the right-hand layer behind the closing screen. The building is the former Imobiliara Insurance Company headquarters, a Beaux-Arts work of the 1890s that is still standing and still in use.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Bucharest_-_Stavropoleos_Monastery_by_nickispeaki_2018_01.jpg">Stavropoleos Monastery</a> — photograph by nickispeaki, Wikimedia Commons.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Ateneul_Rom%C3%A2n_-_Vedere_Frontala.jpg">Romanian Athenaeum</a> — Mihai Petre, CC BY-SA 3.0 RO.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Palacio_CEC,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_64.jpg">CEC Palace</a> — Diego Delso, CC BY-SA 4.0.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Sibiu_Piata_Mare.jpg">Piața Mare, Sibiu</a> — Andrei kokelburg, CC BY-SA 3.0 RO.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+          </details>
+        </footer>
       </article>
     </main>
     <script src="./nav.js" defer></script>

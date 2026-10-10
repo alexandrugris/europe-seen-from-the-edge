@@ -9,11 +9,13 @@
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./landing.css" />
     <link rel="stylesheet" href="./site-nav.css" />
-      <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="./fr.css" />
+    <link rel="stylesheet" href="./editorial.css" />
   </head>
-  <body class="landing-page">
+  <body class="polished-page landing-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main">
-    <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
+    <a class="site-home" href="./index.html" aria-current="page">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
       <span class="nav-toggle-label">Menu</span>
@@ -27,15 +29,15 @@
       <li><a href="./routes.html">Routes</a></li>
     </ul>
   </nav>
-    <main class="landing" aria-labelledby="title">
+    <main id="main-content" class="landing" aria-labelledby="title">
 
       <!-- Screen one: the claim, carried by the four pictures -->
       <section class="screen screen--hero" aria-labelledby="title">
         <div class="landing-scenes" aria-hidden="true">
-          <figure class="landing-scene landing-scene--kyiv"><img src="./assets/euromaidan-flags.webp" alt="" /></figure>
-          <figure class="landing-scene landing-scene--tbilisi"><img src="./assets/tbilisi-europe.webp" alt="" /></figure>
-          <figure class="landing-scene landing-scene--bucharest"><img src="./assets/bucharest-protest-2017.webp" alt="" /></figure>
-          <figure class="landing-scene landing-scene--bucha"><img src="./assets/bucha-2022.webp" alt="" /></figure>
+          <figure class="landing-scene landing-scene--kyiv"><img src="./assets/euromaidan-flags.webp" alt="" width="1920" height="1280" /></figure>
+          <figure class="landing-scene landing-scene--tbilisi"><img src="./assets/tbilisi-europe.webp" alt="" width="1920" height="1280" /></figure>
+          <figure class="landing-scene landing-scene--bucharest"><img src="./assets/bucharest-protest-2017.webp" alt="" width="2000" height="1125" /></figure>
+          <figure class="landing-scene landing-scene--bucha"><img src="./assets/bucha-2022.webp" alt="" width="2000" height="1334" /></figure>
         </div>
         <div class="landing-shade" aria-hidden="true"></div>
 
@@ -54,8 +56,8 @@
           </header>
 
           <a class="hero-cue" href="#shared-text">
-            <span>The story</span>
-            <small lang="fr">L’histoire</small>
+            <span>Begin here</span>
+            <small lang="fr">Le récit commence</small>
             <i aria-hidden="true">↓</i>
           </a>
         </div>

@@ -4,12 +4,14 @@ This document is the continuity layer for the project. It records the product in
 
 ## Current Checkpoint
 
-- Working branch: `master`
+- Working branch: `codex/site-polish-review` (user-requested desktop review branch; `master` remains unchanged)
 - Approved visual/story baseline: tag `pdf-baseline-v1` (`1f0b9df`)
 - Continuation brief commit: `5247e7e`
 - Source: `dist/` (buildless HTML, CSS, and JavaScript)
-- Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site/?revision=f46bc968>
-- Working preview: `cd` into the repo and run `./serve.sh`, then open <http://127.0.0.1:4173/>. Review **R-014** is implemented and validated at desktop 1440 and mobile 390: one shared nav on all seven pages, a three-screen landing, and a single bilingual contract with French on every narrative heading. The Site has **not** been published from this state.
+- Live reference: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site>
+- Original reference confirmed by the user: <https://alexandrugris.ro/from-the-edges/>. On 2026-10-10, fetched Story HTML, `styles.css`, and `script.js` from this origin and verified that all three match the restored review source byte-for-byte. Use this public original when comparing behavior, not assumptions about the GitHub copy.
+- Working preview: <http://127.0.0.1:4173/>. **R-015** is implemented and verified at five responsive widths. Started from GitHub `master` at `97c3c3f`; the user has now authorized committing and pushing this review edition on `codex/site-polish-review` for desktop inspection. Publication is to the existing private Sites project only; the personal-domain deployment is outside this pass.
+- Review restriction: the user has authorized a separate GitHub branch for inspection at home. Commit and push `codex/site-polish-review`; do not merge into `master` before approval. The separate Sites publishing snapshot was also authorized.
 - Source of truth for French: the essay *De la Révolution française à la Grande Guerre, 1789–1914* (Claw, octobre 2026) is written in French and is the original of this English rendering. Prefer its French over any translation written from the English.
 - Repository: <https://github.com/alexandrugris/europe-seen-from-the-edge>
 
@@ -53,6 +55,8 @@ The central idea is that French revolutionary ideals, language, education, and c
 - **Romania at the intersection:** present-day linguistic and cultural plurality, ending with a distinct identity strongly anchored in Europe.
 
 ## Active Milestone
+
+**Current review pass — R-015: bring the companion pages to The Story's level of polish.** Preserve the Story's HTML and CSS, publish the private Sites review edition, and retain the changes on the separately authorized `codex/site-polish-review` branch pending desktop review. The earlier M2 acceptance criteria below remain historical context rather than authorization to commit or publish elsewhere.
 
 **M2 — Build the first three destination stories and make the entrance work on mobile.**
 
@@ -219,10 +223,78 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 **Resolution:** A full-site audit found five unrelated navigation patterns across seven pages — including no navigation at all on the 19,646px story page — and a finished nav component in `annex.css` that no page had adopted. Promoted it into `dist/site-nav.css` and linked it from all seven pages with `aria-current="page"` on the current one; this also gave the previously orphaned annexes and routes index their inbound links. The landing was rebuilt as three screens: the claim, "Four ways in" with a one-line rationale per chapter, and the annexes doorway. French was consolidated into a single contract, `dist/fr.css` (`.fr-echo` and `.fr-echo--head`), retiring seven competing classes whose scale ratios ranged from 0.16 to 1.00 — two of which had no CSS rule and rendered at display weight, running into their English with no line break. Every narrative heading now carries French. `routes.html` was an empty stub with seven blank sections; it was written out as a real index and restyled from a stray cream theme into the site's dark system. English text is byte-for-byte unchanged throughout.
 **Commit:** the commit titled *Unify navigation, rebuild the landing, and standardise French* (the one carrying this entry).
 
+### R-015 — Polish the companion pages against The Story
+
+**Status:** implemented, verified and published privately on Sites; awaiting user review
+**Priority:** high
+**Area:** layout, typography, imagery, interaction, opening
+**Review:** “the only polished page of the site is The Story. Has no e reveal animations, great spacing, great page setup. To a lesser extent, the landing page is not bad either, but could use some polish. Do a great analysis of the site and bring it to the same level of polish as The Story page. As you do your job, you tell me what you change. Publish it here, on sites, but not commit anything until I verify in depth everything.”
+**Acceptance:** All six companion pages share a coherent editorial rhythm; preserve The Story’s original reveal animation and remove companion-page hover zooms; readable English/French pairings; intact historical imagery and citations; working navigation and source drawers on desktop and mobile; published to the existing private Sites audience. Follow-up authorization permits committing and pushing the separate review branch only; no merge into `master`.
+**Commit:** The commit titled *Polish companion pages for desktop review* on `codex/site-polish-review`. The user explicitly requested this branch for inspection at home; merge approval is still pending.
+
+#### Findings and implementation
+
+The Story's strongest qualities are its restrained serif hierarchy, paper/navy contrast, images with documentary weight, and straightforward reading flow. Correction after motion investigation: its HTML loads `script.js` in the head (line 15). The original script adds `has-js` and uses IntersectionObserver to reveal content. The initial review incorrectly overlooked that include and removed the observer, causing a regression despite unchanged Story HTML/CSS. The exact original script has now been restored.
+
+| Finding | Review-edition change |
+| --- | --- |
+| Chapter display headings used line heights as low as .78 and large 9.2vw sizing. French clearance depended on compensating margins. | Companion titles now use the Story's approximate scale with .96–.98 line heights, a consistent heading echo, and aligned hero decks. |
+| Several wide grids devoted too much width to empty gaps while bilingual prose ran through narrow columns. | Shared 1180px maximum width, responsive gutters, a smaller column gap, and consistent section spacing in `dist/editorial.css`, loaded only by the six companion pages. |
+| Pale gold emphasis disappeared against cream backgrounds. | Dark ochre emphasis on paper; light gold retained on navy and red. |
+| Generic paragraph selectors overrode French sizes, making the echo inconsistent between adjacent sections. | Explicit body/heading echo sizes within the companion reading areas; Manuc's two legacy hero echoes converted to the shared classes. |
+| Manuc's treaty number, heading and French echo were separate grid items, creating a large detached gap. The prose used a percentage margin plus a fixed maximum width. | Grouped the heading/echo, gave the marker its own cell, and aligned the prose with the heading column. |
+| Forced minimum image heights cropped architecture and left landscape art inside oversized frames. | Natural image proportions for the Athenaeum, Sibiu and Grigorescu; restrained frames; a bounded, uncropped Rosenthal painting. Added intrinsic dimensions to companion-page image markup. |
+| Art's four newspaper columns were too narrow for two languages. | Two columns on desktop, one on small phones, consistent date/title/body hierarchy. |
+| The annex architecture grid reserved two rows for one image but left the other two images together above an empty lower row. | One tall image beside two stacked views; responsive stacking below. Removed annex image zoom. The shared reveal observer is retained: The Story uses it; annex CSS deliberately keeps annex content static. Reading progress remains. |
+| Chapter endings led straight into long source lists. | A single next-destination link, a return to the four chapters, and native expandable source drawers preserving source links and credits. |
+| Landing action said “The story” but scrolled further down the landing; chapter links were understated. | “Begin here” scroll cue, clearer numbered chapter links with restrained arrows, improved English/French hierarchy, and squared-off link treatments. Argument and images preserved. |
+| Mobile links could remain hidden when navigation JS failed; focus indication was often removed. | Enable the mobile collapse only when the navigation code runs; visible no-JS navigation, skip links, explicit keyboard focus, and larger touch targets on the companion pages. |
+| Two visible French typos survived in the chapters. | Corrected `de/anaconda` to `de Roumanie` in Art and `reconstruie` to `reconstruite` in Manuc. |
+
+At 1440×900, the initial before/after render reduced the page heights from 8,347 to approximately 6,700px for Manuc, 13,820 to 10,475px for Architecture, and 13,233 to 10,435px for Art. This comes from layout and collapsed apparatus, not cuts to narrative paragraphs. It is a rhythm check, not a goal to fit long bilingual chapters into a fixed number of screens.
+
+#### Motion investigation and correction — 2026-10-10
+
+The user's follow-up exposed a gap in the first audit: visibility and error checks do not establish that the original transitions still run. The earlier claim that the Story did not load its reveal script was false; the include is in the document head, not at the end.
+
+- **The Story:** `script.js` adds `has-js`, observes `.reveal`, and adds `is-visible`. `styles.css` supplies the 24px upward movement, .82s opacity transition and .9s transform transition.
+- **Manuc, Architecture, Art:** only load `nav.js`, have no `.reveal` elements and no reveal CSS. Their static behavior predates this pass.
+- **Annexes:** load the shared script and contain 19 `.reveal` elements, but `annexes/styles.css` explicitly forces opacity 1 and no transform. The observer does not create a visual reveal there.
+- **Public personal-domain site:** the fetched Story loads `script.js`; the fetched script is byte-identical to GitHub HEAD's original script. The personal-domain publication was not changed in this task.
+- **Regression:** removing the observer from the shared script disabled Story animations in Sites review version 17. Restored `dist/script.js` byte-for-byte from GitHub HEAD, including the red-thread behavior, with no Story HTML/CSS changes.
+- **Targeted browser evidence:** before the fix, the heading stayed at opacity 1 with zero transitions; with the original script it starts at opacity 0 / translateY(24px), transitions through intermediate values, and ends at opacity 1 / no transform. Reduced-motion mode remains immediately visible without transitions. Evidence: `/tmp/history-reveal-before.json`; post-restoration check passed in `/tmp/history-reveal-restored.json`: actual transitions restored, final content visible, and reduced-motion behavior intact.
+- **Publication:** correction published successfully to the same private Sites URL on 2026-10-10. Sites-only snapshot `e7fdb3d7abbea10054ff9e417d8d43f348c873e9`; saved version `appgprj_6ac8aabaa9288191b0a11f5f5603ee1c~appgver_f76cc490988081919d56b2392a6c02e6`. Story HTML, stylesheet and script now all match GitHub HEAD exactly; GitHub remains uncommitted.
+
+#### Verification and review notes
+
+- Published successfully on 2026-10-10: <https://europe-seen-from-the-edge.ambercoin8.chatgpt.site>. Owner-private audience preserved. Sites-only snapshot: `8729e53a759374e8407f460dfe20f9df460c649b`; saved version: `appgprj_6ac8aabaa9288191b0a11f5f5603ee1c~appgver_544ec2993f64819184218f82ef911623`. GitHub remains at `97c3c3f` with the review changes uncommitted.
+
+- Before/after full-page desktop and 390px mobile captures: `/tmp/history-polish-before/`, `/tmp/history-polish-after/`.
+- Opening, representative middle and ending captures, plus detailed responsive results: `/tmp/history-review/`.
+- Final verification passed on all seven pages at 320, 390, 768, 1024 and 1440px widths (35 page/viewport combinations): zero horizontal or text overflow, zero browser errors or failed requests, zero missing images/background assets, all local destinations and fragments valid. Mobile menu open/Escape/focus, expandable sources, and navigation without JavaScript passed. `node --check` for both scripts and `git diff --check` passed. The Story HTML and stylesheet have no diff.
+- Existing prose contains editorial issues beyond this visual pass: Manuc's Bucharest passages refer to Târgu Cucu and then to the size of Iași's Jewish community without clearly switching cities. Several French passages also expand on the English rather than simply echo it. These need a separately sourced editorial review; this pass does not claim to fact-check or rewrite the historical narrative.
+
+#### Desktop review handoff — 2026-10-10
+
+The user requested: “Can you commit this to a separate branch which I can check on my desktop at home?” This supersedes the earlier no-commit restriction for the review branch only. The branch contains the published polish, the exact original Story HTML/CSS/script, and this audit. GitHub `master` remains at the original base.
+
+On the home desktop, from this repository:
+
+```sh
+git fetch origin
+git switch --track origin/codex/site-polish-review
+python3 -m http.server 4173 --directory dist
+```
+
+Open <http://localhost:4173/>. If the branch already exists locally, switch to it and pull with `--ff-only`.
+
 ## Decision Log
 
 | Date | Decision | Reason |
 | --- | --- | --- |
+| 2026-10-10 | Commit and push the review edition to `codex/site-polish-review`, leaving `master` unchanged. | User explicitly requested a separate branch to inspect on the home desktop. This supersedes the earlier no-GitHub-commit restriction for that branch only. |
+| 2026-10-10 | Use The Story as the visual reference; apply a common editorial stylesheet only to its six companion pages. | Improve spacing, type, images and navigation while preserving the approved reference composition. |
+| 2026-10-10 | Keep the GitHub checkout uncommitted; publish only through an isolated Sites source snapshot. | User requested in-depth review before any GitHub commit and explicitly approved the snapshot required for Sites publication. |
 | 2026-10-09 | Preserve `pdf-baseline-v1` as the approved foundation. | It is the strongest version of the framing and visual language so far. |
 | 2026-10-09 | Keep the French “language for freedom” idea as the single narrative spine. | Other cultural threads should enrich, not diffuse, the story. |
 | 2026-10-09 | Put deeper material in annexes behind one end-of-story doorway. | The main experience must remain short, linear, and emotional. |
@@ -240,7 +312,7 @@ Add new feedback here. Keep one review per heading. The person implementing it s
 At the start of a new conversation, ask the agent to:
 
 1. Read `AGENTS.md` and this file completely.
-2. Confirm the branch is `master` and the working tree is understood before editing. (`codex/pdf-baseline` is the frozen approved-baseline branch and is far behind — do not switch to it to continue work.)
+2. For the pending R-015 desktop review, use `codex/site-polish-review`; otherwise the normal working branch is `master`. Understand the working tree before editing. (`codex/pdf-baseline` is the frozen approved-baseline branch and is far behind — do not switch to it to continue work.)
 3. Treat `pdf-baseline-v1` as read-only reference, then inspect the latest commits and open reviews.
 4. Work only on the active milestone or explicitly selected review IDs.
 5. Preview and validate the result before committing.

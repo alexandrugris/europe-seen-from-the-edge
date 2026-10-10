@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./annex.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./fr.css" />
-      <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="./editorial.css" />
   </head>
-  <body class="chapter-page art-page">
+  <body class="polished-page chapter-page art-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav class="site-nav" aria-label="Main">
     <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
@@ -28,9 +29,9 @@
       <li><a href="./routes.html">Routes</a></li>
     </ul>
   </nav>
-    <main>
+    <main id="main-content">
       <section class="chapter-hero art-hero" aria-labelledby="title">
-        <figure aria-hidden="true"><img src="./assets/romania-revolutionary.webp" alt="" /></figure>
+        <figure aria-hidden="true"><img src="./assets/romania-revolutionary.webp" alt="" width="1536" height="2000" /></figure>
         <div class="chapter-hero-copy">
           <p class="chapter-kicker">1830–1918 · art, poetry, argument</p>
           <h1 id="title">A people learns<br />to speak <em>in public.</em></h1>
@@ -56,7 +57,7 @@
         </section>
 
         <figure class="chapter-image image--painting">
-          <img src="./assets/romania-revolutionary.webp" alt="The Romanian Revolutionary by Constantin Daniel Rosenthal" loading="lazy" />
+          <img src="./assets/romania-revolutionary.webp" alt="The Romanian Revolutionary by Constantin Daniel Rosenthal" loading="lazy" width="1536" height="2000" />
           <figcaption><i>România revoluționară</i> · Constantin Daniel Rosenthal · c. 1850 · National Museum of Art of Romania.</figcaption>
         </figure>
 
@@ -76,7 +77,7 @@
 
         <section class="chapter-feature feature--grigorescu">
           <figure>
-            <img src="./assets/nicolae-grigorescu.webp" alt="An ox cart in a landscape by Nicolae Grigorescu" loading="lazy" />
+            <img src="./assets/nicolae-grigorescu.webp" alt="An ox cart in a landscape by Nicolae Grigorescu" loading="lazy" width="526" height="313" />
             <figcaption><i>Car cu boi</i> / <i>Ox Cart</i> · Nicolae Grigorescu · late nineteenth century · Wikimedia Commons.</figcaption>
           </figure>
           <div class="chapter-feature-copy">
@@ -86,7 +87,7 @@
             <p>Grigorescu reached Paris in 1861 on a state scholarship, then found a more decisive education outside it: Barbizon, near the Forest of Fontainebleau. There, the generation around Corot, Rousseau, Millet and Courbet had made landscape and ordinary rural life serious subjects for painting. Direct observation mattered more than heroic finish; weather, soil and work carried their own dignity.</p>
             <p class="fr-echo" lang="fr">Grigorescu arriva à Paris en 1861 avec une bourse d’État, puis trouva hors de Paris une formation plus décisive&nbsp;: Barbizon, près de la forêt de Fontainebleau. Là, la génération de Corot, Rousseau, Millet et Courbet avait fait du paysage et de la vie rurale ordinaire des sujets sérieux pour la peinture. L’observation directe comptait davantage que la finition héroïque&nbsp;; le temps, le sol et le travail portaient leur propre dignité.</p>
             <p>He brought that permission home. His roads, shepherds, ox-carts and women at the river did not turn Romanian peasants into French ones. They put Romanian life inside an international modern vocabulary of light and attention. The National Museum of Art of Romania traces the Barbizon and Courbet–Corot principles in his work: the practice of looking closely could give a small nation’s landscape a European seriousness without draining away its particular weather.</p>
-            <p class="fr-echo" lang="fr">Il rapporta cette permission au pays. Ses routes, ses bergers, ses charrettes à bœufs et ses femmes au bord de l’eau ne transformèrent pas les paysans roumains en paysans français. Ils placèrent la vie roumaine dans un vocabulaire moderne et international de lumière et d’attention. Le Musée national d’art de/anaconda retrouve dans son œuvre les principes de Barbizon et de Courbet–Corot&nbsp;: la pratique d’un regard attentif pouvait donner au paysage d’un petit pays une gravité européenne sans lui ôter son climat propre.</p>
+            <p class="fr-echo" lang="fr">Il rapporta cette permission au pays. Ses routes, ses bergers, ses charrettes à bœufs et ses femmes au bord de l’eau ne transformèrent pas les paysans roumains en paysans français. Ils placèrent la vie roumaine dans un vocabulaire moderne et international de lumière et d’attention. Le Musée national d’art de Roumanie retrouve dans son œuvre les principes de Barbizon et de Courbet–Corot&nbsp;: la pratique d’un regard attentif pouvait donner au paysage d’un petit pays une gravité européenne sans lui ôter son climat propre.</p>
           </div>
         </section>
 
@@ -108,7 +109,7 @@
 
         <section class="chapter-german">
           <figure>
-            <img src="./assets/mihai-eminescu.webp" alt="Portrait photograph of Mihai Eminescu" loading="lazy" />
+            <img src="./assets/mihai-eminescu.webp" alt="Portrait photograph of Mihai Eminescu" loading="lazy" width="549" height="800" />
             <figcaption>Mihai Eminescu · photograph by Jean Bielig · c. 1883 · public domain.</figcaption>
           </figure>
           <div class="chapter-german-copy">
@@ -196,30 +197,40 @@
           <p class="fr-echo fr-echo--head" lang="fr">L’art ne décore pas la liberté. Il construit une vie publique.</p>
         </section>
 
-        <section class="chapter-sources">
-          <h2>Sources &amp; image credits</h2>
-          <div class="chapter-source-grid">
-            <div>
-              <h3>Art, literature and the press</h3>
-              <ul>
-                <li><a href="https://www.mnar.arts.ro/en/discover/permanent-galleries/117-romanian-modern-art-gallery/discover-the-works-in-the-romanian-modern-art-gallery/296-grigorescu-the-spy">National Museum of Art of Romania</a> — Grigorescu’s relation to Barbizon, Courbet and Corot.</li>
-                <li><a href="https://mnar.arts.ro/descopera/expozitii-temporare/402-expozi%C8%9Bia-eveniment-%E2%80%9Enicolae-grigorescu-%E2%80%93-pictor-al-ethosului-rom%C3%A2esc%E2%80%9D-deschide-la-muzeul-na%C8%9Bional-din-gda%C5%84sk-sezonul-cultural-rom%C3%A2nia-polonia-2024-2025/7799-expozi%C8%9Bia-eveniment-%E2%80%9Enicolae-grigorescu-%E2%80%93-pictor-al-ethosului-rom%C3%A2esc%E2%80%9D-deschide-la-muzeul-na%C8%9Bional-din-gda%C5%84sk-sezonul-cultural-rom%C3%A2nia-polonia-2024-2025">MNAR exhibition note</a> — Grigorescu in Barbizon and <i>en plein air</i>.</li>
-                <li><a href="https://www.icr.ro/budapesta/titu-maiorescu-si-modernitatea-romaneasca-eveniment-organizat-de-icr-berlin-in-marja-zilei-culturii-nationale">Romanian Cultural Institute</a> — Maiorescu, Junimea, Berlin, Giessen and <i>Convorbiri literare</i>.</li>
-                <li><a href="https://www.icr.ro/pagini/religion-and-identity-in-interwar-romania-orthodoxism">Romanian Cultural Institute</a> — German historicist philosophy and Maiorescu’s critique of imported institutions.</li>
-                <li>National Museum of Romanian Literature Iași — Vasile Alecsandri archive; <i>Britannica</i> — Mihai Eminescu and George Enescu; <i>Convorbiri literare</i> and <i>Timpul</i> archival histories.</li>
-              </ul>
+        <nav class="chapter-next" aria-label="Continue reading">
+          <p class="next-label">Continue · V</p>
+          <a href="./annexes/"><span>One door further<span class="fr-echo" lang="fr">Une porte plus loin</span></span><span aria-hidden="true">→</span></a>
+          <a class="next-home" href="./index.html#chapters">Back to the four chapters</a>
+        </nav>
+
+        <footer class="chapter-colophon">
+          <details>
+            <summary>Sources &amp; image credits</summary>
+            <div class="colophon-content">
+              <div class="chapter-source-grid">
+                <div>
+                  <h3>Art, literature and the press</h3>
+                  <ul>
+                    <li><a href="https://www.mnar.arts.ro/en/discover/permanent-galleries/117-romanian-modern-art-gallery/discover-the-works-in-the-romanian-modern-art-gallery/296-grigorescu-the-spy">National Museum of Art of Romania</a> — Grigorescu’s relation to Barbizon, Courbet and Corot.</li>
+                    <li><a href="https://mnar.arts.ro/descopera/expozitii-temporare/402-expozi%C8%9Bia-eveniment-%E2%80%9Enicolae-grigorescu-%E2%80%93-pictor-al-ethosului-rom%C3%A2esc%E2%80%9D-deschide-la-muzeul-na%C8%9Bional-din-gda%C5%84sk-sezonul-cultural-rom%C3%A2nia-polonia-2024-2025/7799-expozi%C8%9Bia-eveniment-%E2%80%9Enicolae-grigorescu-%E2%80%93-pictor-al-ethosului-rom%C3%A2esc%E2%80%9D-deschide-la-muzeul-na%C8%9Bional-din-gda%C5%84sk-sezonul-cultural-rom%C3%A2nia-polonia-2024-2025">MNAR exhibition note</a> — Grigorescu in Barbizon and <i>en plein air</i>.</li>
+                    <li><a href="https://www.icr.ro/budapesta/titu-maiorescu-si-modernitatea-romaneasca-eveniment-organizat-de-icr-berlin-in-marja-zilei-culturii-nationale">Romanian Cultural Institute</a> — Maiorescu, Junimea, Berlin, Giessen and <i>Convorbiri literare</i>.</li>
+                    <li><a href="https://www.icr.ro/pagini/religion-and-identity-in-interwar-romania-orthodoxism">Romanian Cultural Institute</a> — German historicist philosophy and Maiorescu’s critique of imported institutions.</li>
+                    <li>National Museum of Romanian Literature Iași — Vasile Alecsandri archive; <i>Britannica</i> — Mihai Eminescu and George Enescu; <i>Convorbiri literare</i> and <i>Timpul</i> archival histories.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Images</h3>
+                  <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:The_Romanian_revolutionary,_by_Constantin_Daniel_Rosenthal.jpg"><i>România revoluționară</i></a> — Constantin Daniel Rosenthal, public domain.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Nicolae_Grigorescu_-_Car_cu_boi.jpg"><i>Car cu boi</i></a> — Nicolae Grigorescu, public domain.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Jean_Bielig_-_Mihai_Eminescu_-_copy.jpg">Mihai Eminescu</a> — Jean Bielig photograph, public domain.</li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Theodor_Aman-Unirea_Principatelor.jpg"><i>The Union of the Principalities</i></a> — Theodor Aman, public domain; part of the page’s institutional context.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3>Images</h3>
-              <ul>
-                <li><a href="https://commons.wikimedia.org/wiki/File:The_Romanian_revolutionary,_by_Constantin_Daniel_Rosenthal.jpg"><i>România revoluționară</i></a> — Constantin Daniel Rosenthal, public domain.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Nicolae_Grigorescu_-_Car_cu_boi.jpg"><i>Car cu boi</i></a> — Nicolae Grigorescu, public domain.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Jean_Bielig_-_Mihai_Eminescu_-_copy.jpg">Mihai Eminescu</a> — Jean Bielig photograph, public domain.</li>
-                <li><a href="https://commons.wikimedia.org/wiki/File:Theodor_Aman-Unirea_Principatelor.jpg"><i>The Union of the Principalities</i></a> — Theodor Aman, public domain; part of the page’s institutional context.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+          </details>
+        </footer>
       </article>
     </main>
     <script src="./nav.js" defer></script>
