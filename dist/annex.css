@@ -437,19 +437,20 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 .chapter-press::before { position: absolute; top: -1.5rem; right: -1.5rem; color: rgba(38,43,56,.045); content: "PRESS"; font: italic 20vw/.8 var(--serif); letter-spacing: -.1em; pointer-events: none; }
 .press-head, .press-grid, .press-afterword { position: relative; z-index: 1; width: min(1100px, 100%); margin-inline: auto; }
 .press-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; }
-.press-head .chapter-kicker { grid-column: 1 / -1; grid-row: 1; margin-bottom: 0; }
-/* Same reason as .chapter-essay-grid: echoes sat as bare siblings in a two-column
-   grid, so auto-placement zig-zagged every item — kicker and its echo stacked in
-   the left column, the h2 stranded alone on the right, row 1 column 2 left empty.
-   Each rule keys off the element it echoes, because the grid may hold a kicker
-   echo, a heading echo and a deck echo, and a positional selector would put two
-   of them on the same row. The kicker keeps its full-bleed row; title and its
-   echo stack in column 1; the deck and its echo hold column 2. */
-.press-head .chapter-kicker + .fr-echo { grid-column: 1 / -1; grid-row: 2; }
-.press-head h2 { grid-column: 1; grid-row: 3; margin: 0; }
-.press-head h2 + .fr-echo--head { grid-column: 1; grid-row: 4; }
-.press-head h2 + .fr-echo--head + p { grid-column: 2; grid-row: 3 / span 2; max-width: 430px; margin: 0; color: #5a554e; }
-.press-head h2 + .fr-echo--head + p + .fr-echo { grid-column: 2; grid-row: 5; max-width: 430px; margin: 1.2rem 0 0; }
+/* Echoes sat as bare siblings in a two-column grid, so auto-placement zig-zagged
+   every item — kicker and its echo stacked in the left column, the h2 stranded
+   alone on the right, row 1 column 2 left empty. Pinning each item to an
+   explicit row stopped that but was wrong in a subtler way: the deck spanned
+   two rows, which inflated the row the title occupied and pushed the title's
+   echo hundreds of pixels below the title. Three cells, each a unit, leaves
+   grid flow nothing to misplace. The kicker keeps its full-bleed row. */
+.press-head-kicker { grid-column: 1 / -1; align-self: start; }
+.press-head-title { grid-column: 1; }
+.press-head-deck { grid-column: 2; max-width: 430px; }
+.press-head .chapter-kicker { margin-bottom: 0; }
+.press-head h2 { margin: 0; }
+.press-head-deck > p { margin: 0; color: #5a554e; }
+.press-head-deck > p.fr-echo { margin-top: 1.2rem; }
 .press-grid { margin-top: clamp(4rem, 8vw, 7rem); display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--chapter-line); border-left: 1px solid var(--chapter-line); }
 .press-grid article { min-height: 260px; padding: clamp(1.2rem, 2.4vw, 2.1rem); border-right: 1px solid var(--chapter-line); border-bottom: 1px solid var(--chapter-line); }
 .press-date { margin: 0 0 2.2rem; color: var(--chapter-red); font: 700 .67rem/1 var(--sans) !important; letter-spacing: .1em; }
@@ -495,11 +496,8 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
   .chapter-split, .chapter-essay-grid, .chapter-avenue, .chapter-feature, .chapter-transylvania, .chapter-german, .press-head, .press-afterword { grid-template-columns: 1fr; }
   /* Explicit column placement above would otherwise create a phantom second
      column once the grid collapses to one, overlapping the title and the body. */
-  .press-head .chapter-kicker, .press-head .chapter-kicker + .fr-echo, .press-head h2,
-  .press-head h2 + .fr-echo--head, .press-head h2 + .fr-echo--head + p,
-  .press-head h2 + .fr-echo--head + p + .fr-echo,
-  .manuc-treaty-intro h2, .manuc-treaty-intro .fr-echo--head { grid-column: auto; grid-row: auto; }
-  .press-head h2 + .fr-echo--head + p { grid-row: auto; }
+  .press-head-kicker, .press-head-title, .press-head-deck,
+  .manuc-treaty-intro h2, .manuc-treaty-intro .fr-echo--head { grid-column: auto; }
   .chapter-split { gap: 2.5rem; }
   .chapter-essay-grid { gap: 2.5rem; }
   .chapter-avenue, .chapter-feature, .chapter-transylvania { width: calc(100% - 32px); gap: 3rem; padding-block: 5rem; }
