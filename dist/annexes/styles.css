@@ -28,7 +28,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
 .annex-nav p { margin: 0; color: #aaa7a0; }
 
 .annex-hero { position: relative; min-height: 100svh; overflow: hidden; display: grid; align-items: center; padding: 10rem max(1.5rem, 6vw) 8rem; color: #f8f1e5; background: var(--night); }
-.annex-hero-image { position: absolute; inset: 0; background: url("../assets/hanul-manuc-historic.jpg") center / cover no-repeat; filter: sepia(.15) saturate(.7) contrast(1.08); transform: scale(1.015); }
+.annex-hero-image { position: absolute; inset: 0; background: url("../assets/hanul-manuc-historic.webp") center / cover no-repeat; filter: sepia(.15) saturate(.7) contrast(1.08); transform: scale(1.015); }
 .annex-hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,10,15,.93), rgba(7,10,15,.52) 65%, rgba(7,10,15,.6)), linear-gradient(0deg, rgba(7,10,15,.88), transparent 55%, rgba(7,10,15,.56)); }
 .annex-hero-copy { position: relative; z-index: 1; width: min(1120px, 100%); margin: auto; }
 .annex-hero .kicker { margin-bottom: 1.8rem; color: #e7cc91; font: 750 .68rem/1.3 var(--sans); }

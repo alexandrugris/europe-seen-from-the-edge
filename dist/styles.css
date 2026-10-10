@@ -28,8 +28,8 @@ h1, h2, h3, p, figure, blockquote { margin-top: 0; }
 
 .hero { position: relative; height: 100svh; min-height: 40rem; overflow: hidden; display: grid; place-items: center; color: #faf4e7; background: var(--night); }
 .hero-half { position: absolute; inset: 0 50% 0 0; background-position: center; background-size: cover; filter: saturate(.78) contrast(1.08); }
-.hero-half--france { background-image: url("./assets/lamartine-1848.jpg"); }
-.hero-half--romania { inset: 0 0 0 50%; background-image: url("./assets/calea-victoriei-1900.jpg"); }
+.hero-half--france { background-image: url("./assets/lamartine-1848.webp"); }
+.hero-half--romania { inset: 0 0 0 50%; background-image: url("./assets/calea-victoriei-1900.webp"); }
 .hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,10,15,.7), rgba(7,10,15,.36) 48%, rgba(7,10,15,.62)), linear-gradient(0deg, rgba(7,10,15,.83), transparent 54%, rgba(7,10,15,.38)); }
 .hero-content { position: relative; z-index: 2; width: min(1210px, calc(100% - 48px)); margin: auto; padding: clamp(2.5rem, 6vh, 4.5rem) 0 clamp(4.5rem, 9vh, 6.5rem); }
 .eyebrow { margin: 0 0 1.3rem; color: #e6cb91; font-size: .68rem; font-weight: 700; }
@@ -59,7 +59,7 @@ h1 em { color: #e4c98d; font-weight: 400; }
 
 .opening, .language-section, .pressure { position: relative; padding: clamp(7rem, 13vw, 13rem) max(1.5rem, 6vw); overflow: hidden; }
 .opening { padding-block: clamp(3.75rem, 6vh, 5rem); }
-.opening { min-height: 100svh; display: grid; align-content: center; background: linear-gradient(90deg, rgba(239,234,221,.97) 0%, rgba(239,234,221,.93) 42%, rgba(239,234,221,.78) 100%), url("./assets/paris-boulevard-1838.jpg") center / cover no-repeat, var(--paper); }
+.opening { min-height: 100svh; display: grid; align-content: center; background: linear-gradient(90deg, rgba(239,234,221,.97) 0%, rgba(239,234,221,.93) 42%, rgba(239,234,221,.78) 100%), url("./assets/paris-boulevard-1838.webp") center / cover no-repeat, var(--paper); }
 .opening::before { content: ""; position: absolute; inset: 2.2rem max(1.5rem, 6vw); pointer-events: none; border-block: 1px solid rgba(23,26,33,.12); }
 .section-kicker { margin-bottom: 1.4rem; color: var(--red); font-size: .68rem; font-weight: 750; }
 .opening > .section-kicker, .opening > h2 { width: min(1000px, 100%); margin-inline: auto; text-align: center; }
@@ -82,7 +82,7 @@ h2 { margin-bottom: 1.8rem; font-size: clamp(2.9rem, 6.4vw, 6.6rem); font-weight
 
 .epoch { position: relative; padding: clamp(6rem, 11vw, 10rem) max(1.5rem, 6vw); overflow: hidden; }
 .epoch--paper, .epoch--islaz, .epoch--little-paris { background: var(--paper); }
-.epoch--little-paris { background: linear-gradient(90deg, rgba(239,234,221,.95), rgba(239,234,221,.84)), url("./assets/calea-victoriei-1900.jpg") center / cover; }
+.epoch--little-paris { background: linear-gradient(90deg, rgba(239,234,221,.95), rgba(239,234,221,.84)), url("./assets/calea-victoriei-1900.webp") center / cover; }
 .epoch--little-paris::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(110deg, transparent 45%, rgba(173,49,59,.08) 45% 46%, transparent 46%); }
 .epoch--paris, .epoch--napoleon { color: #f3ede2; background: var(--night); }
 .epoch--paris::after, .epoch--napoleon::after, .pressure::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .17; background-image: radial-gradient(rgba(255,255,255,.22) .5px, transparent .5px); background-size: 7px 7px; }
@@ -273,7 +273,7 @@ footer summary { cursor: pointer; color: #e4ded2; font-size: .72rem; font-weight
   .hero-title-fr { margin-left: 0; }
   .begin { left: 1rem; bottom: 1.2rem; }
   .opening, .language-section, .pressure, .crossroads, .epoch { padding-inline: 1.35rem; }
-  .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.97), rgba(239,234,221,.82)), url("./assets/paris-boulevard-1838.jpg") 65% center / auto 100% no-repeat, var(--paper); }
+  .opening { min-height: auto; padding-block: 6.5rem; background: linear-gradient(90deg, rgba(239,234,221,.97), rgba(239,234,221,.82)), url("./assets/paris-boulevard-1838.webp") 65% center / auto 100% no-repeat, var(--paper); }
   .opening::before { inset: 1.3rem; }
   .opening-grid, .timeline-key-grid, .language-grid, .argument, .sources-grid { grid-template-columns: 1fr; }
   .timeline-key-grid { gap: .55rem; }
