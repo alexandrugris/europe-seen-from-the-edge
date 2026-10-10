@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="./annex.css" />
     <link rel="stylesheet" href="./site-nav.css" />
     <link rel="stylesheet" href="./fr.css" />
+      <script>document.documentElement.classList.add('js')</script>
   </head>
   <body class="chapter-page architecture-page">
   <nav class="site-nav" aria-label="Main">
     <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
-    <ul class="site-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <ul class="site-links" id="site-links">
       <li><a href="./the-long-way-from-paris.html">The story</a></li>
       <li><a href="./manuc.html">Manuc</a></li>
       <li><a href="./architecture.html" aria-current="page">Architecture</a></li>
@@ -185,5 +190,6 @@
         </section>
       </article>
     </main>
+    <script src="./nav.js" defer></script>
   </body>
 </html>

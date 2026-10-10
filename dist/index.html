@@ -4,16 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#10131b" />
-    <meta name="description" content="Europe needs a story to attach itself to. It is told here from the edge — through Romania, two centuries ago." />
+    <meta name="description" content="Europe needs a story to attach itself to. It is told here from the edge, through Romania, two centuries ago." />
     <title>Europe, Seen from the Edge</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./landing.css" />
     <link rel="stylesheet" href="./site-nav.css" />
+      <script>document.documentElement.classList.add('js')</script>
   </head>
   <body>
   <nav class="site-nav" aria-label="Main">
     <a class="site-home" href="./index.html">Europe, from the edge<em lang="fr">Aux confins de l’Europe</em></a>
-    <ul class="site-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-links">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <ul class="site-links" id="site-links">
       <li><a href="./the-long-way-from-paris.html">The story</a></li>
       <li><a href="./manuc.html">Manuc</a></li>
       <li><a href="./architecture.html">Architecture</a></li>
@@ -41,8 +46,8 @@
             <p class="landing-fr" lang="fr">Aux confins de l’Europe, la liberté a un drapeau.</p>
 
             <div class="landing-connection">
-              <p>Four places at Europe’s edge. Kyiv, Tbilisi, Bucharest — people in the street, asking for the same thing. Bucha: what happens when the answer arrives with an army.</p>
-              <p class="landing-fr" lang="fr">Quatre lieux aux confins de l’Europe. Kyiv, Tbilissi, Bucarest&nbsp;: des gens dans la rue, qui demandent la même chose. Boutcha&nbsp;: ce qui arrive quand la réponse vient avec une armée.</p>
+              <p>Four places at Europe’s edge. Kyiv, Tbilisi, Bucharest, people in the street, asking for the same thing. Bucha: the answer arrives with an army.</p>
+              <p class="landing-fr" lang="fr">Quatre lieux aux confins de l’Europe. Kyiv, Tbilissi, Bucarest&nbsp;: des gens dans la rue, qui demandent la même chose. Boutcha&nbsp;: la réponse arrive avec une armée.</p>
               <p>A new age of empires has made the question urgent again.</p>
               <p class="landing-fr" lang="fr">Un nouvel âge d’empires a rendu la question plus urgente.</p>
             </div>
@@ -74,11 +79,11 @@
             <p class="landing-eyebrow">From the edge</p>
             <h2 id="chapters-title">I cannot tell the story of Europe.</h2>
             <p class="landing-fr" lang="fr">Je ne peux pas raconter l’histoire de l’Europe.</p>
-            <p class="screen-lede">It is too large, and it does not belong to one country. But I can show what it looked like from the edge — from a country that stood where Europe stands now, two centuries ago. Romania was made by a revolution, a language and a constitution. That is not a national story. It is the same story, told once.</p>
-            <p class="screen-lede landing-fr" lang="fr">Elle est trop grande, et elle n’appartient à aucun pays. Mais je peux montrer à quoi elle ressemblait vue du bord — depuis un pays qui se trouvait là où l’Europe se trouve aujourd’hui, il y a deux siècles. La Roumanie a été faite par une révolution, une langue et une constitution. Ce n’est pas un récit national. C’est la même histoire, racontée une fois.</p>
+            <p class="screen-lede">It is too large, and it does not belong to one country. But I can show what it looked like from the edge, from a country that stood in a position surprisingly similar to where Europe stands now, two centuries ago.</p>
+            <p class="screen-lede landing-fr" lang="fr">Elle est trop grande, et elle n’appartient à aucun pays. Mais je peux montrer à quoi elle ressemblait vue du bord, depuis un pays qui se trouvait dans une position étonnamment similaire à celle où l’Europe se trouve aujourd’hui, il y a deux siècles.</p>
 
-            <p class="principle">The idea of a united Europe is a glorious one. But unity must preserve individuality. Romania is not France and does not want to be — as no country does.</p>
-            <p class="principle landing-fr" lang="fr">L’idée d’une Europe unifiée est une idée glorieuse. Mais l’unité doit préserver l’individualité. La Roumanie n’est pas la France et ne veut pas l’être — comme aucun pays.</p>
+            <p class="principle">The idea of a united Europe is the imperative of today. A Europe in which each country preserves its individuality and all stand together united by a shared understanding that together we are strong.</p>
+            <p class="principle landing-fr" lang="fr">L’idée d’une Europe unifiée est l’impératif d’aujourd’hui. Une Europe où chaque pays préserve son individualité, et où tous se tiennent ensemble, unis par la compréhension commune que c’est ensemble que nous sommes forts.</p>
           </header>
 
           <header class="ladder-head">
@@ -92,8 +97,8 @@
               <span class="chapter-body">
                 <span class="chapter-title">The Long Way from Paris</span>
                 <span class="chapter-title landing-fr" lang="fr">La longue route depuis Paris</span>
-                <span class="chapter-why">A state. How the revolution’s vocabulary travelled east and came home as a constitution, a language, a code — written in the same terms as Paris.</span>
-                <span class="chapter-why landing-fr" lang="fr">Un État. Comment le vocabulaire de la révolution est parti vers l’est et revenu en constitution, en langue, en code — formulé dans les mêmes termes qu’à Paris.</span>
+                <span class="chapter-why">A state. How the revolution’s vocabulary travelled east and came home as a constitution, a language, a code, written in the same terms as Paris.</span>
+                <span class="chapter-why landing-fr" lang="fr">Un État. Comment le vocabulaire de la révolution est parti vers l’est et revenu en constitution, en langue, en code, formulé dans les mêmes termes qu’à Paris.</span>
               </span>
             </a>
 
@@ -102,8 +107,8 @@
               <span class="chapter-body">
                 <span class="chapter-title">Manuc’s Inn</span>
                 <span class="chapter-title landing-fr" lang="fr">L’auberge de Manuc</span>
-                <span class="chapter-why">A courtyard. The border of Europe as a place where Armenian, Greek, German, Bulgarian and French worked side by side — none of them pretending to be the others.</span>
-                <span class="chapter-why landing-fr" lang="fr">Une cour. La frontière de l’Europe comme lieu où arméniens, grecs, allemands, bulgares et français travaillaient côte à côte — sans qu’aucun ne fasse semblant d’être les autres.</span>
+                <span class="chapter-why">A courtyard. The border of Europe as a place where Armenian, Greek, German, Bulgarian and French worked side by side, commerce, diplomacy, joy, mutual understanding, friendships.</span>
+                <span class="chapter-why landing-fr" lang="fr">Une cour. La frontière de l’Europe comme lieu où arméniens, grecs, allemands, bulgares et français travaillaient côte à côte, le commerce, la diplomatie, la joie, la compréhension mutuelle, les amitiés.</span>
               </span>
             </a>
 
@@ -112,8 +117,8 @@
               <span class="chapter-body">
                 <span class="chapter-title">Architecture · Little Paris</span>
                 <span class="chapter-title landing-fr" lang="fr">Architecture · Le Petit Paris</span>
-                <span class="chapter-why">A city. A capital borrowed a grammar of boulevards and concert halls — and stopped exactly where borrowing stops.</span>
-                <span class="chapter-why landing-fr" lang="fr">Une ville. Une capitale emprunta une grammaire de boulevards et de salles de concert — et s’arrêta précisément là où s’arrête l’emprunt.</span>
+                <span class="chapter-why">A city. A capital that made its own the grammar of boulevards and concert halls, of cafes and hotels. A capital that internalized La Belle Epoque out of necessity and awe and transformed it to match its spirit.</span>
+                <span class="chapter-why landing-fr" lang="fr">Une ville. Une capitale qui s’est approprié la grammaire des boulevards et des salles de concert, des cafés et des hôtels. Une capitale qui a intériorisé la Belle Époque par nécessité et par émerveillement, et l’a transformée pour qu’elle corresponde à son esprit.</span>
               </span>
             </a>
 
@@ -122,8 +127,8 @@
               <span class="chapter-body">
                 <span class="chapter-title">Art · Poetry &amp; Painting</span>
                 <span class="chapter-title landing-fr" lang="fr">Art · poésie et peinture</span>
-                <span class="chapter-why">A culture. One that held a French current and a German current at the same time, and was neither.</span>
-                <span class="chapter-why landing-fr" lang="fr">Une culture. Celle qui tint à la fois un courant français et un courant allemand, et qui n’était ni l’un ni l’autre.</span>
+                <span class="chapter-why">A culture. Its intellectuals were educated in Paris and Berlin, yet dreamed to build a nation at home.</span>
+                <span class="chapter-why landing-fr" lang="fr">Une culture. Ses intellectuels ont été formés à Paris et à Berlin, et rêvaient pourtant de construire une nation chez eux.</span>
               </span>
             </a>
           </nav>
@@ -137,8 +142,8 @@
             <p class="landing-eyebrow">One door further</p>
             <h2 id="cabinet-title">And six rooms more</h2>
             <p class="landing-fr" lang="fr">Et six pièces de plus</p>
-            <p class="screen-lede">Language, the Paris generation, territory and the rest live in a cabinet behind the story — six rooms for what the chapters could only brush against.</p>
-            <p class="screen-lede landing-fr" lang="fr">La langue, la génération parisienne, le territoire et le reste vivent dans un cabinet derrière le récit — six pièces pour ce que les chapitres ne faisaient qu’effleurer.</p>
+            <p class="screen-lede">Language, the Paris generation, territory and the rest live in a cabinet behind the story, six rooms for what the chapters could only brush against.</p>
+            <p class="screen-lede landing-fr" lang="fr">La langue, la génération parisienne, le territoire et le reste vivent dans un cabinet derrière le récit, six pièces pour ce que les chapitres ne faisaient qu’effleurer.</p>
           </header>
 
           <a class="cabinet-door" href="./annexes/">
@@ -161,5 +166,6 @@
         </p>
       </footer>
     </main>
+    <script src="./nav.js" defer></script>
   </body>
 </html>

@@ -254,7 +254,11 @@ img { max-width: 100%; }
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 760px) {
-  .landing-scenes { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); }
+  /* On a phone the four images become four small squares, too small to carry
+     anything. Bucha alone fills the screen instead, which is also the image
+     the closing line of the caption is about. */
+  .landing-scene:not(.landing-scene--bucha) { display: none; }
+  .landing-scenes { grid-template-columns: 1fr; grid-template-rows: 1fr; }
   .landing-scene img { object-position: center; }
   .landing-shade {
     background:
