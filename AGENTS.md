@@ -138,3 +138,22 @@ Note that `master` receives bulk pushes from the publishing pipeline ("Update Si
 Never commit credentials or tokens. Preserve the Sites project ID and private audience unless a change is explicitly requested.
 
 `serve.sh` binds `0.0.0.0`, so the site is reachable from the LAN and Tailscale. That is convenient for phone testing and fine for unpublished draft content; do not leave it running while the site holds work you do not want on the network.
+
+### This site is one of four
+
+`/from-the-edges/` is a sub-site of `alexandrugris.ro`. It shares one docroot with the
+personal site, The Light Bringer and the literature site, each owned by its own repository.
+**Do not rsync to the docroot wholesale and never use `--delete`** — the docroot holds three
+sub-sites this repository does not contain.
+
+Deploy everything with one command, which backs up, deploys all four sites, rebuilds
+`sitemap.xml` and verifies the result:
+
+```bash
+"~/Downloads/Personal Website/tools/deploy.sh"
+```
+
+`dist/` here is hand-edited, not generated — there is no build step, so anything you add to
+`dist/` survives. That is *not* true of the literature site, whose `build.py` wipes its `dist/`
+on every run. The full estate map, SSH aliases and verification procedure live in
+`~/Downloads/Personal Website/AGENTS.md`.
